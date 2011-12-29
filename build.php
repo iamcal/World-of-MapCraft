@@ -17,7 +17,7 @@
 
 	build_set('azeroth', 'TolBarad/map', 27, 32, 31, 37, 57, 30); # tol barad
 
-	build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 27); # maelstrom
+	build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 33); # maelstrom
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x, $offset_y, $skips=array()){
 
