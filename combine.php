@@ -1,7 +1,7 @@
 <?php
-	$pngs = "/var/www/doats.net/tiles/pngs2";
-	$maps = "/var/www/doats.net/tiles/maps2";
-	$pngs_url = "/tiles/pngs2";
+	$pngs = "/var/www/doats.net/tiles/pngs";
+	$maps = "/var/www/doats.net/tiles/maps";
+	$pngs_url = "/tiles/pngs";
 
 
 	#
@@ -69,9 +69,13 @@
 		$out .= "$min_x - $max_x, $min_y - $max_y<br />";
 
 		$out .= "<table border=0 cellpadding=0 cellspacing=0>\n";
+		$out16 = $out;
 
 		for ($y=0; $y<$h; $y++){
+
 			$out .= "<tr>\n";
+			$out16 .= "<tr>\n";
+
 			for ($x=0; $x<$w; $x++){
 
 				if (preg_match('!/WMO!', $file)){
@@ -85,21 +89,32 @@
 
 				if ($file){
 					$url = str_replace($pngs, $pngs_url, $file);
-					$url = str_replace('.png', '--16.png', $url);
-					$out .= "<td><img src=\"$url\" width=16 height=16 /></td>\n";
+					$url16 = str_replace('.png', '--16.png', $url);
+
+					$out .= "<td><img src=\"$url\" width=64 height=64 /></td>\n";
+					$out16 .= "<td><img src=\"$url16\" width=16 height=16 /></td>\n";
 				}else{
 					$out .= '<td>.</td>';
+					$out16 .= '<td>.</td>';
 				}
 			}
+
 			$out .= "</tr>\n";
+			$out16 .= "</tr>\n";
 		}
 
 		$out .= "</table>\n";
+		$out16 .= "</table>\n";
 
 		$out .= '</body></html>';
+		$out16 .= '</body></html>';
 
 		$fh = fopen("$maps/{$name}.htm", 'w');
 		fwrite($fh, $out);
+		fclose($fh);
+
+		$fh = fopen("$maps/{$name}--16.htm", 'w');
+		fwrite($fh, $out16);
 		fclose($fh);
 
 		echo "ok\n";
