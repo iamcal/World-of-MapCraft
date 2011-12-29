@@ -16,7 +16,7 @@
 
 	function process_dir($pngs, $dir){
 
-		echo "$dir: ";
+		echo "$dir: \n";
 
 		$tiles = array();
 		$all_x = array();
@@ -41,24 +41,24 @@
 		$max_x = max($all_x);
 		$max_y = max($all_y);
 
-		for ($zoom=5; $zoom>=1; $zoom--){
+		for ($zoom=4; $zoom>=1; $zoom--){
 
 			$pow = pow(2, $zoom);
 			$slice = 256 / $pow;
 
-			$layer_w = ceil($max_x / $pow);
-			$layer_h = ceil($max_y / $pow);
+			$layer_w = ceil(($max_x+1) / $pow);
+			$layer_h = ceil(($max_y+1) / $pow);
 
 			echo "\tlayer $zoom is $layer_w x $layer_h : ";
 
-			for ($x=1; $x<=$layer_w; $x++){
-			for ($y=1; $y<=$layer_h; $y++){
+			for ($x=0; $x<$layer_w; $x++){
+			for ($y=0; $y<$layer_h; $y++){
 
-				$min_x = (($x-1) * $pow) + 1;
-				$min_y = (($y-1) * $pow) + 1;
+				$min_x = ($x * $pow);
+				$min_y = ($y * $pow);
 
-				$max_x = ($x * $pow) + 1;
-				$max_y = ($y * $pow) + 1;
+				$max_x = (($x+1) * $pow) - 1;
+				$max_y = (($y+1) * $pow) - 1;
 
 			#	echo "tile $x,$y contains ($min_x,$min_y)-($max_x,$max_y)\n";
 
@@ -96,6 +96,7 @@
 			}
 
 			echo " done\n";
+			#exit;
 		}
 
 #		print_r($tiles);
