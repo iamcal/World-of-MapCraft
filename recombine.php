@@ -3,7 +3,7 @@
 	$maps = "/var/www/doats.net/tiles/built";
 	$pngs_url = "/tiles/built";
 
-	$size = 128;
+	$size = 16;
 
 
 	#

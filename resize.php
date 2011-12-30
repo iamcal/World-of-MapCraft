@@ -16,7 +16,7 @@
 
 	function process_dir($pngs, $dir){
 
-		if ($dir != 'bg_ab') return;
+		#if ($dir != 'azeroth') return;
 
 		echo "$dir: \n";
 

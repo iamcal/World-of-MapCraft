@@ -2,7 +2,7 @@
 	$pngs = '/var/www/doats.net/tiles/pngs';
 	$built = '/var/www/doats.net/tiles/built';
 
-if (0){
+if (1){
 	clean_set('azeroth');
 
 	build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
@@ -27,12 +27,23 @@ if (0){
 if (0){
 	clean_set('deepholm');
 	build_set('deepholm', 'Deephome/map', 28, 33, 27, 32, 0, 0, array('28_27','28_32','33_27','33_32'));
+
+	patch_set('deepholm', '#2E2D36', 256, 0, 256+161, 63);
+	patch_set('deepholm', '#2E2D36', 256, 0, 256+48, 144);
+	patch_set('deepholm', '#2E2D36', 256, 0, 256+16, 224);
+
+	patch_set('deepholm', '#2E2D36', 0, 256, 17, 512+31);
+	patch_set('deepholm', '#2E2D36', (5*256)+190, 256, 6*256, 256+20);
+	patch_set('deepholm', '#2E2D36', (5*256)+208, 768+222, 6*256, 5*256);
+
+	patch_set('deepholm', '#2E2D36', 256, (256*5)+224, 5*256, 256*6);
+	patch_set('deepholm', '#2E2D36', 256, (256*5)+78, 256+114, 256*6);
 }
 if (0){
 	clean_set('bg_eots');
 	build_set('bg_eots', 'NetherstormBG/map', 28, 30, 26, 29, 0, 0);
 }
-if (1){
+if (0){
 	clean_set('bg_ab');
 	build_set('bg_ab', 'PVPZone04/map', 28, 31, 28, 31, 0, 0);
 	patch_set('bg_ab', '#414318', 0, 0, 1024, 48);
