@@ -14,11 +14,97 @@ var tiles_config = {
 		5: [3,2],
 		4: [6,4],
 		3: [12,8],
-		2: [99,99], //?
-		1: [99,99], //?
-		0: [84,59]  //?
+		2: [24,16],
+		1: [48,32],
+		0: [84,59]
 	}
 };
+
+var Xtiles_config = {
+	stem		: '/tiles/built/outland/',
+	center		: [0.7, 0.7],
+	bgcolor		: '#000000',
+	layers		: {
+		4: [2,2],
+		3: [4,4],
+		2: [8,8],
+		1: [16,16],
+		0: [32,32]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/deepholm/',
+	center		: [0.7, 0.7],
+	bgcolor		: '#2E2D36',
+	layers		: {
+		2: [2,2],
+		1: [4,4],
+		0: [8,8]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/bg_eots/',
+	center		: [0.9, 0.6],
+	bgcolor		: '#000000',
+	layers		: {
+		1: [2,2],
+		0: [4,4]
+	}
+};
+
+var tiles_config = {
+	stem		: '/tiles/built/bg_ab/',
+	center		: [0.9, 0.6],
+	bgcolor		: '#414318',
+	layers		: {
+		1: [2,2],
+		0: [4,4]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/bg_sota/',
+	center		: [2.2, 1.1],
+	bgcolor		: '#052431',
+	layers		: {
+		1: [2,4],
+		0: [4,8]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/bg_ioc/',
+	center		: [1.2, 1.2],
+	bgcolor		: '#1E395D',
+	layers		: {
+		1: [4,3],
+		0: [8,6]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/bg_bfg/',
+	center		: [1.2, 1.2],
+	bgcolor		: '#000C18',
+	layers		: {
+		1: [2,2],
+		0: [4,4]
+	}
+};
+
+var Xtiles_config = {
+	stem		: '/tiles/built/bg_tp/',
+	center		: [1.2, 1.2],
+	bgcolor		: '#8E8175',
+	layers		: {
+		1: [2,2],
+		0: [4,4]
+	}
+};
+
+
 
 
 
@@ -72,8 +158,8 @@ var WoWMapOptions = {
 
 		var z = 1 + ((num_layers-2) - zoom);
 
-		if (tiles_config.layers[z][0] <= tile.x) return null;
-		if (tiles_config.layers[z][1] <= tile.y) return null;
+		if (tiles_config.layers[z][0] < tile.x) return null;
+		if (tiles_config.layers[z][1] < tile.y) return null;
 
 		var tx = ""+tile.x;
 		var ty = ""+tile.y;
@@ -105,11 +191,16 @@ function initialize() {
 		backgroundColor: tiles_config.bgcolor,
 		zoom: map_config.defaultZoom,
 		center: new google.maps.LatLng(tiles_config.center[0], tiles_config.center[1]),
-		navigationControl: true,
-		navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }, // still no way to get rid of the dude
+
+		zoomControl: true,
+		zoomControlOptions: { style: google.maps.ZoomControlStyle.LARGE },
+		panControl: false,
+		rotateControl: false,
+		overviewMapControl: false,
 		scaleControl: false,
 		mapTypeControl: false,
 		streetViewControl: false,
+
 		mapTypeId: 'WoWmap'
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);

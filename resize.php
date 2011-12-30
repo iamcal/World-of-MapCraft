@@ -16,6 +16,8 @@
 
 	function process_dir($pngs, $dir){
 
+		if ($dir != 'bg_ab') return;
+
 		echo "$dir: \n";
 
 		$tiles = array();
@@ -41,7 +43,12 @@
 		$max_x = max($all_x);
 		$max_y = max($all_y);
 
-		for ($zoom=4; $zoom>=1; $zoom--){
+		$max_zoom = 1;
+		if ($dir == 'azeroth') $max_zoom = 5;
+		if ($dir == 'outland') $max_zoom = 4;
+		if ($dir == 'deepholm') $max_zoom = 2;
+
+		for ($zoom=$max_zoom; $zoom>=1; $zoom--){
 
 			$pow = pow(2, $zoom);
 			$slice = 256 / $pow;
@@ -98,6 +105,10 @@
 			echo " done\n";
 			#exit;
 		}
+
+		$max_x++;
+		$max_y++;
+		echo "\tlayer 0 is $max_x x $max_y\n";
 
 #		print_r($tiles);
 	}
