@@ -33,7 +33,7 @@
 			$file_esc = escapeshellarg($file);
 
 			$ret = array();
-			$cmd = "$blp_convertor-o $pngs/$group/ -f png $file_esc 2>&1";
+			$cmd = "$blp_convertor -o $pngs/$group/ -f png $file_esc 2>&1";
 			exec($cmd, $ret, $code);
 			$all_ret = implode("\n", $ret);
 
@@ -41,9 +41,9 @@
 				echo ".";
 			}else{
 				echo 'x';
-			#	echo "\n";
-			#	foreach ($ret as $line) echo "\t$line\n";
-			#	echo "\t";
+				#echo "\n";
+				#foreach ($ret as $line) echo "\t$line\n";
+				#echo "\t";
 				continue;
 			}
 
