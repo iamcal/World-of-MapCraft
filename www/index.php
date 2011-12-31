@@ -3,7 +3,7 @@
 <title>WoW Maps</title>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="map.js"></script>
+<script type="text/javascript" src="/map.js"></script>
 <script type="text/javascript">
 <?
 $base = '/tiles/built';
@@ -183,7 +183,7 @@ body { padding: 0; margin: 0 }
 		if ($k == $map){
 			echo "<b>$v</b>\n";
 		}else{
-			$url = $k == '_' ? './' : './?m='.$k;
+			$url = $k == '_' ? '/' : "/$k/";
 			echo "<a href=\"$url\">$v</a>\n";
 		}
 	}
