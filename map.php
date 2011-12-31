@@ -5,13 +5,16 @@
 <script type="text/javascript" src="map2.js"></script>
 <script type="text/javascript">
 <?
+$base = '/tiles/built';
+$base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
+
 $map = $_GET['m'];
 switch ($map){
 case 'outland':
 ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/outland/',
+	stem		: '<?=$base?>/outland/',
 	center		: [0.7, 0.7],
 	bgcolor		: '#000000',
 	layers		: {
@@ -26,7 +29,7 @@ var tiles_config = {
 <? break; case 'deepholm': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/deepholm/',
+	stem		: '<?=$base?>/deepholm/',
 	center		: [0.7, 0.7],
 	bgcolor		: '#2E2D36',
 	layers		: {
@@ -39,7 +42,7 @@ var tiles_config = {
 <? break; case 'eots': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_eots/',
+	stem		: '<?=$base?>/bg_eots/',
 	center		: [1, 0.5],
 	bgcolor		: '#000000',
 	layers		: {
@@ -51,7 +54,7 @@ var tiles_config = {
 <? break; case 'ab': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_ab/',
+	stem		: '<?=$base?>/bg_ab/',
 	center		: [1, 1.1],
 	bgcolor		: '#414318',
 	layers		: {
@@ -63,7 +66,7 @@ var tiles_config = {
 <? break; case 'sota': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_sota/',
+	stem		: '<?=$base?>/bg_sota/',
 	center		: [2.2, 1.1],
 	bgcolor		: '#052431',
 	layers		: {
@@ -75,7 +78,7 @@ var tiles_config = {
 <? break; case 'ioc': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_ioc/',
+	stem		: '<?=$base?>/bg_ioc/',
 	center		: [1.2, 1.2],
 	bgcolor		: '#1E395D',
 	layers		: {
@@ -87,7 +90,7 @@ var tiles_config = {
 <? break; case 'bfg': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_bfg/',
+	stem		: '<?=$base?>/bg_bfg/',
 	center		: [0.9, 1],
 	bgcolor		: '#000C18',
 	layers		: {
@@ -99,7 +102,7 @@ var tiles_config = {
 <? break; case 'tp': ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/bg_tp/',
+	stem		: '<?=$base?>/bg_tp/',
 	center		: [0.8, 0.8],
 	bgcolor		: '#8E8175',
 	layers		: {
@@ -111,7 +114,7 @@ var tiles_config = {
 <? break; default: $map = '_'; ?>
 
 var tiles_config = {
-	stem		: '/tiles/built/azeroth/',
+	stem		: '<?=$base?>/azeroth/',
 	center		: [0.9, 1.3],
 	bgcolor		: '#001D29',
 	layers		: {
