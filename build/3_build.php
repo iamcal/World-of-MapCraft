@@ -1,6 +1,7 @@
 <?
+	include('config.php');
 
-if (1){
+if (0){
 	clean_set('azeroth');
 
 	build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
@@ -21,6 +22,10 @@ if (1){
 if (0){
 	clean_set('outland');
 	build_set('outland', 'Expansion01/map', 12, 33, 21, 42, 0, 0);
+}
+if (1){
+	clean_set('vashjir');
+	build_set('vashjir', 'Azeroth/noLiquid_map', 17, 26, 39, 47, 0, 0);
 }
 if (0){
 	clean_set('deepholm');
