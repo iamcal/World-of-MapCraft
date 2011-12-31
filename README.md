@@ -1,6 +1,11 @@
 WoW-Maps - World of Warcraft Slippy Maps
 ========================================
 
+To see the maps in action:
+
+http://maps.hunterloot.com/
+
+
 To recreate the maps yourself:
 
 * Make sure you have at least 10 GB of space!
