@@ -1,7 +1,9 @@
 <?php
-	$pngs = "/var/www/doats.net/tiles/built";
-	$maps = "/var/www/doats.net/tiles/built";
-	$pngs_url = "/tiles/built";
+	include('config.php');
+
+	$pngs = $built;
+	$maps = $built;
+	$pngs_url = $built_url;
 
 	$size = 16;
 
@@ -48,7 +50,7 @@
 		echo "$name ($num chunks) : ";
 
 		$out = '<html><head></head><body><h1>'.$name.'</h1>';
-		$out .= "<style>body { background-image: url('/tiles/purple-stripes.png'); } td { font-size: 5px }</style>\n";
+		$out .= "<style>body { background-image: url('$bg_url'); } td { font-size: 5px }</style>\n";
 
 		$all_x = array();
 		$all_y = array();

@@ -1,5 +1,7 @@
 <?php
-	$pngs = "/var/www/doats.net/tiles/built";
+	include('config.php');
+
+	$pngs = $built;
 
 
 	#

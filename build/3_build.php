@@ -1,6 +1,4 @@
 <?
-	$pngs = '/var/www/doats.net/tiles/pngs';
-	$built = '/var/www/doats.net/tiles/built';
 
 if (1){
 	clean_set('azeroth');

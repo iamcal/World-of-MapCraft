@@ -1,6 +1,6 @@
 <?php
-	$blps = "/var/www/doats.net/tiles/out";
-	$pngs = "/var/www/doats.net/tiles/pngs";
+	include('config.php');
+
 
 	$files = explode("\n", shell_exec("find $blps"));
 
@@ -33,7 +33,7 @@
 			$file_esc = escapeshellarg($file);
 
 			$ret = array();
-			$cmd = "/root/Kanma-BLPConverter-3abb6b9/build/bin/BLPConverter -o $pngs/$group/ -f png $file_esc 2>&1";
+			$cmd = "$blp_convertor-o $pngs/$group/ -f png $file_esc 2>&1";
 			exec($cmd, $ret, $code);
 			$all_ret = implode("\n", $ret);
 
