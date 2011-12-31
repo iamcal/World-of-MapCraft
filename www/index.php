@@ -2,11 +2,12 @@
 <head>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="map2.js"></script>
+<script type="text/javascript" src="map.js"></script>
 <script type="text/javascript">
 <?
 $base = '/tiles/built';
 $base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
+
 
 $map = $_GET['m'];
 switch ($map){
@@ -164,7 +165,7 @@ body { padding: 0; margin: 0 }
 		if ($k == $map){
 			echo "<b>$v</b>\n";
 		}else{
-			$url = $k == '_' ? 'map.php' : 'map.php?m='.$k;
+			$url = $k == '_' ? './' : './?m='.$k;
 			echo "<a href=\"$url\">$v</a>\n";
 		}
 	}
