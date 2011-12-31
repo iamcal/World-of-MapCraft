@@ -29,6 +29,20 @@ var tiles_config = {
 	}
 };
 
+<? break; case 'vashjir': ?>
+
+var tiles_config = {
+	stem		: '<?=$base?>/vashjir/',
+	center		: [0.7, 0.7],
+	bgcolor		: '#575357',
+	layers		: {
+		3: [2,2],
+		2: [4,4],
+		1: [8,8],
+		0: [10,10]
+	}
+};
+
 <? break; case 'deepholm': ?>
 
 var tiles_config = {
@@ -156,6 +170,7 @@ body { padding: 0; margin: 0 }
 	$nav = array(
 		'_'		=> 'Azeroth',
 		'outland'	=> 'Outland',
+		'vashjir'	=> 'Vash\'jir',
 		'deepholm'	=> 'Deepholm',
 		'ab'		=> 'AB',
 		'eots'		=> 'EotS',
