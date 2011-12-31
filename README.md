@@ -20,6 +20,7 @@ To recreate the maps yourself:
  * <code>art.MPQ</code>
  * <code>wow-update-nnnnn.MPQ</code> (multiple files)
  * <code>wow-update-base-nnnnn.MPQ</code> (multiple files)
+ * You'll find them all inside the <code>Data</code> subfolder of your WoW installation
 * Extract the BLPs from these files:
  * <code>MPQExtractor -e "World\Minimaps\*" -f -p mpqs/wow-update-1*.MPQ mpqs/wow-update-base-1*.MPQ -o blps mpqs/art.MPQ</code>
  * This will take a few minutes!
