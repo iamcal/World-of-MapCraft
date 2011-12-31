@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>WoW Maps</title>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="map.js"></script>
@@ -149,7 +150,8 @@ body { padding: 0; margin: 0 }
 </head>
 <body>
 
-<div>
+<div style="padding: 0 8px;">
+<div style="float: right"><a href="https://github.com/iamcal/WoW-Maps">Source</a></div>
 <?
 	$nav = array(
 		'_'		=> 'Azeroth',
