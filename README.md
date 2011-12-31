@@ -5,8 +5,7 @@ To recreate the maps yourself:
 
 * Make sure you have at least 10 GB of space!
 * Install ImageMagick
-* Install <a href="https://github.com/Kanma/MPQExtractor">MPQExtractor</a>
-* Install <a href="https://github.com/Kanma/BLPConverter">BLPConverter</a>
+* Install <a href="https://github.com/Kanma/MPQExtractor">MPQExtractor</a> & <a href="https://github.com/Kanma/BLPConverter">BLPConverter</a>
  * Both of these tools require <code>cmake</code> to build
 * Create some folders:
  * <code>mpqs</code> - base MPQ files will go here
@@ -22,7 +21,7 @@ To recreate the maps yourself:
  * <code>wow-update-base-nnnnn.MPQ</code> (multiple files)
  * You'll find them all inside the <code>Data</code> subfolder of your WoW installation
 * Extract the BLPs from these files:
- * <code>MPQExtractor -e "World\Minimaps\*" -f -p mpqs/wow-update-1*.MPQ mpqs/wow-update-base-1*.MPQ -o blps mpqs/art.MPQ</code>
+ * `MPQExtractor -e "World\Minimaps\*" -f -p mpqs/wow-update-1*.MPQ mpqs/wow-update-base-1*.MPQ -o blps mpqs/art.MPQ`
  * This will take a few minutes!
 * Run <code>1_convert.php</code> to convert all of the BLP files to PNGs
  * This takes a while!
