@@ -154,6 +154,7 @@ $(function(){
 		$('#map').css('width', $(window).width()+'px');
 		$('#map').css('height', ($(window).height()-20)+'px');
 		google.maps.event.trigger(map, 'resize');
+		hash_init(); // keeps the map centered correctly
 	}).resize();
 });
 
