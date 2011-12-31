@@ -7,6 +7,7 @@
 <?
 $base = '/tiles/built';
 $base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
+$base = 'http://cdn.iamcal.com/wow-tiles';
 
 
 $map = $_GET['m'];
