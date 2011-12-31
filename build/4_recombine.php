@@ -5,7 +5,7 @@
 	$maps = $built;
 	$pngs_url = $built_url;
 
-	$size = 16;
+	$size = 128;
 
 
 	#

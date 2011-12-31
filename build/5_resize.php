@@ -18,7 +18,7 @@
 
 	function process_dir($pngs, $dir){
 
-		#if ($dir != 'azeroth') return;
+		if ($dir != 'vashjir') return;
 
 		echo "$dir: \n";
 
@@ -48,6 +48,7 @@
 		$max_zoom = 1;
 		if ($dir == 'azeroth') $max_zoom = 5;
 		if ($dir == 'outland') $max_zoom = 4;
+		if ($dir == 'vashjir') $max_zoom = 3;
 		if ($dir == 'deepholm') $max_zoom = 2;
 
 		for ($zoom=$max_zoom; $zoom>=1; $zoom--){
