@@ -41,6 +41,7 @@ function PixelsToLatLng(pxs){
 
 
 var map;
+var WoWMapOptions;
     
 function initialize() {
 
@@ -51,7 +52,7 @@ function initialize() {
 	var num_layers = 0;
 	for (var i in tiles_config.layers) num_layers++;
 
-	var WoWMapOptions = {
+	WoWMapOptions = {
 
 		getTileUrl: function(tile, zoom) {
 
@@ -109,5 +110,42 @@ function initialize() {
   
 	// We can now set the map to use the 'coordinate' map type
 	map.setMapTypeId('WoWmap');
+
+
+
+	// deal with hash stuff
+	hash_init();
+	google.maps.event.addListener(map, 'dragend', hash_update);
+	google.maps.event.addListener(map, 'zoom_changed', hash_update);
 }
 
+function hash_init(){
+	if (window.location.hash.split("/").length > 1){
+		hash_goto();
+		hash_update();
+	}
+}
+
+function hash_update(){
+	var pos = LatLngToPixels(map.getCenter());
+	var zoom = map.getZoom();
+	hash_set(pos[0], pos[1], zoom);
+}
+
+function hash_set(x, y, zoom){
+	window.location.replace("#/" + Math.floor(x) + "/" + Math.floor(y) + "/" + zoom + "/");
+}
+
+function hash_goto(){
+
+	var coords = window.location.hash.split("/");
+	var latlng = PixelsToLatLng([parseInt(coords[1]), parseInt(coords[2])]);
+
+	var zoom = parseInt(coords[3]);
+	if (zoom < 0 || zoom > WoWMapOptions.maxZoom){
+		zoom = map_config.defaultZoom;
+	}
+			
+	map.setCenter(latlng);
+	map.setZoom(zoom);
+}
