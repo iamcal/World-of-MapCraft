@@ -1,9 +1,9 @@
-WoW-Maps - World of Warcraft Slippy Maps
-========================================
+World-of-MapCraft - World of Warcraft Slippy Maps
+=================================================
 
 To see the maps in action:
 
-http://maps.hunterloot.com/
+http://worldofmapcraft.com/
 
 
 To recreate the maps yourself:
