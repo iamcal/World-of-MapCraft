@@ -220,7 +220,7 @@ body { padding: 0; margin: 0 }
 <div id="map" style="position: absolute; top: 35px; left: 0px; width: 400px; height: 400px"></div>
 
 <div class="topnav">
-<div class="source"><a href="https://github.com/iamcal/WoW-Maps">Source</a></div>
+<div class="source"><a href="https://github.com/iamcal/World-of-MapCraft">Source code</a></div>
 
 <img src="/img/mapcraft.gif" width="70" height="35" />
 
