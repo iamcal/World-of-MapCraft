@@ -128,6 +128,57 @@ var tiles_config = {
 	}
 };
 
+<? break; case 'wsg': ?>
+
+var tiles_config = {
+	stem		: '<?=$base?>/bg_wsg/',
+	center		: [0.9, 0.7],
+	bgcolor		: '#F7F3F7',
+	layers		: {
+		1: [2,2],
+		0: [4,4]
+	}
+};
+
+<? break; case 'av': ?>
+
+var tiles_config = {
+	stem		: '<?=$base?>/bg_av/',
+	center		: [1.25, 0.75],
+	bgcolor		: '#8FB0C9',
+	layers		: {
+		1: [2,3],
+		0: [4,6]
+	}
+};
+
+<? break; case 'bmh': ?>
+
+var tiles_config = {
+	stem		: '<?=$base?>/inst_bmh/',
+	center		: [0.65, 0.75],
+	bgcolor		: '#F7F3F7',
+	layers		: {
+		2: [2,2],
+		1: [4,4],
+		0: [8,8]
+	}
+};
+
+<? break; case 'hillsbrad': ?>
+
+var tiles_config = {
+	stem		: '<?=$base?>/inst_hillsbrad/',
+	center		: [0.75, 0.75],
+	bgcolor		: '#F7F3F7',
+	layers		: {
+		2: [2,2],
+		1: [4,4],
+		0: [8,8]
+	}
+};
+
+
 <? break; default: $map = '_'; ?>
 
 var tiles_config = {
@@ -174,11 +225,15 @@ body { padding: 0; margin: 0 }
 		'vashjir'	=> 'Vash\'jir',
 		'deepholm'	=> 'Deepholm',
 		'ab'		=> 'AB',
+		'wsg'		=> 'WSG',
+		'av'		=> 'AV',
 		'eots'		=> 'EotS',
 		'sota'		=> 'SotA',
 		'ioc'		=> 'IoC',
 		'bfg'		=> 'BfG',
 		'tp'		=> 'TP',
+		'bmh'		=> 'Hyjal Past',
+		'hillsbrad'	=> 'Hillsbrad Past',
 	);
 	foreach ($nav as $k => $v){
 		if ($k == $map){

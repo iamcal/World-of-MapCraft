@@ -23,7 +23,7 @@ if (0){
 	clean_set('outland');
 	build_set('outland', 'Expansion01/map', 12, 33, 21, 42, 0, 0);
 }
-if (1){
+if (0){
 	clean_set('vashjir');
 	build_set('vashjir', 'Azeroth/noLiquid_map', 17, 26, 39, 47, 0, 0);
 }
@@ -81,6 +81,65 @@ if (0){
 	patch_set('bg_tp', '#8E8175', 512+64, 32, 512+256, 208);
 	patch_set('bg_tp', '#8E8175', 512+225, 209, 512+256, 512+63);
 	patch_set('bg_tp', '#8E8175', 512+112, 512+47, 512+256, 512+63);
+}
+if (0){
+	clean_set('bg_av');
+	build_set('bg_av', 'PVPZone01/map', 31, 33, 30, 34, 0, 0);
+}
+if (0){
+	clean_set('bg_wsg');
+	build_set('bg_wsg', 'PVPZone03/map', 28, 30, 28, 30, 0, 0);
+	patch_set('bg_wsg', '#F7F3F7', 0, 0, 96, 512+256); # left
+	patch_set('bg_wsg', '#F7F3F7', 512+48, 0, 512+256, 512+256); # right
+	patch_set('bg_wsg', '#F7F3F7', 0, 0, 512+256, 208); # top
+	patch_set('bg_wsg', '#F7F3F7', 0, 512+160, 512+256, 512+256); # bottom
+
+	# bottom edge
+	patch_set('bg_wsg', '#F7F3F7', 0, 512+112, 208, 512+256);
+	patch_set('bg_wsg', '#F7F3F7', 97, 512+32, 112, 112+512);
+	patch_set('bg_wsg', '#F7F3F7', 113, 64+512, 128, 112+512);
+	patch_set('bg_wsg', '#F7F3F7', 129, 80+512, 144, 112+512);
+	patch_set('bg_wsg', '#F7F3F7', 144, 96+512, 175, 112+512);
+	patch_set('bg_wsg', '#F7F3F7', 209, 128+512, 224, 160+512);
+	patch_set('bg_wsg', '#F7F3F7', 32+512, 144+512, 48+512, 160+512);
+}
+if (0){
+	clean_set('inst_bmh');
+	build_set('inst_bmh', 'HyjalPast/map', 34, 39, 20, 24, 0, 0);
+
+	patch_set('inst_bmh', '#F7F3F7', 0, 0, 64, 5*256); # left
+	patch_set('inst_bmh', '#F7F3F7', 0, 1024+240, 6*256, 1024+256); # bottom
+	patch_set('inst_bmh', '#F7F3F7', 1280+240, 0, 1280+256, 1280); # right
+
+	# top left
+	patch_set('inst_bmh', '#F7F3F7', 0, 0, 512, 256+31);
+	patch_set('inst_bmh', '#F7F3F7', 0, 256, 240, 256+128);
+
+	# bottom right
+	patch_set('inst_bmh', '#F7F3F7', 1024+160, 1024+192, 1280+256, 1024+256);
+	patch_set('inst_bmh', '#F7F3F7', 1280+16, 1024+115, 1280+256, 1024+256);
+
+	# bottom left
+	patch_set('inst_bmh', '#F7F3F7', 65, 95+768, 96, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 96, 128+768, 112, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 112, 160+768, 128, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 128, 176+768, 144, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 144, 208+768, 160, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 160, 224+768, 176, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 176, 240+768, 240, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 241, 47+1024, 256+16, 1280);
+
+	patch_set('inst_bmh', '#F7F3F7', 17+256, 63+1024, 32+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 32+256, 79+1024, 64+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 64+256, 91+1024, 96+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 96+256, 128+1024, 128+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 128+256, 144+1024, 160+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 160+256, 160+1024, 192+256, 1280);
+	patch_set('inst_bmh', '#F7F3F7', 192+256, 176+1024, 256+256+16, 1280);
+}
+if (1){
+	clean_set('inst_hillsbrad');
+	build_set('inst_hillsbrad', 'HillsbradPast/map', 27, 32, 25, 30, 0, 0);
 }
 
 
