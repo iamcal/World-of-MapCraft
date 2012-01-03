@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>WoW Maps</title>
+<title>World of MapCraft</title>
 <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
