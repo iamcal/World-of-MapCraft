@@ -222,7 +222,7 @@ body { padding: 0; margin: 0 }
 <div class="topnav">
 <div class="source"><a href="https://github.com/iamcal/World-of-MapCraft">Source code</a></div>
 
-<img src="/img/mapcraft.gif" width="70" height="35" />
+<a href="/"><img src="/img/mapcraft.gif" width="70" height="35" /></a>
 
 <ul class="topnav">
 <?
