@@ -1,5 +1,8 @@
 RewriteEngine on
 
+RewriteCond %{HTTP_HOST}	^www\.worldofmapcraft\.com$	[NC]
+RewriteRule ^/?(.*)$		http://worldofmapcraft.com/$1	[L,R=permanent]
+
 RewriteCond	%{REQUEST_URI}	!^/img/
 RewriteRule	^(.+)/	/index.php?m=$1	[L]
 
