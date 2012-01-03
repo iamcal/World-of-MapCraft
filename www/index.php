@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>WoW Maps</title>
+<link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/map.js"></script>
@@ -203,7 +204,7 @@ $(function(){
 	initialize();
 	$(window).resize(function(){
 		$('#map').css('width', $(window).width()+'px');
-		$('#map').css('height', ($(window).height()-20)+'px');
+		$('#map').css('height', ($(window).height()-35)+'px');
 		google.maps.event.trigger(map, 'resize');
 		hash_init(); // keeps the map centered correctly
 	}).resize();
@@ -216,37 +217,51 @@ body { padding: 0; margin: 0 }
 </head>
 <body>
 
-<div style="padding: 0 8px;">
-<div style="float: right"><a href="https://github.com/iamcal/WoW-Maps">Source</a></div>
+<div id="map" style="position: absolute; top: 35px; left: 0px; width: 400px; height: 400px"></div>
+
+<div class="topnav">
+<div class="source"><a href="https://github.com/iamcal/WoW-Maps">Source</a></div>
+
+<img src="/img/mapcraft.gif" width="70" height="35" />
+
+<ul class="topnav">
 <?
-	$nav = array(
-		'_'		=> 'Azeroth',
-		'outland'	=> 'Outland',
-		'vashjir'	=> 'Vash\'jir',
-		'deepholm'	=> 'Deepholm',
-		'ab'		=> 'AB',
-		'wsg'		=> 'WSG',
-		'av'		=> 'AV',
-		'eots'		=> 'EotS',
-		'sota'		=> 'SotA',
-		'ioc'		=> 'IoC',
-		'bfg'		=> 'BfG',
-		'tp'		=> 'TP',
-		'bmh'		=> 'Hyjal Past',
-		'hillsbrad'	=> 'Hillsbrad Past',
-	);
-	foreach ($nav as $k => $v){
+	function nav_link($k, $v){
+		global $map;
+		$url = $k == '_' ? '/' : "/$k/";
 		if ($k == $map){
-			echo "<b>$v</b>\n";
+			return "<a href=\"$url\" class=\"current\">$v</a>";
 		}else{
-			$url = $k == '_' ? '/' : "/$k/";
-			echo "<a href=\"$url\">$v</a>\n";
+			return "<a href=\"$url\">$v</a>";
 		}
 	}
 ?>
-</div>
+<ul class="topnav">
+	<li><?=nav_link('_', 'Azeroth')?></li>
+	<li><?=nav_link('outland', 'Outland')?></li>
+	<li><?=nav_link('vashjir', 'Vash\'jir')?></li>
+	<li><?=nav_link('deepholm', 'Deepholm')?></li>
+	<li><a href="#" onclick="return false;">Battlegrounds</a>
+		<ul class="subnav">
+			<li><?=nav_link('wsg', 'Warsong Gulch')?></li>
+			<li><?=nav_link('ab', 'Arathi Basin')?></li>
+			<li><?=nav_link('av', 'Alterac Valley')?></li>
+			<li><?=nav_link('eots', 'Eye of the Storm')?></li>
+			<li><?=nav_link('sota', 'Strand of the Ancients')?></li>
+			<li><?=nav_link('ioc', 'Isle of Conquest')?></li>
+			<li><?=nav_link('bfg', 'Battle for Gilneas')?></li>
+			<li><?=nav_link('tp', 'Twin Peaks')?></li>
+		</ul>
+	</li>
+	<li><a href="#" onclick="return false;">Instances</a>
+		<ul class="subnav">
+			<li><?=nav_link('bmh', 'Hyjal Past')?></li>
+			<li><?=nav_link('hillsbrad', 'Hillsbrad Past')?></li>
+		</ul>
+	</li>
+</ul>
 
-<div id="map" style="position: absolute; top: 20px; left: 0px; width: 400px; height: 400px"></div>
+</div>
 
 </body>
 </html>

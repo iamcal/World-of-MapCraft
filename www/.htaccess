@@ -1,3 +1,5 @@
 RewriteEngine on
+
+RewriteCond	%{REQUEST_URI}	!^/img/
 RewriteRule	^(.+)/	/index.php?m=$1	[L]
 
