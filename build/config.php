@@ -22,6 +22,13 @@
 
 
 	#
+	# flat versions of composited images
+	#
+
+	$flats = "/var/www/doats.net/tiles/flats";
+
+
+	#
 	# path to the built tilesets
 	#
 
