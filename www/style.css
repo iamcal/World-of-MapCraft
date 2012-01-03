@@ -68,9 +68,14 @@ html ul.topnav li ul.subnav li a:hover {
 	background: #222;
 }
 
-ul.topnav li a.current {
+ul.topnav li a.current,
+ul.topnav li a.current:hover {
 	color: #A4D627;
 	font-weight: bold;
+}
+
+ul.topnav li a:hover {
+	color: #CAE77D;
 }
 
 div.source {
