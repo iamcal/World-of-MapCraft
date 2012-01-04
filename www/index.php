@@ -35,7 +35,8 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'bmh'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
 
 		'durnholde'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
-		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.7, 0.7, '#D0C1B5', array(2,2, 4,4)),
+		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.55, 0.7, '#D0C1B5', array(2,2, 4,4)),
+		'strat'		=> array('http://doats.net/tiles/built/inst_strat/', 0.7, 0.7, 'white', array(2,2, 3,3)),
 	);
 
 
@@ -137,7 +138,7 @@ body { padding: 0; margin: 0 }
 					<li><?=dead_link("Dire Maul")?></li>
 					<li><?=dead_link("Scholomance")?></li>
 					<li><?=dead_link("Razorfen Downs")?></li>
-					<li><?=dead_link("Stratholme")?></li>
+					<li><?=nav_link('strat', "Stratholme")?></li>
 					<li><?=nav_link('zf', "Zul'Farrak")?></li>
 					<li><?=dead_link("Blackrock Depths")?></li>
 					<li><?=dead_link("Temple of Atal'Hakkar")?></li>
