@@ -154,21 +154,7 @@ function hash_goto(){
 
 $(document).ready(function(){
 
-	$("ul.subnav").parent().append("<span></span>");
-
-	var hover = function(){
-
-		$(this).addClass("subhover");
-		$(this).parent().find("ul.subnav").slideDown('fast').show();
-		$(this).parent().hover(function(){}, function(){
-			$(this).parent().find("ul.subnav").slideUp('slow');
-		});
-	};
-
-	var unhover = function(){
-		$(this).removeClass("subhover");
-	};
-
-	$("ul.topnav li span").hover(hover, unhover).siblings('a').hover(hover, unhover);
+	$("ul#nav > li > ul").parent().addClass("tophassub");
+	$("ul#nav ul ul").parent().addClass("subhassub");
 });
 

@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <title>World of MapCraft</title>
 <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
@@ -224,7 +227,6 @@ body { padding: 0; margin: 0 }
 
 <a href="/"><img src="/img/mapcraft.gif" width="70" height="35" /></a>
 
-<ul class="topnav">
 <?
 	function nav_link($k, $v){
 		global $map;
@@ -235,8 +237,11 @@ body { padding: 0; margin: 0 }
 			return "<a href=\"$url\">$v</a>";
 		}
 	}
+	function dead_link($v){
+		return "<a href=\"#\" onclick=\"return false;\" class=\"pending\">$v</a>";
+	}
 ?>
-<ul class="topnav">
+<ul id="nav" xclass="topnav">
 	<li><?=nav_link('_', 'Azeroth')?></li>
 	<li><?=nav_link('outland', 'Outland')?></li>
 	<li><?=nav_link('vashjir', 'Vash\'jir')?></li>
@@ -253,10 +258,135 @@ body { padding: 0; margin: 0 }
 			<li><?=nav_link('tp', 'Twin Peaks')?></li>
 		</ul>
 	</li>
-	<li><a href="#" onclick="return false;">Instances</a>
-		<ul class="subnav">
-			<li><?=nav_link('bmh', 'Hyjal Past')?></li>
-			<li><?=nav_link('hillsbrad', 'Hillsbrad Past')?></li>
+	<li><a href="#" onclick="return false;">Dungeons</a>
+		<ul>
+			<li><a href="#" onclick="return false;">Classic</a>
+				<ul>
+					<li><?=dead_link("Ragefire Chasm")?></li>
+					<li><?=dead_link("Deadmines")?></li>
+					<li><?=dead_link("Wailing Caverns")?></li>
+					<li><?=dead_link("Shadowfang Keep")?></li>
+					<li><?=dead_link("Blackfathom Deeps")?></li>
+					<li><?=dead_link("The Stockade")?></li>
+					<li><?=dead_link("Gnomeregan")?></li>
+					<li><?=dead_link("Scarlet Monastery")?></li>
+					<li><?=dead_link("Razorfen Kraul")?></li>
+					<li><?=dead_link("Maraudon")?></li>
+					<li><?=dead_link("Uldaman")?></li>
+					<li><?=dead_link("Dire Maul")?></li>
+					<li><?=dead_link("Scholomance")?></li>
+					<li><?=dead_link("Razorfen Downs")?></li>
+					<li><?=dead_link("Stratholme")?></li>
+					<li><?=dead_link("Zul'Farrak")?></li>
+					<li><?=dead_link("Blackrock Depths")?></li>
+					<li><?=dead_link("Temple of Atal'Hakkar")?></li>
+					<li><?=dead_link("Lower Blackrock Spire")?></li>
+					<li><?=dead_link("Upper Blackrock Spire")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">The Burning Crusade</a>
+				<ul>
+					<li><?=dead_link("Hellfire Ramparts")?></li>
+					<li><?=dead_link("The Blood Furnace")?></li>
+					<li><?=dead_link("Shattered Halls")?></li>
+					<li><?=dead_link("Slave Pens")?></li>
+					<li><?=dead_link("The Underbog")?></li>
+					<li><?=dead_link("The Steamvault")?></li>
+					<li><?=dead_link("Mana-Tombs")?></li>
+					<li><?=dead_link("Auchenai Crypts")?></li>
+					<li><?=dead_link("Sethekk Halls")?></li>
+					<li><?=dead_link("Shadow Labyrinth")?></li>
+					<li><?=nav_link('hillsbrad', "Durnholde Keep")?></li>
+					<li><?=dead_link("Black Morass")?></li>
+					<li><?=dead_link("The Mechanar")?></li>
+					<li><?=dead_link("The Botanica")?></li>
+					<li><?=dead_link("The Arcatraz")?></li>
+					<li><?=dead_link("Magisters' Terrace")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
+				<ul>
+					<li><?=dead_link("Utgarde Keep")?></li>
+					<li><?=dead_link("The Nexus")?></li>
+					<li><?=dead_link("Ahn'kahet: The Old Kingdom")?></li>
+					<li><?=dead_link("Azjol-Nerub")?></li>
+					<li><?=dead_link("Drak'Tharon Keep")?></li>
+					<li><?=dead_link("The Violet Hold")?></li>
+					<li><?=dead_link("Gundrak")?></li>
+					<li><?=dead_link("Halls of Stone")?></li>
+					<li><?=dead_link("Halls of Lightning")?></li>
+					<li><?=dead_link("The Oculus")?></li>
+					<li><?=dead_link("Culling of Stratholme")?></li>
+					<li><?=dead_link("Utgarde Pinnacle")?></li>
+					<li><?=dead_link("Trial of the Champion")?></li>
+					<li><?=dead_link("Forge of Souls")?></li>
+					<li><?=dead_link("Pit of Saron")?></li>
+					<li><?=dead_link("Halls of Reflection")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">Cataclysm</a>
+				<ul>
+					<li><?=dead_link("Throne of the Tides")?></li>
+					<li><?=dead_link("Blackrock Caverns")?></li>
+					<li><?=dead_link("The Stonecore")?></li>
+					<li><?=dead_link("Vortex Pinnacle")?></li>
+					<li><?=dead_link("Lost City of the Tol'vir")?></li>
+					<li><?=dead_link("Halls of Origination")?></li>
+					<li><?=dead_link("Grim Batol")?></li>
+					<li><?=dead_link("Zul'Aman")?></li>
+					<li><?=dead_link("Zul'Gurub")?></li>
+					<li><?=dead_link("End Time")?></li>
+					<li><?=dead_link("Well of Eternity")?></li>
+					<li><?=dead_link("Hour of Twilight")?></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href="#" onclick="return false;">Raids</a>
+		<ul>
+			<li><a href="#" onclick="return false;">Classic</a>
+				<ul>
+					<li><?=dead_link("Molten Core")?></li>
+					<li><?=dead_link("Blackwing Lair")?></li>
+					<li><?=dead_link("Ruins of Ahn'Qiraj")?></li>
+					<li><?=dead_link("Temple of Ahn'Qiraj")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">The Burning Crusade</a>
+				<ul>
+					<li><?=dead_link("Karazhan")?></li>
+					<li><?=dead_link("Gruul's Lair")?></li>
+					<li><?=dead_link("Magtheridon's Lair")?></li>
+					<li><?=dead_link("Serpentshrine Cavern")?></li>
+					<li><?=dead_link("The Eye")?></li>
+					<li><?=nav_link('bmh', "Battle for Mount Hyjal")?></li>
+					<li><?=dead_link("Black Temple")?></li>
+					<li><?=dead_link("Sunwell Plateau")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
+				<ul>
+					<li><?=dead_link("Naxxramas")?></li>
+					<li><?=dead_link("Obsidian Sanctum")?></li>
+					<li><?=dead_link("Vault of Archavon")?></li>
+					<li><?=dead_link("The Eye of Eternity")?></li>
+					<li><?=dead_link("Ulduar")?></li>
+					<li><?=dead_link("Trial of the Crusader")?></li>
+					<li><?=dead_link("Onyxia's Lair")?></li>
+					<li><?=dead_link("Ruby Sanctum")?></li>
+					<li><?=dead_link("Icecrown Citadel")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">Cataclysm</a>
+				<ul>
+					<li><?=dead_link("Baradin Hold")?></li>
+					<li><?=dead_link("Bastion of Twilight")?></li>
+					<li><?=dead_link("Throne of the Four Winds")?></li>
+					<li><?=dead_link("Blackwing Descent")?></li>
+					<li><?=dead_link("Firelands")?></li>
+					<li><?=dead_link("Dragon Soul")?></li>
+				</ul>
+			</li>
 		</ul>
 	</li>
 </ul>
