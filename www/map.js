@@ -156,5 +156,6 @@ $(document).ready(function(){
 
 	$("ul#nav > li > ul").parent().addClass("tophassub");
 	$("ul#nav ul ul").parent().addClass("subhassub");
+	$("li a.current").parents("li").children('a').addClass("current");
 });
 
