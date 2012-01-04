@@ -18,10 +18,23 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 	# map config
 
 	$hash = array(
+		'_'		=> array($base.'/azeroth/', 1.3, 0.9, '#001D29', array(3,2, 6,4, 12,8, 24,16, 48,32, 96,64)),
 		'outland'	=> array($base.'/outland/', 0.7, 0.7, '#000000', array(2,2, 4,4, 8,8, 16,16, 32,32)),
 		'vashjir'	=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,10)),
 		'deepholm'	=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 8,8)),
 
+		'eots'		=> array($base.'/bg_eots/', 0.5, 1, '#000000', array(2,2, 4,4)),
+		'ab'		=> array($base.'/bg_ab/', 1.1, 1, '#414318', array(2,2, 4,4)),
+		'sota'		=> array($base.'/bg_sota/', 1.1, 2.2, '#052431', array(2,4, 4,8)),
+		'ioc'		=> array($base.'/bg_ioc/', 1.2, 1.2, '#1E395D', array(4,3, 8,6)),
+		'bfg'		=> array($base.'/bg_bfg/', 1, 0.9, '#000C18', array(2,2, 4,4)),
+		'tp'		=> array($base.'/bg_tp/', 0.8, 0.8, '#8E8175', array(2,2, 4,4)),
+		'wsg'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 4,4)),
+		'av'		=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 4,6)),
+
+		'bmh'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
+
+		'durnholde'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
 		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.7, 0.7, '#D0C1B5', array(2,2, 4,4)),
 	);
 
@@ -38,167 +51,18 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 	}
 
 
-$map = $_GET['m'];
+	$map = $_GET['m'];
 
-	if ($hash[$map]){
-		$data = $hash[$map];
+	if (!$hash[$map]) $map = '_';
+	$data = $hash[$map];
 ?>
 
 var tiles_config = {
 	stem		: '<?=$data[0]?>',
 	center		: [<?=$data[2]?>, <?=$data[1]?>],
 	bgcolor		: '<?=$data[3]?>',
-	layers		: { <?=format_pairs($data[4])?>	}
+	layers		: { <?=format_pairs($data[4])?> }
 };
-	
-
-<?
-	}else{
-
-switch ($map){
-case 'eots': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_eots/',
-	center		: [1, 0.5],
-	bgcolor		: '#000000',
-	layers		: {
-		1: [2,2],
-		0: [4,4]
-	}
-};
-
-<? break; case 'ab': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_ab/',
-	center		: [1, 1.1],
-	bgcolor		: '#414318',
-	layers		: {
-		1: [2,2],
-		0: [4,4]
-	}
-};
-
-<? break; case 'sota': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_sota/',
-	center		: [2.2, 1.1],
-	bgcolor		: '#052431',
-	layers		: {
-		1: [2,4],
-		0: [4,8]
-	}
-};
-
-<? break; case 'ioc': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_ioc/',
-	center		: [1.2, 1.2],
-	bgcolor		: '#1E395D',
-	layers		: {
-		1: [4,3],
-		0: [8,6]
-	}
-};
-
-<? break; case 'bfg': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_bfg/',
-	center		: [0.9, 1],
-	bgcolor		: '#000C18',
-	layers		: {
-		1: [2,2],
-		0: [4,4]
-	}
-};
-
-<? break; case 'tp': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_tp/',
-	center		: [0.8, 0.8],
-	bgcolor		: '#8E8175',
-	layers		: {
-		1: [2,2],
-		0: [4,4]
-	}
-};
-
-<? break; case 'wsg': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_wsg/',
-	center		: [0.9, 0.7],
-	bgcolor		: '#F7F3F7',
-	layers		: {
-		1: [2,2],
-		0: [4,4]
-	}
-};
-
-<? break; case 'av': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/bg_av/',
-	center		: [1.25, 0.75],
-	bgcolor		: '#8FB0C9',
-	layers		: {
-		1: [2,3],
-		0: [4,6]
-	}
-};
-
-<? break; case 'bmh': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/inst_bmh/',
-	center		: [0.65, 0.75],
-	bgcolor		: '#F7F3F7',
-	layers		: {
-		2: [2,2],
-		1: [4,4],
-		0: [8,8]
-	}
-};
-
-<? break; case 'hillsbrad': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/inst_hillsbrad/',
-	center		: [0.75, 0.75],
-	bgcolor		: '#F7F3F7',
-	layers		: {
-		2: [2,2],
-		1: [4,4],
-		0: [8,8]
-	}
-};
-
-
-<? break; default: $map = '_'; ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/azeroth/',
-	center		: [0.9, 1.3],
-	bgcolor		: '#001D29',
-	layers		: {
-		5: [3,2],
-		4: [6,4],
-		3: [12,8],
-		2: [24,16],
-		1: [48,32],
-		0: [96,64]
-	}
-};
-
-<?
-}
-}
-?>
 
 $(function(){
 	initialize();
@@ -274,7 +138,7 @@ body { padding: 0; margin: 0 }
 					<li><?=dead_link("Scholomance")?></li>
 					<li><?=dead_link("Razorfen Downs")?></li>
 					<li><?=dead_link("Stratholme")?></li>
-					<li><?=dead_link("Zul'Farrak")?></li>
+					<li><?=nav_link('zf', "Zul'Farrak")?></li>
 					<li><?=dead_link("Blackrock Depths")?></li>
 					<li><?=dead_link("Temple of Atal'Hakkar")?></li>
 					<li><?=dead_link("Lower Blackrock Spire")?></li>
@@ -293,7 +157,7 @@ body { padding: 0; margin: 0 }
 					<li><?=dead_link("Auchenai Crypts")?></li>
 					<li><?=dead_link("Sethekk Halls")?></li>
 					<li><?=dead_link("Shadow Labyrinth")?></li>
-					<li><?=nav_link('hillsbrad', "Durnholde Keep")?></li>
+					<li><?=nav_link('durnholde', "Durnholde Keep")?></li>
 					<li><?=dead_link("Black Morass")?></li>
 					<li><?=dead_link("The Mechanar")?></li>
 					<li><?=dead_link("The Botanica")?></li>
