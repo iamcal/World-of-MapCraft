@@ -15,52 +15,48 @@ $base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
 $base = 'http://cdn.iamcal.com/wow-tiles';
 
 
+	# map config
+
+	$hash = array(
+		'outland'	=> array($base.'/outland/', 0.7, 0.7, '#000000', array(2,2, 4,4, 8,8, 16,16, 32,32)),
+		'vashjir'	=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,10)),
+		'deepholm'	=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 8,8)),
+
+		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.7, 0.7, '#D0C1B5', array(2,2, 4,4)),
+	);
+
+
+	function format_pairs($p){
+		$num =( count($p)/2)-1;
+		$bits = array();
+		for ($i=$num; $i>=0; $i--){
+			$a = ($num-$i)*2;
+			$b = $a+1;
+			$bits[] = "$i: [$p[$a],$p[$b]]";
+		}
+		return implode(', ', $bits);
+	}
+
+
 $map = $_GET['m'];
-switch ($map){
-case 'outland':
+
+	if ($hash[$map]){
+		$data = $hash[$map];
 ?>
 
 var tiles_config = {
-	stem		: '<?=$base?>/outland/',
-	center		: [0.7, 0.7],
-	bgcolor		: '#000000',
-	layers		: {
-		4: [2,2],
-		3: [4,4],
-		2: [8,8],
-		1: [16,16],
-		0: [32,32]
-	}
+	stem		: '<?=$data[0]?>',
+	center		: [<?=$data[2]?>, <?=$data[1]?>],
+	bgcolor		: '<?=$data[3]?>',
+	layers		: { <?=format_pairs($data[4])?>	}
 };
+	
 
-<? break; case 'vashjir': ?>
+<?
+	}else{
 
-var tiles_config = {
-	stem		: '<?=$base?>/vashjir/',
-	center		: [0.7, 0.7],
-	bgcolor		: '#575357',
-	layers		: {
-		3: [2,2],
-		2: [4,4],
-		1: [8,8],
-		0: [10,10]
-	}
-};
-
-<? break; case 'deepholm': ?>
-
-var tiles_config = {
-	stem		: '<?=$base?>/deepholm/',
-	center		: [0.7, 0.7],
-	bgcolor		: '#2E2D36',
-	layers		: {
-		2: [2,2],
-		1: [4,4],
-		0: [8,8]
-	}
-};
-
-<? break; case 'eots': ?>
+switch ($map){
+case 'eots': ?>
 
 var tiles_config = {
 	stem		: '<?=$base?>/bg_eots/',
@@ -200,6 +196,7 @@ var tiles_config = {
 };
 
 <?
+}
 }
 ?>
 
