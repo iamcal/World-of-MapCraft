@@ -32,11 +32,67 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'wsg'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 4,4)),
 		'av'		=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 4,6)),
 
+		# dungeons
+
+		'rfc'		=> array('http://doats.net/tiles/built/inst_rfc/', 0.7, 1, '#000000', array(2,3, 4,5)),
+		#vc
+		'wc'		=> array('http://doats.net/tiles/built/inst_wc/', 0.85, 0.6, '#000000', array(3,2, 6,4, 9,5)),
+		#sfk
+		'bfd'		=> array('http://doats.net/tiles/built/inst_bfd/', 0.9, 0.8, '#000000', array(2,2, 4,4, 8,7)),
+		'stocks'	=> array('http://doats.net/tiles/built/inst_stocks/', 1.15, 0.8, '#000000', array(3,3)),
+		'gnomer'	=> array('http://doats.net/tiles/built/inst_gnomer/', 0.85, 0.7, '#000000', array(2,2, 4,4, 8,7)),
+		'sm'		=> array('http://doats.net/tiles/built/inst_sm/', 0.95, 0.8, '#ffffff', array(2,2, 4,4, 8,7)),
+		'rfk'		=> array('http://doats.net/tiles/built/inst_rfk/', 1.1, 1.25, '#000000', array(3,3, 5,5)),
+		'mara'		=> array('http://doats.net/tiles/built/inst_mara/', 1.05, 1.3, '#000000', array(3,3, 6,6, 10,11)),
+		'ulda'		=> array('http://doats.net/tiles/built/inst_ulda/', 1.3, 1.1, '#000000', array(3,3, 6,5)),
+		'dm'		=> array('http://doats.net/tiles/built/inst_dm/', 0.9, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
+		#scholo
+		'rfd'		=> array('http://doats.net/tiles/built/inst_rfd/', 1.55, 0.8, '#000000', array(3,2, 6,4)),
+		'strat'		=> array('http://doats.net/tiles/built/inst_strat/', 0.85, 0.75, '#000000', array(2,2, 4,4, 8,7)),
+		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.55, 0.7, '#D0C1B5', array(2,2, 4,4)),
+		'brd'		=> array('http://doats.net/tiles/built/inst_brd/', 1.1, 1.2, '#000000', array(3,3, 6,6, 10,11)),
+		'st'		=> array('http://doats.net/tiles/built/inst_st/', 1.2, 1.1, '#000000', array(3,3, 5,5)),
+		#lbrs/ubrs
+
+
+
+		# raids
+
+		'mc'		=> array('http://doats.net/tiles/built/raid_mc/', 0.95, 0.8, '#000000', array(2,2, 4,4, 8,8)),
+		# bwl
+		# aq20
+		'aq40'		=> array('http://doats.net/tiles/built/raid_aq40/', 0.85, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
+
+		# kara
+		# gruul
+		# mag
+		# ssc
+		# tk
 		'bmh'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
+		# bt
+		# sunwell
+
+		'naxx'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
+		# os
+		# voa
+		# eoe
+		# ulduar
+		# toc
+		'ony'		=> array('http://doats.net/tiles/built/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
+		# ruby
+		# icc
+
+		# bh
+		# bot
+		# tfw
+		# bwd
+		# firelands
+		# ds
+		
+
+
 
 		'durnholde'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
-		'zf'		=> array('http://doats.net/tiles/built/inst_zf/', 0.55, 0.7, '#D0C1B5', array(2,2, 4,4)),
-		'strat'		=> array('http://doats.net/tiles/built/inst_strat/', 0.7, 0.7, 'white', array(2,2, 3,3)),
 	);
 
 
@@ -124,24 +180,24 @@ body { padding: 0; margin: 0 }
 		<ul>
 			<li><a href="#" onclick="return false;">Classic</a>
 				<ul>
-					<li><?=dead_link("Ragefire Chasm")?></li>
+					<li><?=nav_link('rfc', "Ragefire Chasm")?></li>
 					<li><?=dead_link("Deadmines")?></li>
-					<li><?=dead_link("Wailing Caverns")?></li>
+					<li><?=nav_link('wc', "Wailing Caverns")?></li>
 					<li><?=dead_link("Shadowfang Keep")?></li>
-					<li><?=dead_link("Blackfathom Deeps")?></li>
-					<li><?=dead_link("The Stockade")?></li>
-					<li><?=dead_link("Gnomeregan")?></li>
-					<li><?=dead_link("Scarlet Monastery")?></li>
-					<li><?=dead_link("Razorfen Kraul")?></li>
-					<li><?=dead_link("Maraudon")?></li>
-					<li><?=dead_link("Uldaman")?></li>
-					<li><?=dead_link("Dire Maul")?></li>
+					<li><?=nav_link('bfd', "Blackfathom Deeps")?></li>
+					<li><?=nav_link('stocks', "The Stockade")?></li>
+					<li><?=nav_link('gnomer', "Gnomeregan")?></li>
+					<li><?=nav_link('sm', "Scarlet Monastery")?></li>
+					<li><?=nav_link('rfk', "Razorfen Kraul")?></li>
+					<li><?=nav_link('mara', "Maraudon")?></li>
+					<li><?=nav_link('ulda', "Uldaman")?></li>
+					<li><?=nav_link('dm', "Dire Maul")?></li>
 					<li><?=dead_link("Scholomance")?></li>
-					<li><?=dead_link("Razorfen Downs")?></li>
+					<li><?=nav_link('rfd', "Razorfen Downs")?></li>
 					<li><?=nav_link('strat', "Stratholme")?></li>
 					<li><?=nav_link('zf', "Zul'Farrak")?></li>
-					<li><?=dead_link("Blackrock Depths")?></li>
-					<li><?=dead_link("Temple of Atal'Hakkar")?></li>
+					<li><?=nav_link('brd', "Blackrock Depths")?></li>
+					<li><?=nav_link('st', "Temple of Atal'Hakkar")?></li>
 					<li><?=dead_link("Lower Blackrock Spire")?></li>
 					<li><?=dead_link("Upper Blackrock Spire")?></li>
 				</ul>
@@ -208,7 +264,7 @@ body { padding: 0; margin: 0 }
 		<ul>
 			<li><a href="#" onclick="return false;">Classic</a>
 				<ul>
-					<li><?=dead_link("Molten Core")?></li>
+					<li><?=nav_link('mc', "Molten Core")?></li>
 					<li><?=dead_link("Blackwing Lair")?></li>
 					<li><?=dead_link("Ruins of Ahn'Qiraj")?></li>
 					<li><?=dead_link("Temple of Ahn'Qiraj")?></li>
@@ -228,13 +284,13 @@ body { padding: 0; margin: 0 }
 			</li>
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
 				<ul>
-					<li><?=dead_link("Naxxramas")?></li>
+					<li><?=nav_link('naxx', "Naxxramas")?></li>
 					<li><?=dead_link("Obsidian Sanctum")?></li>
 					<li><?=dead_link("Vault of Archavon")?></li>
 					<li><?=dead_link("The Eye of Eternity")?></li>
 					<li><?=dead_link("Ulduar")?></li>
 					<li><?=dead_link("Trial of the Crusader")?></li>
-					<li><?=dead_link("Onyxia's Lair")?></li>
+					<li><?=nav_link('ony', "Onyxia's Lair")?></li>
 					<li><?=dead_link("Ruby Sanctum")?></li>
 					<li><?=dead_link("Icecrown Citadel")?></li>
 				</ul>
