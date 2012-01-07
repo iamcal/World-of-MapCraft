@@ -98,13 +98,67 @@
 	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Raid');
 	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_zangarentrance');
 
-	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple');
-	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_entrance');
-	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_facade');
-	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementLeft');
-	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementWall01');
-	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Battlementright');
-	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Wall_crack');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_entrance');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_facade');
+	#build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementLeft');
+	#build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementWall01');
+	#build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Battlementright');
+	#build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Wall_crack');
+
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Arcane');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Atrium');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Exterior');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Exterior_smallwing');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Exterior_smallwing_Arcane');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Exterior_smallwing_Factory');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Factory');
+	#build_wmo_map('Dungeon/OL_TempestKeep', 'TK_Raid');
+
+	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_Citadel');
+	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_Military');
+	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_raid');
+	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_ramparts');
+	#build_wmo_map('Dungeon/Hellfire', 'hellfire_DemonWing');
+	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall01');
+	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall02');
+	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall03');
+	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall04');
+
+	#build_wmo_map('Dungeon/OL_GronnRaid', 'Gronnraid');
+	#build_wmo_map('Dungeon/OL_GronnRaid', 'Gronnraid_facade');
+
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'Auchindoun_Enterance');
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'Draenei_wing');
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'OL_Crypt');
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'demon_wing');
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'ethereal_wing');
+	#build_wmo_map('Dungeon/OL_Auchindoun', 'shadow_council_wing');
+
+	build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_LowerCityRoof');
+	build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_Lowercity');
+	build_wmo_map('Dungeon/Azjol_Uppercity', 'Azjol_Uppercity');
+	build_wmo_map('Dungeon/BlackRockV2', 'BlackRockV2');
+	build_wmo_map('Dungeon/BlackWingV2', 'BlackWingV2');
+
+	build_wmo_map('Dungeon/Deepholm', 'Deepholm');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholm_TroggTown');
+	build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt');
+	build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt_Lit_000');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase01');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase02');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase03');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop01');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop02');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop03');
+	build_wmo_map('Dungeon/Deepholm', 'Deepholme_towerpiece');
+
+	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon');
+	build_wmo_map('Dungeon/DrakTharon', 'DrakTharonRuined');
+	build_wmo_map('Dungeon/DrakTharon', 'DrakTharonTower');
+	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerA');
+	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerB');
+
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name=''){
 
