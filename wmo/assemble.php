@@ -71,9 +71,29 @@
 	#	array('AZ_SunkenTemple_Instance_lower.png', 0, 400),
 	#));
 
-	assemble_set('raid_aq40', array(
-		array('Ahn_Qiraj.png', 0, 0),
-		array('Ahn_Qiraj__cthun.png', 220, 930),
+	#assemble_set('raid_ony', array(
+	#	array('KL_OnyxiasLair_B.png', 0, 0),
+	#));
+
+	#assemble_set('raid_aq40', array(
+	#	array('Ahn_Qiraj.png', 0, 0),
+	#	array('Ahn_Qiraj__cthun.png', 100, 930),
+	#));
+
+	#assemble_set('inst_sp', array(
+	#	array('Coilfang_Draenei.png', 0, 0),
+	#));
+
+	#assemble_set('inst_ub', array(
+	#	array('Coilfang_Marsh.png', 0, 0),
+	#));
+
+	#assemble_set('inst_sv', array(
+	#	array('Coilfang_Pumping.png', 0, 0),
+	#));
+
+	assemble_set('raid_ssc', array(
+		array('Coilfang_Raid.png', 0, 0),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
@@ -102,7 +122,7 @@
 			echo shell_exec($cmd);
 		}
 
-return;
+#return;
 		# cut out z0 pieces
 
 		$w /= 256;

@@ -69,7 +69,6 @@
 	#build_wmo_map('Dungeon/SunkenTemple', 'AZ_SunkenTemple');
 	#build_wmo_map('Dungeon/SunkenTemple', 'AZ_SunkenTemple_Instance', array(), $st_lower);
 	#build_wmo_map('Dungeon/SunkenTemple', 'AZ_SunkenTemple_Instance', $st_lower, array(), 'AZ_SunkenTemple_Instance_lower');
-	#exit;
 
 	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFang');
 	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior');
@@ -83,8 +82,29 @@
 	); # 21&37 are needed :(
 
 	#build_wmo_map('Dungeon/KL_AhnQiraj', 'Ahn_Qiraj_facade');
-	build_wmo_map('Dungeon/KL_AhnQiraj', 'Ahn_Qiraj', array(), array_merge($cthun, $junk_over));
+	#build_wmo_map('Dungeon/KL_AhnQiraj', 'Ahn_Qiraj', array(), array_merge($cthun, $junk_over));
 	#build_wmo_map('Dungeon/KL_AhnQiraj', 'Ahn_Qiraj', $cthun, array(), 'Ahn_Qiraj__cthun');
+
+	#build_wmo_map('Dungeon/KL_OnyxiasLair', 'KL_OnyxiasLair');
+	#build_wmo_map('Dungeon/KL_OnyxiasLair', 'KL_OnyxiasLair_A');
+	#build_wmo_map('Dungeon/KL_OnyxiasLair', 'KL_OnyxiasLair_B');
+
+	#build_wmo_map('Dungeon/QT_Sunwell_5Man', 'Sunwell_5Man');
+	#build_wmo_map('Dungeon/QT_Sunwell', 'Sunwell');
+
+	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Draenei');
+	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Marsh');
+	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Pumping');
+	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Raid');
+	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_zangarentrance');
+
+	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple');
+	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_entrance');
+	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_facade');
+	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementLeft');
+	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementWall01');
+	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Battlementright');
+	build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_Wall_crack');
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name=''){
 
