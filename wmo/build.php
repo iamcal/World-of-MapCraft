@@ -159,6 +159,81 @@
 	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerA');
 	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerB');
 
+	build_wmo_map('Dungeon/Gjalerbron', 'Gjalerbron.wmo');
+
+	build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol.wmo');
+	build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol_raid.wmo');
+
+	build_wmo_map('Dungeon/Grizzlemaw', 'Grizzlemaw.wmo');
+	build_wmo_map('Dungeon/Grizzlemaw', 'GrizzlemawTermiteDen.wmo');
+
+	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid.wmo');
+	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_arthas_precipice.wmo');
+	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_frostmourne.wmo');
+	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_middle_section.wmo');
+	build_wmo_map('Dungeon/IceCrownRaid', 'Icecrown_Portal_Exterior.wmo');
+	build_wmo_map('Dungeon/IceCrownRaid', 'icecrown_elevator02_transport.wmo');
+
+	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Dungeon_exteriorMicro.wmo');
+	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Halls_of_reflection.wmo');
+	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_dungeon.wmo');
+	build_wmo_map('Dungeon/IceCrown_dungeon', 'PitOfSaronKrickArea.wmo');
+
+	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_A.wmo');
+	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_B.wmo');
+	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_C.wmo');
+	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_D.wmo');
+
+	build_wmo_map('Dungeon/RubySanctum', 'ND_Ruby_Collision.wmo');
+
+	build_wmo_map('Dungeon/Thor_Modan', 'Thor_Modan');
+
+	build_wmo_map('Dungeon/Ulduar', 'UL_Detail_01');
+	build_wmo_map('Dungeon/Ulduar', 'UL_Dragonroost.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'UlduarRaidCourtyard_Blockout.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'UlduarTramArchitecture.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01D.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02D.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Bridge01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01D.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_DetailFacades_01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext02.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext03.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext04.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Forge.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ramp01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01C.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01D.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall01.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall02.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall03.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall04.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall05.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall06.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall07.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall08.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_dwarf77.wmo');
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_irongiant80.wmo');
+
+	build_wmo_map('Dungeon/Uldum', 'Uldum_Dungeon_Collision.wmo');
+	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior.wmo');
+	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior_Pyramid.wmo');
+
+	build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01.wmo');
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde.wmo');
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW.wmo');
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde_80GW.wmo');
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC.wmo');
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC_LOW.wmo');
+
+	build_wmo_map('Dungeon/Wintergrasp', 'Wintergrasp_Raid.wmo');
+
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name=''){
 
