@@ -135,7 +135,7 @@
 	#build_wmo_map('Dungeon/OL_Auchindoun', 'ethereal_wing');
 	#build_wmo_map('Dungeon/OL_Auchindoun', 'shadow_council_wing');
 
-	build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_LowerCityRoof');
+	#build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_LowerCityRoof');
 	build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_Lowercity');
 	build_wmo_map('Dungeon/Azjol_Uppercity', 'Azjol_Uppercity');
 	build_wmo_map('Dungeon/BlackRockV2', 'BlackRockV2');
@@ -224,6 +224,8 @@
 		# build a list of group chunks with the total size and the positions of all the subchunks
 		#
 
+		$total_pngs = 0;
+
 		$groups = array();
 		foreach ($pieces as $idx => &$group){
 
@@ -255,6 +257,8 @@
 				}
 				$y_pos -= 256;
 			}
+
+			$total_pngs += count($our_pngs);
 
 			$groups[$idx] = array(
 				'w'	=> $total_w,
@@ -306,6 +310,10 @@
 
 		$canvas_w = ceil(max($x2s) - $min_x);
 		$canvas_h = ceil(max($y2s) - $min_y);
+
+
+		$total_chunks = count($chunks);
+		echo "($total_chunks chunks, $total_pngs pngs) ";
 
 #print_r($chunks);
 #print_r($groups);
