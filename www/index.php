@@ -55,6 +55,54 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		#lbrs/ubrs
 
 
+		# ramps
+		'bf'		=> array('http://doats.net/tiles/built/inst_bf/', 0.8, 1.1, '#000000', array(3,3, 5,5)),
+		'sh'		=> array('http://doats.net/tiles/built/inst_sh/', 0.9, 1.2, '#000000', array(3,3, 5,5)),
+		'sp'		=> array('http://doats.net/tiles/built/inst_sp/', 0.8, 0.5, '#000000', array(2,2, 4,4, 8,5)),
+		'ub'		=> array('http://doats.net/tiles/built/inst_ub/', 0.7, 0.6, '#000000', array(2,2, 4,4, 7,5)),
+		'sv'		=> array('http://doats.net/tiles/built/inst_sv/', 1.2, 1.1, '#000000', array(3,3, 6,5)),
+		'mt'		=> array('http://doats.net/tiles/built/inst_mt/', 0.65, 0.9, '#000000', array(2,3, 4,5)),
+		'ac'		=> array('http://doats.net/tiles/built/inst_ac/', 0.9, 0.9, '#000000', array(3,3, 5,5)),
+		'seth'		=> array('http://doats.net/tiles/built/inst_seth/', 0.85, 0.95, '#000000', array(2,2, 4,4)),
+		'slabs'		=> array('http://doats.net/tiles/built/inst_slabs/', 1.2, 1.1, '#000000', array(3,3, 6,6)),
+		'durnholde'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
+		# bm
+		'mech'		=> array('http://doats.net/tiles/built/inst_mech/', 0.8, 0.9, '#000000', array(2,2, 4,4)),
+		'bot'		=> array('http://doats.net/tiles/built/inst_bot/', 0.7, 0.5, '#000000', array(2,2, 4,4, 7,5)),
+		'arc'		=> array('http://doats.net/tiles/built/inst_arc/', 1.1, 1.15, '#000000', array(3,3, 6,6)),
+		# mgt
+
+		# uk
+		# nexus
+		# ok
+		# an
+		# dtk
+		# vh
+		# gd
+		# hos
+		# hol
+		# occ
+		# cos
+		# up
+		# champ
+		# fos
+		# pos
+		# hor
+
+		# tot
+		'blackrock-caverns'	=> array('http://doats.net/tiles/built/inst_brc/', 0.5, 0.5, '#000000', array(2,3, 4,6, 8,10)),
+		'stonecore'		=> array('http://doats.net/tiles/built/inst_sc/', 0.5, 0.5, '#000000', array(3,2, 6,4, 9,8)),
+		# vp
+		# lostcity
+		# hoo
+		'grim-batol'		=> array('http://doats.net/tiles/built/inst_gb/', 0.5, 0.5, '#000000', array(2,2, 4,4, 7,7)),
+		# za
+		# zg
+		# et
+		# woe
+		# hot
+
+
 
 		# raids
 
@@ -64,10 +112,10 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'aq40'		=> array('http://doats.net/tiles/built/raid_aq40/', 0.85, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
 
 		# kara
-		# gruul
-		# mag
-		# ssc
-		# tk
+		'gruul'		=> array('http://doats.net/tiles/built/raid_gruul/', 0.9, 0.65, '#000000', array(3,2, 5,3)),
+		'mag'		=> array('http://doats.net/tiles/built/raid_mag/', 0.4, 0.7, '#000000', array(2,2, 3,4)),
+		'ssc'		=> array('http://doats.net/tiles/built/raid_ssc/', 1.2, 0.9, '#000000', array(3,3, 6,6, 11,9)),
+		'tk'		=> array('http://doats.net/tiles/built/raid_tk/', 0.98, 1.2, '#000000', array(2,3, 4,6, 8,9)),
 		'bmh'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
 		# bt
 		# sunwell
@@ -88,11 +136,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		# bwd
 		# firelands
 		# ds
-		
 
-
-
-		'durnholde'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
 	);
 
 
@@ -205,20 +249,20 @@ body { padding: 0; margin: 0 }
 			<li><a href="#" onclick="return false;">The Burning Crusade</a>
 				<ul>
 					<li><?=dead_link("Hellfire Ramparts")?></li>
-					<li><?=dead_link("The Blood Furnace")?></li>
-					<li><?=dead_link("Shattered Halls")?></li>
-					<li><?=dead_link("Slave Pens")?></li>
-					<li><?=dead_link("The Underbog")?></li>
-					<li><?=dead_link("The Steamvault")?></li>
-					<li><?=dead_link("Mana-Tombs")?></li>
-					<li><?=dead_link("Auchenai Crypts")?></li>
-					<li><?=dead_link("Sethekk Halls")?></li>
-					<li><?=dead_link("Shadow Labyrinth")?></li>
+					<li><?=nav_link('bf', "The Blood Furnace")?></li>
+					<li><?=nav_link('sh', "Shattered Halls")?></li>
+					<li><?=nav_link('sp', "Slave Pens")?></li>
+					<li><?=nav_link('ub', "The Underbog")?></li>
+					<li><?=nav_link('sv', "The Steamvault")?></li>
+					<li><?=nav_link('mt', "Mana-Tombs")?></li>
+					<li><?=nav_link('ac', "Auchenai Crypts")?></li>
+					<li><?=nav_link('seth', "Sethekk Halls")?></li>
+					<li><?=nav_link('slabs', "Shadow Labyrinth")?></li>
 					<li><?=nav_link('durnholde', "Durnholde Keep")?></li>
 					<li><?=dead_link("Black Morass")?></li>
-					<li><?=dead_link("The Mechanar")?></li>
-					<li><?=dead_link("The Botanica")?></li>
-					<li><?=dead_link("The Arcatraz")?></li>
+					<li><?=nav_link('mech', "The Mechanar")?></li>
+					<li><?=nav_link('bot', "The Botanica")?></li>
+					<li><?=nav_link('arc', "The Arcatraz")?></li>
 					<li><?=dead_link("Magisters' Terrace")?></li>
 				</ul>
 			</li>
@@ -267,16 +311,16 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('mc', "Molten Core")?></li>
 					<li><?=dead_link("Blackwing Lair")?></li>
 					<li><?=dead_link("Ruins of Ahn'Qiraj")?></li>
-					<li><?=dead_link("Temple of Ahn'Qiraj")?></li>
+					<li><?=nav_link('aq40', "Temple of Ahn'Qiraj")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">The Burning Crusade</a>
 				<ul>
 					<li><?=dead_link("Karazhan")?></li>
-					<li><?=dead_link("Gruul's Lair")?></li>
-					<li><?=dead_link("Magtheridon's Lair")?></li>
-					<li><?=dead_link("Serpentshrine Cavern")?></li>
-					<li><?=dead_link("The Eye")?></li>
+					<li><?=nav_link('gruul', "Gruul's Lair")?></li>
+					<li><?=nav_link('mag', "Magtheridon's Lair")?></li>
+					<li><?=nav_link('ssc', "Serpentshrine Cavern")?></li>
+					<li><?=nav_link('tk', "The Eye")?></li>
 					<li><?=nav_link('bmh', "Battle for Mount Hyjal")?></li>
 					<li><?=dead_link("Black Temple")?></li>
 					<li><?=dead_link("Sunwell Plateau")?></li>
