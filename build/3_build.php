@@ -137,13 +137,34 @@ if (0){
 	patch_set('inst_bmh', '#F7F3F7', 160+256, 160+1024, 192+256, 1280);
 	patch_set('inst_bmh', '#F7F3F7', 192+256, 176+1024, 256+256+16, 1280);
 }
-if (1){
+if (0){
 	clean_set('inst_hillsbrad');
 	build_set('inst_hillsbrad', 'HillsbradPast/map', 27, 32, 25, 30, 0, 0);
 }
+if (0){
+	clean_set('inst_zf');
+	build_set('inst_zf', 'TanarisInstance/map', 29, 31, 28, 30, 0, 0);
+
+	patch_set('inst_zf', '#D0C1B5', 0, 0, 64, 768); # left
+	patch_set('inst_zf', '#D0C1B5', 0, 0, 768, 16); # top
+	patch_set('inst_zf', '#D0C1B5', 512+16, 0, 768, 768); # right
+
+	patch_set('inst_zf', '#D0C1B5', 256+176, 17, 512, 64);
+	patch_set('inst_zf', '#D0C1B5', 256+192, 64, 512, 96);
+	patch_set('inst_zf', '#D0C1B5', 256+224, 96, 512, 128);
+	patch_set('inst_zf', '#D0C1B5', 512, 17, 512+16, 160);
+}
+if (0){
+	#clean_set('inst_strat');
+	#build_set('inst_strat', 'Stratholme/map', 37, 39, 24, 26);
+}
+if (1){
+	clean_set('inst_mgt');
+	build_set('inst_mgt', 'Sunwell5ManFix/map', 31, 33, 30, 32);
+}
 
 
-	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x, $offset_y, $skips=array()){
+	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){
 
 		global $pngs;
 		global $built;
