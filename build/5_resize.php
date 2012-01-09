@@ -18,7 +18,50 @@
 
 	function process_dir($pngs, $dir){
 
-		if ($dir != 'inst_hillsbrad') return;
+		if (!in_array($dir,array(
+		#	'inst_bfd',
+		#	'inst_stocks',
+		#	'inst_gnomer',
+		#	'inst_rfk',
+		#	'inst_rfd',
+		#	'inst_mara',
+		#	'inst_ulda',
+		#	'inst_dm',
+		#	'inst_strat',
+		#	'raid_naxx',
+		#	'raid_mc',
+		#	'inst_brd',
+		#	'inst_st',
+		#	'raid_ony',
+		#	'raid_aq40',
+		#	'inst_sp',
+		#	'inst_sv',
+		#	'inst_ub',
+		#	'raid_ssc',
+		#	'inst_arc',
+		#	'inst_mech',
+		#	'inst_bot',
+		#	'raid_tk',
+		#	'inst_sh',
+		#	'inst_bf',
+		#	'raid_mag',
+		#	'raid_gruul',
+		#	'inst_mt',
+		#	'inst_ac',
+		#	'inst_seth',
+		#	'inst_slabs',
+		#	'inst_brc',
+		#	'raid_bwd',
+		#	'inst_sc',
+		#	'inst_gb',
+		#	'raid_bot',
+		#	'inst_hor',
+		#	'inst_fos',
+		#	'inst_up',
+		#	'inst_vh',
+		#	'inst_gun',
+			'inst_vc',
+		))) return;
 
 		echo "$dir: \n";
 
@@ -45,13 +88,27 @@
 		$max_x = max($all_x);
 		$max_y = max($all_y);
 
-		$max_zoom = 1;
+		$zero_w = $max_x+1;
+		$zero_h = $max_y+1;
+
+		$max_zoom = 0;
+
+		$zw = $zero_w;
+		$zh = $zero_h;
+		while ($zh > 3 || $zw > 3){
+			$max_zoom++;
+			$zh = ceil($zero_h / pow(2, $max_zoom));
+			$zw = ceil($zero_w / pow(2, $max_zoom));
+		}
+
 		if ($dir == 'azeroth') $max_zoom = 5;
 		if ($dir == 'outland') $max_zoom = 4;
 		if ($dir == 'vashjir') $max_zoom = 3;
 		if ($dir == 'deepholm') $max_zoom = 2;
 		if ($dir == 'inst_bmh') $max_zoom = 2;
 		if ($dir == 'inst_hillsbrad') $max_zoom = 2;
+		if ($dir == 'inst_wc') $max_zoom = 2;
+		if ($dir == 'inst_sm') $max_zoom = 2;
 
 		for ($zoom=$max_zoom; $zoom>=1; $zoom--){
 
@@ -111,9 +168,7 @@
 			#exit;
 		}
 
-		$max_x++;
-		$max_y++;
-		echo "\tlayer 0 is $max_x x $max_y\n";
+		echo "\tlayer 0 is $zero_w x $zero_h\n";
 
 #		print_r($tiles);
 	}
