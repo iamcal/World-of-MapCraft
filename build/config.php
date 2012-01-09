@@ -3,15 +3,16 @@
 	# path where we'll extract the BLP files
 	#
 
-	$blps = "/var/www/doats.net/tiles/out";
+	$blps_raw	= "/var/www/doats.net/tiles/out";
+	$blps		= "/var/www/doats.net/tiles/out_fixed";
 
 
 	#
 	# path where we'll convert BLPs to PNGs, along with URL to it
 	#
 
-	$pngs = "/var/www/doats.net/tiles/pngs";
-	$pngs_url = "/tiles/pngs";
+	$pngs = "/var/www/doats.net/tiles/pngs_fixed";
+	$pngs_url = "/tiles/pngs_fixed";
 
 
 	#
