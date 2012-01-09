@@ -2,7 +2,7 @@
 	include('config.php');
 
 
-	$files = explode("\n", shell_exec("find $blps"));
+	$files = explode("\n", shell_exec("find $blps/world/minimaps"));
 
 	$map = array();
 
@@ -11,7 +11,7 @@
 
 			$bits = explode('/', $file);
 			array_pop($bits);
-			$dir = str_replace($blps.'/World/Minimaps/', '', implode('/', $bits));
+			$dir = str_replace($blps.'/world/minimaps/', '', implode('/', $bits));
 
 			$dir = str_replace('/', '_', $dir);
 			$map[$dir][] = $file;
