@@ -92,11 +92,51 @@
 	#	array('Coilfang_Pumping.png', 0, 0),
 	#));
 
-	assemble_set('raid_ssc', array(
-		array('Coilfang_Raid.png', 0, 0),
+	#assemble_set('raid_ssc', array(
+	#	array('Coilfang_Raid.png', 0, 0),
+	#));
+
+	#assemble_set('inst_mech', 'TK_Factory.png');
+	#assemble_set('inst_bot', 'TK_Atrium.png');
+	#assemble_set('inst_arc', 'TK_Arcane.png');
+	#assemble_set('raid_tk', 'TK_Raid.png');
+
+	#assemble_set('inst_sh', 'Hellfire_Military.png');
+	#assemble_set('inst_bf', 'hellfire_DemonWing.png');
+	#assemble_set('raid_mag', 'Hellfire_raid.png');
+
+	#assemble_set('raid_gruul', 'Gronnraid.png');
+
+	#assemble_set('inst_mt', 'ethereal_wing.png');
+	#assemble_set('inst_slabs', 'shadow_council_wing.png');
+	#assemble_set('inst_seth', 'demon_wing.png');
+	#assemble_set('inst_ac', 'Draenei_wing.png');
+
+	#assemble_set('inst_brc', 'BlackrockV2.png');
+	#assemble_set('raid_bwd', 'BlackwingV2.png');
+	#assemble_set('inst_sc', 'Deepholm.png');
+	#assemble_set('inst_gb', 'KZ_GrimBatol.png');
+
+	#assemble_set('raid_bot', 'KZ_GrimBatol_raid.png');
+	#assemble_set('inst_hor', 'Icecrown_Halls_of_reflection.png');
+	#assemble_set('inst_fos', 'Icecrown_dungeon.png');
+
+	#assemble_set('inst_up', array(array('Valgarde_80GW.png', 0, -260)));
+
+	#assemble_set('inst_vh', 'DalaranPrison.png');
+	#assemble_set('inst_gun', 'GunDrakInterior.png');
+
+	assemble_set('inst_vc', array(
+		array('az_deadmines_a.png', 72, 0),
+		array('az_deadmines_b.png', 0, 360),
+		array('inst_vc.png', 700, 430),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
+
+		if (!is_array($tiles)){
+			$tiles = array(array($tiles, 0, 0));
+		}
 
 		global $flats, $built;
 
@@ -118,7 +158,10 @@
 		$cmd = "convert xc:{$bg_color} -geometry !{$w}x{$h} $temp";
 		echo shell_exec($cmd);
 		foreach ($tiles as $tile){
-			$cmd = "composite $flats/$tile[0] -geometry +{$tile[1]}+{$tile[2]} $temp $temp";
+			$x = ($tile[1]>=0?'+':'').$tile[1];
+			$y = ($tile[2]>=0?'+':'').$tile[2];
+
+			$cmd = "composite $flats/$tile[0] -geometry {$x}{$y} $temp $temp";
 			echo shell_exec($cmd);
 		}
 
