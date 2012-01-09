@@ -5,4 +5,5 @@ maps
 out_fixed
 pngs
 pngs_fixed
-
+*.dbc
+*.db2
