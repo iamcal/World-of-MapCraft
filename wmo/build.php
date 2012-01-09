@@ -4,10 +4,15 @@
 
 	#build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon');
 
-	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_A');
-	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_B');
+	# the outside part
+	build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_A', array(), array(), '', 2);
+
+	# the inside part, but dupes some stuff from A (36-39) and the odd back door (17)
+	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_B', array(), array(36,37,38,39,17), '', 2);
+
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_C');
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_D');
+exit;
 
 	#build_wmo_map('Dungeon/AZ_StormwindPrisons', 'StormwindPrison');
 	#build_wmo_map('Dungeon/AZ_StormwindPrisons', 'StormwindJail');
@@ -136,106 +141,151 @@
 	#build_wmo_map('Dungeon/OL_Auchindoun', 'shadow_council_wing');
 
 	#build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_LowerCityRoof');
-	build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_Lowercity');
-	build_wmo_map('Dungeon/Azjol_Uppercity', 'Azjol_Uppercity');
-	build_wmo_map('Dungeon/BlackRockV2', 'BlackRockV2');
-	build_wmo_map('Dungeon/BlackWingV2', 'BlackWingV2');
+	#build_wmo_map('Dungeon/Azjol_Lowercity', 'Azjol_Lowercity');
+	#build_wmo_map('Dungeon/Azjol_Uppercity', 'Azjol_Uppercity');
 
-	build_wmo_map('Dungeon/Deepholm', 'Deepholm');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholm_TroggTown');
-	build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt');
-	build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt_Lit_000');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase01');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase02');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase03');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop01');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop02');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop03');
-	build_wmo_map('Dungeon/Deepholm', 'Deepholme_towerpiece');
+	#build_wmo_map('Dungeon/BlackRockV2', 'BlackrockV2', array(), array(8));
+	#build_wmo_map('Dungeon/BlackWingV2', 'BlackwingV2');
 
-	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon');
-	build_wmo_map('Dungeon/DrakTharon', 'DrakTharonRuined');
-	build_wmo_map('Dungeon/DrakTharon', 'DrakTharonTower');
-	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerA');
-	build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerB');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholm');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholm_TroggTown');
+	#build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt');
+	#build_wmo_map('Dungeon/Deepholm', 'DeepholmeExt_Lit');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase01');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase02');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillarbase03');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop01');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop02');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_pillartop03');
+	#build_wmo_map('Dungeon/Deepholm', 'Deepholme_towerpiece');
 
-	build_wmo_map('Dungeon/Gjalerbron', 'Gjalerbron.wmo');
+	#build_wmo_map('Dungeon/DrakTharon', 'DrakTharon');
+	#build_wmo_map('Dungeon/DrakTharon', 'DrakTharonRuined');
+	#build_wmo_map('Dungeon/DrakTharon', 'DrakTharonTower');
+	#build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerA');
+	#build_wmo_map('Dungeon/DrakTharon', 'DrakTharon_TowerB');
 
-	build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol.wmo');
-	build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol_raid.wmo');
+	#build_wmo_map('Dungeon/Gjalerbron', 'Gjalerbron');
 
-	build_wmo_map('Dungeon/Grizzlemaw', 'Grizzlemaw.wmo');
-	build_wmo_map('Dungeon/Grizzlemaw', 'GrizzlemawTermiteDen.wmo');
+	#build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol');
+	#build_wmo_map('Dungeon/GrimBatol', 'KZ_GrimBatol_raid');
 
-	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid.wmo');
-	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_arthas_precipice.wmo');
-	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_frostmourne.wmo');
-	build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_middle_section.wmo');
-	build_wmo_map('Dungeon/IceCrownRaid', 'Icecrown_Portal_Exterior.wmo');
-	build_wmo_map('Dungeon/IceCrownRaid', 'icecrown_elevator02_transport.wmo');
+	#build_wmo_map('Dungeon/Grizzlemaw', 'Grizzlemaw');
+	#build_wmo_map('Dungeon/Grizzlemaw', 'GrizzlemawTermiteDen');
 
-	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Dungeon_exteriorMicro.wmo');
-	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Halls_of_reflection.wmo');
-	build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_dungeon.wmo');
-	build_wmo_map('Dungeon/IceCrown_dungeon', 'PitOfSaronKrickArea.wmo');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_arthas_precipice');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_frostmourne');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'IceCrownRaid_middle_section');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'Icecrown_Portal_Exterior');
+	#build_wmo_map('Dungeon/IceCrownRaid', 'icecrown_elevator02_transport');
 
-	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_A.wmo');
-	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_B.wmo');
-	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_C.wmo');
-	build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_D.wmo');
+	#build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Dungeon_exteriorMicro');
+	#build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_Halls_of_reflection');
+	#build_wmo_map('Dungeon/IceCrown_dungeon', 'Icecrown_dungeon');
+	#build_wmo_map('Dungeon/IceCrown_dungeon', 'PitOfSaronKrickArea');
 
-	build_wmo_map('Dungeon/RubySanctum', 'ND_Ruby_Collision.wmo');
+	#build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_A');
+	#build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_B');
+	#build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_C');
+	#build_wmo_map('Dungeon/LD_DragonIsles', 'DragonIsles_D');
 
-	build_wmo_map('Dungeon/Thor_Modan', 'Thor_Modan');
+	#build_wmo_map('Dungeon/RubySanctum', 'ND_Ruby_Collision');
 
-	build_wmo_map('Dungeon/Ulduar', 'UL_Detail_01');
-	build_wmo_map('Dungeon/Ulduar', 'UL_Dragonroost.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'UlduarRaidCourtyard_Blockout.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'UlduarTramArchitecture.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01D.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02D.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Bridge01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01D.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_DetailFacades_01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext02.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext03.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext04.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Forge.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ramp01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01C.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01D.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall01.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall02.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall03.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall04.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall05.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall06.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall07.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall08.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_dwarf77.wmo');
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_irongiant80.wmo');
+	#build_wmo_map('Dungeon/Thor_Modan', 'Thor_Modan');
 
-	build_wmo_map('Dungeon/Uldum', 'Uldum_Dungeon_Collision.wmo');
-	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior.wmo');
-	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior_Pyramid.wmo');
+	#build_wmo_map('Dungeon/Ulduar', 'UL_Detail_01');
+	#build_wmo_map('Dungeon/Ulduar', 'UL_Dragonroost');
+	#build_wmo_map('Dungeon/Ulduar', 'UlduarRaidCourtyard_Blockout');
+	#build_wmo_map('Dungeon/Ulduar', 'UlduarTramArchitecture');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch01D');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Arch02D');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Bridge01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Building01D');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_DetailFacades_01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext02');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext03');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext04');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Forge');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid');
 
-	build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01.wmo');
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde.wmo');
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW.wmo');
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde_80GW.wmo');
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC.wmo');
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC_LOW.wmo');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ramp01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01C');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01D');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall01');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall02');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall03');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall04');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall05');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall06');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall07');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall08');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_dwarf77');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_irongiant80');
 
-	build_wmo_map('Dungeon/Wintergrasp', 'Wintergrasp_Raid.wmo');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Dungeon_Collision');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior_Pyramid');
 
+	#build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_80GW', array(), array(), '', 0);
 
-	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name=''){
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC_LOW');
+
+	#build_wmo_map('Dungeon/Wintergrasp', 'Wintergrasp_Raid');
+
+	#build_wmo_map('Dungeon/ND_ArugalsTower', 'Arugals_Tower01');
+	#build_wmo_map('Dungeon/ND_ChamberRed', 'nd_chamberred_portal_Broken');
+	#build_wmo_map('Dungeon/ND_Chamberblack', 'ND_ChamberBlack_Portal');
+	#build_wmo_map('Dungeon/ND_Chamberblack', 'ND_Chamberblack_Collision');
+	#build_wmo_map('Dungeon/ND_DalaranPrison', 'DalaranPrison');
+	#build_wmo_map('Dungeon/ND_DrakTharon72', 'DrakTharon_72_Wing');
+	#build_wmo_map('Dungeon/ND_GunDrak', 'GunDrak');
+	#build_wmo_map('Dungeon/ND_GunDrak', 'GunDrakInterior');
+	#build_wmo_map('Dungeon/ND_GunDrak', 'GunDrak_Entrance');
+	#build_wmo_map('Dungeon/ND_GunDrak', 'GundrakGrate');
+	#build_wmo_map('Dungeon/ND_Necropolis', 'DeathknightNecropolis');
+	#build_wmo_map('Dungeon/ND_Necropolis', 'ND_Necropolis01');
+	#build_wmo_map('Dungeon/ND_Necropolis', 'ND_NecropolisCollision');
+	#build_wmo_map('Dungeon/ND_Necropolis', 'ND_NecropolisTeleport01');
+	#build_wmo_map('Dungeon/ND_Necropolis', 'ND_NecropolisTeleport02');
+	#build_wmo_map('Dungeon/ND_NerubianMicros', 'ND_NerubianEntrance01');
+	#build_wmo_map('Dungeon/ND_Sholazar_Geodemicro', 'ND_Sholazar_Geodemicro_final');
+	#build_wmo_map('Dungeon/ND_Stratholme', 'CoT_Stratholme_Exterior_Collision');
+	#build_wmo_map('Dungeon/ND_Stratholme', 'Stratholme_Past');
+	#build_wmo_map('Dungeon/ND_TitanMicros', 'ND_TitanOverlook03');
+	#build_wmo_map('Dungeon/ND_VrykulMicros', 'SP_VrykulTunnel01');
+	#build_wmo_map('Dungeon/ND_VrykulMicros', 'SP_VrykulTunnel02');
+	#build_wmo_map('Dungeon/ND_VrykulMicros', 'VR_Icecrown_Micro01');
+
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_LOW');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_01');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_01_LOW');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_02');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_02_LOW');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_03');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Entrance_Building_03_LOW');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance');
+	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance_LOW');
+
+	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw');
+exit;
+
+	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
+
+		$folder = strtolower($folder);
+		$map_name = strtolower($map_name);
 
 		global $blps, $pngs, $flats;
 
@@ -243,7 +293,7 @@
 
 		echo "$out_name: ";
 
-		$wmo = "$blps/World/wmo/$folder/{$map_name}.wmo";
+		$wmo = "$blps/world/wmo/$folder/{$map_name}.wmo";
 
 		#echo "WMO: $wmo\n";
 		#exit;
@@ -277,7 +327,7 @@
 		$png_folder = str_replace('/', '_', $folder);
 		$png_prefix = $map_name.'_';
 
-		$files = glob("$pngs/WMO_$png_folder/$png_prefix*");
+		$files = glob("$pngs/wmo_$png_folder/$png_prefix*");
 		$pieces = array();
 		$rx = preg_quote($png_prefix, '!').'(\d\d\d)_(\d\d)_(\d\d)\.png$';
 		foreach ($files as $file){
@@ -413,7 +463,12 @@
 				echo '.';
 			}
 		}
-		echo shell_exec("convert $dst -rotate 90 $dst");
+		if ($rotate==1){
+			echo shell_exec("convert $dst -rotate 90 $dst");
+		}
+		if ($rotate==2){
+			echo shell_exec("convert $dst -rotate 180 $dst");
+		}
 		echo " done\n";
 	}
 
