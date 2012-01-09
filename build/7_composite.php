@@ -2,6 +2,7 @@
 	include('config.php');
 
 
+if (0){
 	init_set('inst_rfc', 880, 800, 'black');
 
 	comp_set('inst_rfc', 'WMO_Dungeon_KL_OrgrimmarLavaDungeon/LavaDungeon_011_00_00.png', 0, 0);
@@ -17,6 +18,16 @@
 	comp_set('inst_rfc', 'WMO_Dungeon_KL_OrgrimmarLavaDungeon/LavaDungeon_004_01_00.png', 236+120+256, 260+256);
 	comp_set('inst_rfc', 'WMO_Dungeon_KL_OrgrimmarLavaDungeon/LavaDungeon_003_00_00.png', 236+120+204+100, 260+256+19);
 	comp_set('inst_rfc', 'WMO_Dungeon_KL_OrgrimmarLavaDungeon/LavaDungeon_003_00_01.png', 236+120+204+100, 260+19);
+}
+if (1){
+	init_set('inst_mgt', 1000, 1000, 'blue');
+
+	comp_set('inst_mgt', 'WMO_Dungeon_QT_Sunwell_5Man/Sunwell_5Man_003_00_00.png', 256, 256);
+	comp_set('inst_mgt', 'WMO_Dungeon_QT_Sunwell_5Man/Sunwell_5Man_003_01_00.png', 512, 256);
+	comp_set('inst_mgt', 'WMO_Dungeon_QT_Sunwell_5Man/Sunwell_5Man_003_00_01.png', 256, 0);
+	comp_set('inst_mgt', 'WMO_Dungeon_QT_Sunwell_5Man/Sunwell_5Man_003_01_01.png', 512, 0);
+}
+
 
 
 	function comp_set($set_name, $src, $x, $y){
