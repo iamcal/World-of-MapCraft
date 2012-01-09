@@ -18,6 +18,7 @@
 
 	function process_dir($pngs, $dir, &$map){
 
+		$files = array();
 		$dh = opendir("$pngs/$dir");
 		while ($file = readdir($dh)){
 
@@ -26,9 +27,21 @@
 				$key = StrToLower($dir.'__'.$m[1]);
 
 				$map[$key]["$m[2]-$m[3]"] = "$pngs/$dir/$file";
+				$files[] = $file;
 			}
 		}
 		closedir($dh);
+
+
+		# make preview
+		$out = "";
+		foreach ($files as $file){
+			$out .= "<img src=\"$file\" style=\"border: 1px solid red\" >\n";
+		}
+
+		$fh = fopen("$pngs/$dir/preview.htm", 'w');
+		fwrite($fh, $out);
+		fclose($fh);
 	}
 
 
@@ -89,7 +102,7 @@
 					$url = str_replace($pngs, $pngs_url, $file);
 					$url16 = str_replace('.png', '--16.png', $url);
 
-					$out .= "<td><img src=\"$url\" width=64 height=64 /></td>\n";
+					$out .= "<td><img src=\"$url\" width=256 height=256 /></td>\n";
 					$out16 .= "<td><img src=\"$url16\" width=16 height=16 /></td>\n";
 				}else{
 					$out .= '<td>.</td>';
