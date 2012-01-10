@@ -35,9 +35,13 @@
 		$low = "$blps".StrToLower($file);
 		$src = $blps_raw.$file;
 
+		# some paths even have spaces! "world/minimaps/stratholme raid"
+		$low = str_replace(' ', '_', $low);
+
 		$bits = explode('/', $low);
 		array_pop($bits);
 		$path = implode('/', $bits);
+
 
 		@mkdir($path, 0777, true);
 		rename($src, $low);
