@@ -60,7 +60,15 @@
 		#	'inst_up',
 		#	'inst_vh',
 		#	'inst_gun',
-			'inst_vc',
+		#	'inst_vc',
+		#	'inst_sfk',
+		#	'inst_zg',
+		#	'inst_za',
+		#	'inst_lc',
+		#	'inst_hos',
+		#	'inst_hol',
+			'inst_lbrs',
+			'inst_ubrs',
 		))) return;
 
 		echo "$dir: \n";
