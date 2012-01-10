@@ -158,11 +158,27 @@ if (0){
 	#clean_set('inst_strat');
 	#build_set('inst_strat', 'Stratholme/map', 37, 39, 24, 26);
 }
-if (1){
+if (0){
 	clean_set('inst_mgt');
 	build_set('inst_mgt', 'Sunwell5ManFix/map', 31, 33, 30, 32);
 }
+if (0){
+	clean_set('inst_zg');
+	build_set('inst_zg', 'zul_gurub5man/map', 34,36, 53,55);
 
+	patch_set('inst_zg', '#ffffff', 512+30, 0, 512+256, 512+256);
+	patch_set('inst_zg', '#ffffff', 0, 512+160, 512+256, 512+256);
+}
+if (0){
+	clean_set('inst_za');
+	build_set('inst_za', 'zulaman/map', 29,30, 31,32);
+
+	patch_set('inst_za', '#2D2A21', 0, 256+150, 512, 512);
+}
+if (1){
+	clean_set('inst_lc');
+	build_set('inst_lc', 'uldumdungeon/map', 33,35, 51,53);
+}
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){
 
