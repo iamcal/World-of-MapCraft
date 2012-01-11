@@ -5,14 +5,12 @@
 	#build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon');
 
 	# the outside part
-	build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_A', array(), array(), '', 2);
-
+	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_A', array(), array(), '', 2);
 	# the inside part, but dupes some stuff from A (36-39) and the odd back door (17)
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_B', array(), array(36,37,38,39,17), '', 2);
 
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_C');
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_D');
-exit;
 
 	#build_wmo_map('Dungeon/AZ_StormwindPrisons', 'StormwindPrison');
 	#build_wmo_map('Dungeon/AZ_StormwindPrisons', 'StormwindJail');
@@ -55,10 +53,75 @@ exit;
 	#build_wmo_map('Dungeon/LD_Stratholme', 'Stratholme_raid');
 
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock2');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_lower_guild');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_lower_instance');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild');
-	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance');
+
+	$lbrs_lower = array(
+		#66,68,	# forlorn span, outside
+
+		34, # bottom floor
+		37,38, # smolder web
+		41,42, # big room with ramps
+		39,40,43, # war master room
+	);
+
+	$lbrs_upper = array(
+
+		36, # top floor
+		45,46,47, # floor at top of ramps
+
+		61,48,52,53,49, # lbrs floor 2
+		69,50,62,
+	
+		44, # upper passage
+		54,55, # upper chamber
+		#59, # lbrs floor 3
+
+		11,0,2,3,4, # lrbs entrance cavern
+		5,6, # lbrs transition rooms
+	);
+
+	$brs_entrance = array(
+
+		7,8,9, # the entrance hall
+		67,1, # portal
+		12,13,32, # bottom side rooms
+	);
+
+	$ubrs_lower = array(
+
+		10, # ramp from entrance hall
+		33, # ubrs lobby
+
+		14,15,22, # ubrs pyro ramp
+		16, #pyromancer's room
+	);
+
+	$ubrs_upper = array(
+
+		20,21, # rookery?
+		18,19,17, #rookery upper deck
+
+		28, # ubrs after rend?
+		64, # rend's room
+		23, # cave just before rend
+		30,31, # between rend & beast
+		24,25, # long way to rend
+		29,35,26,27, # passages after rend
+		60, # beast lobby
+		63, # beast
+		56,57,58, # drak's room
+
+		65, # bwl entrance
+		#51, # bwl
+	);
+
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', array_merge($brs_entrance, $lbrs_lower, $lbrs_upper), array(), 'lbrs_upper');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', $lbrs_lower, array(), 'lbrs_lower');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', array_merge($brs_entrance, $ubrs_lower), array(), 'ubrs_lower');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', $ubrs_upper, array(), 'ubrs_upper');
 
 	$st_lower = array(
 		101,	# bottom middle
@@ -76,8 +139,36 @@ exit;
 	#build_wmo_map('Dungeon/SunkenTemple', 'AZ_SunkenTemple_Instance', $st_lower, array(), 'AZ_SunkenTemple_Instance_lower');
 
 	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFang');
-	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior');
 
+	$sfk1 = array(
+		75,39,74,19,62,59,60,38,15,2,72, # ground floor
+		61,16,14,20,13,17,1, # first floor
+		22,23,30,12,11,7,6,37,35,36,
+		63,21,24,25,26,27,28,29,31,34,
+		3,4,5,64,65,66,32,33,
+	);
+
+	$sfk2a = array(
+		18,67,68,69,70, # floor 2 near entrance
+	);
+
+	$sfk2b = array(
+		71,10,9,0,8, # floor 2 at top		
+	);
+
+	$sfk3 = array(
+		44,45,46,73,42,42,41,56,47,48,49,50,51,	# floor 3
+	);
+
+	$sfk4 = array(
+		40,52,53,57,54,55,58, # floor 4
+	);
+
+	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior', $sfk1,  array(), 'LD_ShadowFangInterior_1',  0);
+	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior', $sfk2a, array(), 'LD_ShadowFangInterior_2a', 0);
+	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior', $sfk2b, array(), 'LD_ShadowFangInterior_2b', 0);
+	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior', $sfk3,  array(), 'LD_ShadowFangInterior_3',  0);
+	#build_wmo_map('Dungeon/LD_ShadowFang', 'LD_ShadowFangInterior', $sfk4,  array(), 'LD_ShadowFangInterior_4',  0);
 
 	$cthun = array(1,2,23,24,25,26,30,31,32,34);
 	$junk_over = array(
@@ -226,7 +317,7 @@ exit;
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall07');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Wall08');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_dwarf77');
-	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_irongiant80');
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_irongiant80', array(), array(), '', 2);
 
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Dungeon_Collision');
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior');
@@ -279,8 +370,22 @@ exit;
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance');
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance_LOW');
 
-	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw');
-exit;
+	#build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw');
+
+	build_wmo_map('Cataclysm/deathwing', 'deathwing_wmo_torso');
+	build_wmo_map('Dungeon/Spineofthedestroyer', 'deathwins_back');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_column_01');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb02');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb03');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_leftcurb');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_rightcurb');
+	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_walls');
+	build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaL_Curb');
+	build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaR_Curb');
+	build_wmo_map('Dungeon/wellofeternity', 'WoE_Palace');
+	build_wmo_map('Dungeon/wellofeternity', 'WoE_Ruined_Walls');
+	build_wmo_map('Dungeon/wellofeternity', 'WoE_Well');
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
 
@@ -294,6 +399,15 @@ exit;
 		echo "$out_name: ";
 
 		$wmo = "$blps/world/wmo/$folder/{$map_name}.wmo";
+
+		if (!file_exists($wmo)){
+			echo "can't find $wmo\n";
+			return;
+		}
+		if (!filesize($wmo)){
+			echo "zero-length wmo - $wmo\n";
+			return;
+		}
 
 		#echo "WMO: $wmo\n";
 		#exit;
@@ -473,7 +587,7 @@ exit;
 	}
 
 	function zsort_chunks($a, $b){
-		return $a[2]-$b[2];
+		return $a[5]-$b[5];
 	}
 
 
@@ -590,7 +704,7 @@ exit;
 			$box = unpack('f6', $floats);
 			$name = read_int($fh);
 
-			$chunks[$i] = array($box[1], 0-$box[2], $box[3]);
+			$chunks[$i] = array($box[1], 0-$box[2], $box[3], $box[4], 0-$box[5], $box[6]);
 
 			#echo "group $i \t: ".format_box($box)."\n";
 			#print_r($box);
