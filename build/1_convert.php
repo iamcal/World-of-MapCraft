@@ -21,6 +21,10 @@
 
 	foreach ($map as $group => $files){
 
+		#if ($group != 'firelandsdailies') continue;;
+		#if ($group != 'azeroth') continue;
+		#if ($group != 'wmo_dungeon_md_hyjal') continue;
+
 		$group = str_replace("'", '', $group);
 
 		$num = count($files);
@@ -29,6 +33,11 @@
 		@mkdir("$pngs/$group");
 
 		foreach ($files as $file){
+
+			#if (!preg_match('!noliq!', $file)) continue;
+
+			# files which get patched as 'deleted' end up with 0 size
+			if (!filesize($file)) continue;
 
 			$file_esc = escapeshellarg($file);
 
@@ -41,9 +50,9 @@
 				echo ".";
 			}else{
 				echo 'x';
-				#echo "\n";
-				#foreach ($ret as $line) echo "\t$line\n";
-				#echo "\t";
+				echo "\n";
+				foreach ($ret as $line) echo "\t$line\n";
+				echo "\t";
 				continue;
 			}
 
