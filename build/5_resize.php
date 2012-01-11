@@ -67,8 +67,11 @@
 		#	'inst_lc',
 		#	'inst_hos',
 		#	'inst_hol',
-			'inst_lbrs',
-			'inst_ubrs',
+		#	'inst_lbrs',
+		#	'inst_ubrs',
+		#	'inst_aq20',
+			'inst_bm',
+			'inst_pos',
 		))) return;
 
 		echo "$dir: \n";
