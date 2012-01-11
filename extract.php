@@ -29,9 +29,15 @@
 	# extract stuff!
 	#
 
-	extract_files("World\\Minimaps\\*", 'mpqs/art.MPQ');
-	
+	#extract_files("World\\Minimaps\\*", 'mpqs/art.MPQ');
 
+	$patch_list = "mpqs/expansion1.MPQ mpqs/expansion2.MPQ mpqs/expansion3.MPQ ".$patch_list;
+
+	extract_files("World\\WMO\\*", 'mpqs/world.MPQ');
+
+	#extract_files("World\\WMO\\*", 'mpqs/expansion1.MPQ');
+	#extract_files("World\\WMO\\*", 'mpqs/expansion2.MPQ');
+	#extract_files("World\\WMO\\*", 'mpqs/expansion3.MPQ');
 
 
 
@@ -40,6 +46,5 @@
 		global $patch_list;
 		global $extractor;
 
-		passthru("$extractor -e \"base\\$path\" -f -p $patch_list -o out $base_mpq");
 		passthru("$extractor -e \"$path\" -f -p $patch_list -o out $base_mpq");
 	}
