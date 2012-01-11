@@ -37,7 +37,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'ragefire-chasm'	=> array('http://doats.net/tiles/built/inst_rfc/', 0.7, 1, '#000000', array(2,3, 4,5)),
 		'deadmines'		=> array('http://doats.net/tiles/built/inst_vc/', 0.9, 1.05, '#000000', array(3,3, 5,5)),
 		'wailing-caverns'	=> array('http://doats.net/tiles/built/inst_wc/', 0.85, 0.6, '#000000', array(3,2, 6,4, 9,5)),
-		'shadowfang-keep'	=> array(),
+		'shadowfang-keep'	=> array('http://doats.net/tiles/built/inst_sfk/', 1.4, 0.7, '#000000', array(3,2)),
 		'blackfathom-deeps'	=> array('http://doats.net/tiles/built/inst_bfd/', 0.9, 0.8, '#000000', array(2,2, 4,4, 8,7)),
 		'stockade'		=> array('http://doats.net/tiles/built/inst_stocks/', 1.15, 0.8, '#000000', array(3,3)),
 		'gnomeregan'		=> array('http://doats.net/tiles/built/inst_gnomer/', 0.85, 0.7, '#000000', array(2,2, 4,4, 8,7)),
@@ -52,8 +52,8 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'zul-farrak'		=> array('http://doats.net/tiles/built/inst_zf/', 0.55, 0.7, '#D0C1B5', array(2,2, 4,4)),
 		'blackrock-depths'	=> array('http://doats.net/tiles/built/inst_brd/', 1.1, 1.2, '#000000', array(3,3, 6,6, 10,11)),
 		'sunken-temple'		=> array('http://doats.net/tiles/built/inst_st/', 1.2, 1.1, '#000000', array(3,3, 5,5)),
-		'lower-blackrock-spire'	=> array(),
-		'upper-blackrock-spire'	=> array(),
+		'lower-blackrock-spire'	=> array('http://doats.net/tiles/built/inst_lbrs/', 1.3, 0.6, '#000000', array(3,2, 6,3)),
+		'upper-blackrock-spire'	=> array('http://doats.net/tiles/built/inst_ubrs/', 1.05, 0.5, '#000000', array(3,2, 5,3)),
 
 		'hellfire-ramparts'	=> array(),
 		'blood-furnace'		=> array('http://doats.net/tiles/built/inst_bf/', 0.8, 1.1, '#000000', array(3,3, 5,5)),
@@ -66,7 +66,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'sethekk-halls'		=> array('http://doats.net/tiles/built/inst_seth/', 0.85, 0.95, '#000000', array(2,2, 4,4)),
 		'shadow-labyrinth'	=> array('http://doats.net/tiles/built/inst_slabs/', 1.2, 1.1, '#000000', array(3,3, 6,6)),
 		'durnholde-keep'	=> array($base.'/inst_hillsbrad/', 0.75, 0.75, '#F7F3F7', array(2,2, 4,4, 8,8)),
-		'black-morass'		=> array(),
+		'black-morass'		=> array('http://doats.net/tiles/built/inst_bm/', 1.65, 1.5, '#453B25', array(3,3)),
 		'mechanar'		=> array('http://doats.net/tiles/built/inst_mech/', 0.8, 0.9, '#000000', array(2,2, 4,4)),
 		'botanica'		=> array('http://doats.net/tiles/built/inst_bot/', 0.7, 0.5, '#000000', array(2,2, 4,4, 7,5)),
 		'arcatraz'		=> array('http://doats.net/tiles/built/inst_arc/', 1.1, 1.15, '#000000', array(3,3, 6,6)),
@@ -79,25 +79,25 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'drak-tharon-keep'	=> array(),
 		'violet-hold'		=> array('http://doats.net/tiles/built/inst_vh/', 0.9, 0.7, '#000000', array(2,2)),
 		'gundrak'		=> array('http://doats.net/tiles/built/inst_gun/', 0.9, 1.0, '#000000', array(3,3, 5,5)),
-		'halls-of-stone'	=> array(),
-		'halls-of-lightning'	=> array(),
+		'halls-of-stone'	=> array('http://doats.net/tiles/built/inst_hos/', 0.9, 0.8, '#000000', array(2,2, 4,4, 8,7)),
+		'halls-of-lightning'	=> array('http://doats.net/tiles/built/inst_hol/', 0.8, 0.5, '#000000', array(2,2, 4,4, 7,5)),
 		'oculus'		=> array(),
 		'culling-of-stratholme'	=> array(),
 		'utgarde-pinnacle'	=> array('http://doats.net/tiles/built/inst_up/', 0.7, 0.8, '#000000', array(3,2, 5,4)),
 		'trial-of-the-champion'	=> array(),
 		'forge-of-souls'	=> array('http://doats.net/tiles/built/inst_fos/', 0.8, 0.5, '#000000', array(2,2, 4,4, 7,5)),
-		'pit-of-saron'		=> array(),
+		'pit-of-saron'		=> array('http://doats.net/tiles/built/inst_pos/', 1.45, 1.52, '#151A21', array(3,3)),
 		'halls-of-reflection'	=> array('http://doats.net/tiles/built/inst_hor/', 0.9, 0.8, '#000000', array(2,2, 4,4, 7,8)),
 
 		'throne-of-the-tides'	=> array(),
 		'blackrock-caverns'	=> array('http://doats.net/tiles/built/inst_brc/', 0.95, 0.65, '#000000', array(2,2, 4,4, 8,7)),
 		'stonecore'		=> array('http://doats.net/tiles/built/inst_sc/', 0.95, 0.8, '#000000', array(3,2, 6,4, 9,8)),
 		'vortex-pinnacle'	=> array(),
-		'lost-city'		=> array(),
+		'lost-city'		=> array('http://doats.net/tiles/built/inst_lc/', 1.5, 1.5, '#ffffff', array(3,3)),
 		'halls-of-origination'	=> array(),
 		'grim-batol'		=> array('http://doats.net/tiles/built/inst_gb/', 0.8, 0.75, '#000000', array(2,2, 4,4, 7,7)),
-		'zul-aman'		=> array(),
-		'zul-gurub'		=> array(),
+		'zul-aman'		=> array('http://doats.net/tiles/built/inst_za/', 1.0, 0.8, '#2D2A21', array(2,2)),
+		'zul-gurub'		=> array('http://doats.net/tiles/built/inst_zg/', 1.05, 1.3, '#ffffff', array(3,3)),
 		'end-time'		=> array(),
 		'well-of-eternity'	=> array(),
 		'hour-of-twilight'	=> array(),
@@ -107,7 +107,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 
 		'molten-core'		=> array('http://doats.net/tiles/built/raid_mc/', 0.95, 0.8, '#000000', array(2,2, 4,4, 8,8)),
 		'blackwing-lair'	=> array(),
-		'aq-ruins'		=> array(),
+		'aq-ruins'		=> array('http://doats.net/tiles/built/inst_aq20/', 0.85, 1.3, '#655339', array(2,3, 4,5)),
 		'aq-temple'		=> array('http://doats.net/tiles/built/raid_aq40/', 0.85, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
 
 		'karazhan'		=> array(),
@@ -225,7 +225,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('ragefire-chasm', "Ragefire Chasm")?></li>
 					<li><?=nav_link('deadmines', "Deadmines")?></li>
 					<li><?=nav_link('wailing-caverns', "Wailing Caverns")?></li>
-					<li><?=dead_link("Shadowfang Keep")?></li>
+					<li><?=nav_link('shadowfang-keep', "Shadowfang Keep")?></li>
 					<li><?=nav_link('blackfathom-deeps', "Blackfathom Deeps")?></li>
 					<li><?=nav_link('stockade', "The Stockade")?></li>
 					<li><?=nav_link('gnomeregan', "Gnomeregan")?></li>
@@ -240,8 +240,8 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('zul-farrak', "Zul'Farrak")?></li>
 					<li><?=nav_link('blackrock-depths', "Blackrock Depths")?></li>
 					<li><?=nav_link('sunken-temple', "Temple of Atal'Hakkar")?></li>
-					<li><?=dead_link("Lower Blackrock Spire")?></li>
-					<li><?=dead_link("Upper Blackrock Spire")?></li>
+					<li><?=nav_link('lower-blackrock-spire', "Lower Blackrock Spire")?></li>
+					<li><?=nav_link('upper-blackrock-spire', "Upper Blackrock Spire")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">The Burning Crusade</a>
@@ -257,7 +257,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('sethekk-halls', "Sethekk Halls")?></li>
 					<li><?=nav_link('shadow-labyrinth', "Shadow Labyrinth")?></li>
 					<li><?=nav_link('durnholde-keep', "Durnholde Keep")?></li>
-					<li><?=dead_link("Black Morass")?></li>
+					<li><?=nav_link('black-morass', "Black Morass")?></li>
 					<li><?=nav_link('mechanar', "The Mechanar")?></li>
 					<li><?=nav_link('botanica', "The Botanica")?></li>
 					<li><?=nav_link('arcatraz', "The Arcatraz")?></li>
@@ -273,14 +273,14 @@ body { padding: 0; margin: 0 }
 					<li><?=dead_link("Drak'Tharon Keep")?></li>
 					<li><?=nav_link('violet-hold', "The Violet Hold")?></li>
 					<li><?=nav_link('gundrak', "Gundrak")?></li>
-					<li><?=dead_link("Halls of Stone")?></li>
-					<li><?=dead_link("Halls of Lightning")?></li>
+					<li><?=nav_link('halls-of-stone', "Halls of Stone")?></li>
+					<li><?=nav_link('halls-of-lightning', "Halls of Lightning")?></li>
 					<li><?=dead_link("The Oculus")?></li>
 					<li><?=dead_link("Culling of Stratholme")?></li>
 					<li><?=nav_link('utgarde-pinnacle', "Utgarde Pinnacle")?></li>
 					<li><?=dead_link("Trial of the Champion")?></li>
 					<li><?=nav_link('forge-of-souls', "Forge of Souls")?></li>
-					<li><?=dead_link("Pit of Saron")?></li>
+					<li><?=nav_link('pit-of-saron', "Pit of Saron")?></li>
 					<li><?=nav_link('halls-of-reflection', "Halls of Reflection")?></li>
 				</ul>
 			</li>
@@ -290,11 +290,11 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('blackrock-caverns', "Blackrock Caverns")?></li>
 					<li><?=nav_link('stonecore', "The Stonecore")?></li>
 					<li><?=dead_link("Vortex Pinnacle")?></li>
-					<li><?=dead_link("Lost City of the Tol'vir")?></li>
+					<li><?=nav_link('lost-city', "Lost City of the Tol'vir")?></li>
 					<li><?=dead_link("Halls of Origination")?></li>
 					<li><?=nav_link('grim-batol', "Grim Batol")?></li>
-					<li><?=dead_link("Zul'Aman")?></li>
-					<li><?=dead_link("Zul'Gurub")?></li>
+					<li><?=nav_link('zul-aman', "Zul'Aman")?></li>
+					<li><?=nav_link('zul-gurub', "Zul'Gurub")?></li>
 					<li><?=dead_link("End Time")?></li>
 					<li><?=dead_link("Well of Eternity")?></li>
 					<li><?=dead_link("Hour of Twilight")?></li>
@@ -308,7 +308,7 @@ body { padding: 0; margin: 0 }
 				<ul>
 					<li><?=nav_link('molten-core', "Molten Core")?></li>
 					<li><?=dead_link("Blackwing Lair")?></li>
-					<li><?=dead_link("Ruins of Ahn'Qiraj")?></li>
+					<li><?=nav_link('aq-ruins', "Ruins of Ahn'Qiraj")?></li>
 					<li><?=nav_link('aq-temple', "Temple of Ahn'Qiraj")?></li>
 				</ul>
 			</li>
