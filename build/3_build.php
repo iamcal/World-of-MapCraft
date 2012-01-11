@@ -175,9 +175,38 @@ if (0){
 
 	patch_set('inst_za', '#2D2A21', 0, 256+150, 512, 512);
 }
-if (1){
+if (0){
 	clean_set('inst_lc');
 	build_set('inst_lc', 'uldumdungeon/map', 33,35, 51,53);
+}
+if (0){
+	clean_set('inst_aq20');
+	build_set('inst_aq20', 'ahnqiraj/map', 27,30, 46,50);
+
+	patch_set('inst_aq20', '#655339', 0,0, 256+16,256);
+	patch_set('inst_aq20', '#655339', 0,0, 1024,128);
+	patch_set('inst_aq20', '#655339', 0,256, 96,512);
+	patch_set('inst_aq20', '#655339', 0,512, 64,256*5);
+
+	patch_set('inst_aq20', '#655339', 0,1024+160, 1024,256*5);
+	patch_set('inst_aq20', '#655339', 512+206,1024+30, 1024,256*5);
+	patch_set('inst_aq20', '#655339', 768+64,0, 1024,256*5);
+}
+if (0){
+	clean_set('inst_pos');
+	build_set('inst_pos', 'quarryoftears/map', 30,32, 29,31);
+
+	patch_set('inst_pos', '#151A21', 0,0, 25,768);
+	patch_set('inst_pos', '#151A21', 0,0, 768,20);
+	patch_set('inst_pos', '#151A21', 0,0, 256+50,84);
+	patch_set('inst_pos', '#151A21', 0,0, 256+76,54);
+	patch_set('inst_pos', '#151A21', 512+206,0, 768,768);
+	patch_set('inst_pos', '#151A21', 0, 512+240, 768,768);
+	patch_set('inst_pos', '#151A21', 512+176,512+26, 768,768);
+}
+if (1){
+	clean_set('inst_bm');
+	build_set('inst_bm', 'cavernsoftime/map', 17,19, 34,36);
 }
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){
