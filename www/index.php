@@ -46,7 +46,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'maraudon'		=> array('http://doats.net/tiles/built/inst_mara/', 1.05, 1.3, '#000000', array(3,3, 6,6, 10,11)),
 		'uldaman'		=> array('http://doats.net/tiles/built/inst_ulda/', 1.3, 1.1, '#000000', array(3,3, 6,5)),
 		'dire-maul'		=> array('http://doats.net/tiles/built/inst_dm/', 0.9, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
-		'scholomance'		=> array(),
+		'scholomance'		=> array('http://doats.net/tiles/built/inst_scholo/', 0.7, 0.37, '#000000', array(2,1, 4,2, 7,4)),
 		'razorfen-downs'	=> array('http://doats.net/tiles/built/inst_rfd/', 1.55, 0.8, '#000000', array(3,2, 6,4)),
 		'stratholme'		=> array('http://doats.net/tiles/built/inst_strat/', 0.85, 0.75, '#000000', array(2,2, 4,4, 8,7)),
 		'zul-farrak'		=> array('http://doats.net/tiles/built/inst_zf/', 0.55, 0.7, '#D0C1B5', array(2,2, 4,4)),
@@ -92,15 +92,15 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'throne-of-the-tides'	=> array(),
 		'blackrock-caverns'	=> array('http://doats.net/tiles/built/inst_brc/', 0.95, 0.65, '#000000', array(2,2, 4,4, 8,7)),
 		'stonecore'		=> array('http://doats.net/tiles/built/inst_sc/', 0.95, 0.8, '#000000', array(3,2, 6,4, 9,8)),
-		'vortex-pinnacle'	=> array(),
+		'vortex-pinnacle'	=> array('http://doats.net/tiles/built/inst_vp/', 0.9, 0.7, '#310000', array(2,2, 4,3)),
 		'lost-city'		=> array('http://doats.net/tiles/built/inst_lc/', 1.5, 1.5, '#ffffff', array(3,3)),
 		'halls-of-origination'	=> array(),
 		'grim-batol'		=> array('http://doats.net/tiles/built/inst_gb/', 0.8, 0.75, '#000000', array(2,2, 4,4, 7,7)),
 		'zul-aman'		=> array('http://doats.net/tiles/built/inst_za/', 1.0, 0.8, '#2D2A21', array(2,2)),
 		'zul-gurub'		=> array('http://doats.net/tiles/built/inst_zg/', 1.05, 1.3, '#ffffff', array(3,3)),
-		'end-time'		=> array(),
-		'well-of-eternity'	=> array(),
-		'hour-of-twilight'	=> array(),
+		'end-time'		=> array('http://doats.net/tiles/built/inst_et/', 1.5, 1.25, '#443C3C', array(3,3, 6,5)),
+		'well-of-eternity'	=> array('http://doats.net/tiles/built/inst_woe/', 1.0, 0.75, '#634929', array(2,2, 4,3)),
+		'hour-of-twilight'	=> array('http://doats.net/tiles/built/inst_hot/', 0.75, 1.0, '#E4F0F4', array(2,2, 3,4)),
 
 
 		# raids
@@ -120,18 +120,18 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'sunwell'		=> array(),
 
 		'naxxramas'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
-		'obsidian-sanctum'	=> array(),
+		'obsidian-sanctum'	=> array('http://doats.net/tiles/built/raid_os/', 1.0, 0.95, '#1E1C1E', array(2,2)),
 		'vault-of-archavon'	=> array(),
 		'eye-of-eternity'	=> array(),
 		'ulduar'		=> array(),
 		'trial-of-the-crusader'	=> array(),
 		'onyxia'		=> array('http://doats.net/tiles/built/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
-		'ruby-sanctum'		=> array(),
+		'ruby-sanctum'		=> array('http://doats.net/tiles/built/raid_rs/', 1.0, 1.0, '#392E39', array(2,2)),
 		'icecrown-citadel'	=> array(),
 
-		'baradin-hold'		=> array(),
+		'baradin-hold'		=> array('http://doats.net/tiles/built/raid_bh/', 1.15, 0.8, '#000000', array(3,2, 6,4)),
 		'bastion-of-twilight'	=> array('http://doats.net/tiles/built/raid_bot/', 0.4, 0.8, '#000000', array(1,2, 2,4, 4,8, 8,13)),
-		'throne-of-the-four-winds'	=> array(),
+		'throne-of-four-winds'	=> array('http://doats.net/tiles/built/raid_tofw/', 1.45, 1.1, '#310000', array(3,3)),
 		'blackwing-descent'	=> array('http://doats.net/tiles/built/raid_bwd/', 0.8, 0.9, '#000000', array(2,3, 4,6, 8,9)),
 		'firelands'		=> array(),
 		'dragon-soul'		=> array(),
@@ -234,7 +234,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('maraudon', "Maraudon")?></li>
 					<li><?=nav_link('uldaman', "Uldaman")?></li>
 					<li><?=nav_link('dire-maul', "Dire Maul")?></li>
-					<li><?=dead_link("Scholomance")?></li>
+					<li><?=nav_link('scholomance', "Scholomance")?></li>
 					<li><?=nav_link('razorfen-downs', "Razorfen Downs")?></li>
 					<li><?=nav_link('stratholme', "Stratholme")?></li>
 					<li><?=nav_link('zul-farrak', "Zul'Farrak")?></li>
@@ -289,15 +289,15 @@ body { padding: 0; margin: 0 }
 					<li><?=dead_link("Throne of the Tides")?></li>
 					<li><?=nav_link('blackrock-caverns', "Blackrock Caverns")?></li>
 					<li><?=nav_link('stonecore', "The Stonecore")?></li>
-					<li><?=dead_link("Vortex Pinnacle")?></li>
+					<li><?=nav_link('vortex-pinnacle', "Vortex Pinnacle")?></li>
 					<li><?=nav_link('lost-city', "Lost City of the Tol'vir")?></li>
 					<li><?=dead_link("Halls of Origination")?></li>
 					<li><?=nav_link('grim-batol', "Grim Batol")?></li>
 					<li><?=nav_link('zul-aman', "Zul'Aman")?></li>
 					<li><?=nav_link('zul-gurub', "Zul'Gurub")?></li>
-					<li><?=dead_link("End Time")?></li>
-					<li><?=dead_link("Well of Eternity")?></li>
-					<li><?=dead_link("Hour of Twilight")?></li>
+					<li><?=nav_link('end-time', "End Time")?></li>
+					<li><?=nav_link('well-of-eternity', "Well of Eternity")?></li>
+					<li><?=nav_link('hour-of-twilight', "Hour of Twilight")?></li>
 				</ul>
 			</li>
 		</ul>
@@ -327,21 +327,21 @@ body { padding: 0; margin: 0 }
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
 				<ul>
 					<li><?=nav_link('naxxramas', "Naxxramas")?></li>
-					<li><?=dead_link("Obsidian Sanctum")?></li>
+					<li><?=nav_link('obsidian-sanctum', "Obsidian Sanctum")?></li>
 					<li><?=dead_link("Vault of Archavon")?></li>
 					<li><?=dead_link("The Eye of Eternity")?></li>
 					<li><?=dead_link("Ulduar")?></li>
 					<li><?=dead_link("Trial of the Crusader")?></li>
 					<li><?=nav_link('onyxia', "Onyxia's Lair")?></li>
-					<li><?=dead_link("Ruby Sanctum")?></li>
+					<li><?=nav_link('ruby-sanctum', "Ruby Sanctum")?></li>
 					<li><?=dead_link("Icecrown Citadel")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">Cataclysm</a>
 				<ul>
-					<li><?=dead_link("Baradin Hold")?></li>
+					<li><?=nav_link('baradin-hold', "Baradin Hold")?></li>
 					<li><?=nav_link('bastion-of-twilight', "Bastion of Twilight")?></li>
-					<li><?=dead_link("Throne of the Four Winds")?></li>
+					<li><?=nav_link('throne-of-four-winds', "Throne of the Four Winds")?></li>
 					<li><?=nav_link('blackwing-descent', "Blackwing Descent")?></li>
 					<li><?=dead_link("Firelands")?></li>
 					<li><?=dead_link("Dragon Soul")?></li>
