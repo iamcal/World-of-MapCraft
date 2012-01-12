@@ -1,13 +1,18 @@
 <?
 
-	$w = parse_dbc('WMOAreaTable.dbc');
-
+#$w = parse_dbc('WMOAreaTable.dbc');
 #print_r($w);
-foreach ($w as $row) if ($row[2] == 3433) print_r($row);
+#foreach ($w as $row) if ($row[2] == 3433) print_r($row);
+#exit;
+
+$map = parse_dbc('Map.dbc', array(2), 1);
+print_r($map);
 exit;
 
-	$map = parse_dbc('Map.dbc', array(2), 1);
-	$areas =  parse_dbc('AreaTable.dbc', array(12), 1);
+$areas =  parse_dbc('AreaTable.dbc', array(12), 1);
+print_r($areas);
+exit;
+
 	$aa = parse_dbc('AreaAssignment.dbc', array(), 1);
 
 	$dm = parse_dbc('DungeonMap.dbc', array(), 1);
