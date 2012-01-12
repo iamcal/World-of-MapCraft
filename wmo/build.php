@@ -118,6 +118,7 @@
 		#51, # bwl
 	);
 
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', array_merge($brs_entrance, $lbrs_lower, $lbrs_upper), array(), 'lbrs_upper');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', $lbrs_lower, array(), 'lbrs_lower');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_instance', array_merge($brs_entrance, $ubrs_lower), array(), 'ubrs_lower');
@@ -372,20 +373,64 @@
 
 	#build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw');
 
-	build_wmo_map('Cataclysm/deathwing', 'deathwing_wmo_torso');
-	build_wmo_map('Dungeon/Spineofthedestroyer', 'deathwins_back');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_column_01');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb02');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb03');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_leftcurb');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_rightcurb');
-	build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_walls');
-	build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaL_Curb');
-	build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaR_Curb');
-	build_wmo_map('Dungeon/wellofeternity', 'WoE_Palace');
-	build_wmo_map('Dungeon/wellofeternity', 'WoE_Ruined_Walls');
-	build_wmo_map('Dungeon/wellofeternity', 'WoE_Well');
+	#build_wmo_map('Cataclysm/deathwing', 'deathwing_wmo_torso');
+	#build_wmo_map('Dungeon/Spineofthedestroyer', 'deathwings_back');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_column_01');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb02');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_curb03');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_leftcurb');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_rightcurb');
+	#build_wmo_map('Dungeon/wellofeternity', 'woe_courtyard_walls');
+	#build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaL_Curb');
+	#build_wmo_map('Dungeon/wellofeternity', 'Woe_EyeofAzsharaR_Curb');
+	#build_wmo_map('Dungeon/wellofeternity', 'WoE_Palace');
+	#build_wmo_map('Dungeon/wellofeternity', 'WoE_Ruined_Walls');
+	#build_wmo_map('Dungeon/wellofeternity', 'WoE_Well');
+
+	#build_wmo_map('dungeon/md_cryptschool', 'md_cryptschool');
+
+
+	$scholo_upper = array(
+		#13, # odd broken bit
+		14,0,
+		1,2, # bone room, main hall
+		9,7,
+		3,
+		5,
+		4,
+	);
+	$scholo_lower = array(
+		8, # zombie basement
+		12,
+		5,3,
+		18,16,17,10,11,15,6,
+		15, # gangling's lobby
+		#6, empty?
+	);
+	$scholo_bottom = array(
+		15, #lobby
+		19, # north
+		20, # south
+		21, # east
+	);
+
+	#build_wmo_map('dungeon/md_ruinedkeep', 'Ruinedkeep_crypt_instance', $scholo_upper, array(), 'Ruinedkeep_crypt_instance_top');
+	#build_wmo_map('dungeon/md_ruinedkeep', 'Ruinedkeep_crypt_instance', $scholo_lower, array(), 'Ruinedkeep_crypt_instance_bottom');
+	#build_wmo_map('dungeon/md_ruinedkeep', 'Ruinedkeep_crypt_instance', $scholo_bottom, array(), 'Ruinedkeep_crypt_instance_basement');
+
+	#build_wmo_map('dungeon/azjol_uppercity', 'azjol_uppercity');
+
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_baradinhold');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_human_house02');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_human_inn');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_human_barracks');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_human_tower_open');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_human_townhall');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_micro01');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_micro02');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_micro03');
+	#build_wmo_map('pvp/buildings/tolbarad', 'tb_tower');
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
 
