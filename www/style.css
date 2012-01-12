@@ -114,7 +114,7 @@ div.source a {
 }
 #nav ul a {
 	margin: 0;
-	padding: 6px 0 6px 20px;
+	padding: 6px 20px 6px 20px;
 	font-weight: normal;
 	background: #333;
 	height: auto;
