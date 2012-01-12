@@ -126,10 +126,39 @@
 	#assemble_set('inst_vh', 'DalaranPrison.png');
 	#assemble_set('inst_gun', 'GunDrakInterior.png');
 
-	assemble_set('inst_vc', array(
-		array('az_deadmines_a.png', 72, 0),
-		array('az_deadmines_b.png', 0, 360),
-		array('inst_vc.png', 700, 430),
+	#assemble_set('inst_vc', array(
+	#	array('az_deadmines_a.png', 72, 0),
+	#	array('az_deadmines_b.png', 0, 360),
+	#	array('inst_vc.png', 700, 430),
+	#));
+
+	#assemble_set('inst_sfk', array(
+	#	array('LD_ShadowFangInterior_1.png', 0, -100),
+	#	array('LD_ShadowFangInterior_2a.png', 220, 160),
+	#	array('LD_ShadowFangInterior_2b.png', 330, 70),
+	#	array('LD_ShadowFangInterior_3.png', 430, 117+70),
+	#	array('LD_ShadowFangInterior_4.png', 562, 80),
+	#));
+
+	#assemble_set('inst_hos', 'ulduar_dwarf77.png');
+	#assemble_set('inst_hol', 'ulduar_irongiant80.png');
+
+	#assemble_set('inst_lbrs', array(
+	#	array('lbrs_upper.png', 0, 0),
+	#	array('lbrs_lower.png', 830, 0),
+	#));
+
+	#assemble_set('inst_ubrs', array(
+	#	array('ubrs_lower.png', 0, 0),
+	#	array('ubrs_upper.png', 400, 27),
+	#));
+
+	#assemble_set('raid_bh', 'tb_baradinhold.png');
+
+	assemble_set('inst_scholo', array(
+		array('Ruinedkeep_crypt_instance_top.png', 0, 0),
+		array('Ruinedkeep_crypt_instance_bottom.png', 540, -30),
+		array('Ruinedkeep_crypt_instance_basement.png', 540+720-33, 99),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
