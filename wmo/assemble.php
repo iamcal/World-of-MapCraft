@@ -155,11 +155,13 @@
 
 	#assemble_set('raid_bh', 'tb_baradinhold.png');
 
-	assemble_set('inst_scholo', array(
-		array('Ruinedkeep_crypt_instance_top.png', 0, 0),
-		array('Ruinedkeep_crypt_instance_bottom.png', 540, -30),
-		array('Ruinedkeep_crypt_instance_basement.png', 540+720-33, 99),
-	));
+	#assemble_set('inst_scholo', array(
+	#	array('Ruinedkeep_crypt_instance_top.png', 0, 0),
+	#	array('Ruinedkeep_crypt_instance_bottom.png', 540, -30),
+	#	array('Ruinedkeep_crypt_instance_basement.png', 540+720-33, 99),
+	#));
+
+	assemble_set('raid_voa', 'wintergrasp_raid.png');
 
 	function assemble_set($name, $tiles, $bg_color='black'){
 

@@ -121,7 +121,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 
 		'naxxramas'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
 		'obsidian-sanctum'	=> array('http://doats.net/tiles/built/raid_os/', 1.0, 0.95, '#1E1C1E', array(2,2)),
-		'vault-of-archavon'	=> array(),
+		'vault-of-archavon'	=> array('http://doats.net/tiles/built/raid_voa/', 0.5, 0.8, '#000000', array(2,2, 4,4, 5,7)),
 		'eye-of-eternity'	=> array(),
 		'ulduar'		=> array(),
 		'trial-of-the-crusader'	=> array(),
@@ -328,7 +328,7 @@ body { padding: 0; margin: 0 }
 				<ul>
 					<li><?=nav_link('naxxramas', "Naxxramas")?></li>
 					<li><?=nav_link('obsidian-sanctum', "Obsidian Sanctum")?></li>
-					<li><?=dead_link("Vault of Archavon")?></li>
+					<li><?=nav_link('vault-of-archavon', "Vault of Archavon")?></li>
 					<li><?=dead_link("The Eye of Eternity")?></li>
 					<li><?=dead_link("Ulduar")?></li>
 					<li><?=dead_link("Trial of the Crusader")?></li>

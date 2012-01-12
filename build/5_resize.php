@@ -78,7 +78,8 @@
 		#	'inst_woe',
 		#	'inst_hot',
 		#	'raid_bh',
-			'inst_scholo',
+		#	'inst_scholo',
+			'raid_voa',
 		))) return;
 
 		echo "$dir: \n";
