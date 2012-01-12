@@ -194,7 +194,8 @@ if (0){
 }
 if (0){
 	clean_set('inst_pos');
-	build_set('inst_pos', 'quarryoftears/map', 30,32, 29,31);
+	#build_set('inst_pos', 'quarryoftears/map', 30,32, 29,31);
+	build_set('inst_pos', 'icecrowncitadel5man/map', 28,30, 30,32);
 
 	patch_set('inst_pos', '#151A21', 0,0, 25,768);
 	patch_set('inst_pos', '#151A21', 0,0, 768,20);
@@ -203,10 +204,55 @@ if (0){
 	patch_set('inst_pos', '#151A21', 512+206,0, 768,768);
 	patch_set('inst_pos', '#151A21', 0, 512+240, 768,768);
 	patch_set('inst_pos', '#151A21', 512+176,512+26, 768,768);
+
+	patch_set('inst_pos', '#151A21', 0,0, 125,148);
 }
-if (1){
+if (0){
 	clean_set('inst_bm');
 	build_set('inst_bm', 'cavernsoftime/map', 17,19, 34,36);
+}
+if (0){
+	clean_set('inst_vp');
+	build_set('inst_vp', 'skywalldungeon/map', 30,33, 32,34);
+}
+if (0){
+	clean_set('raid_tofw');
+	build_set('raid_tofw', 'skywallraid/map', 29,31, 31,33);
+}
+if (0){
+	clean_set('inst_woe');
+	build_set('inst_woe', 'cotwaroftheancients/map', 40,43, 24,26);
+
+	clean_set('inst_et');
+	build_set('inst_et', 'cotdragonblight/map', 28,33, 23,27);
+}
+if (0){
+	clean_set('inst_hot');
+	build_set('inst_hot', 'thehouroftwilight/map', 30,32, 22,25);
+}
+if (0){
+	clean_set('raid_bh');
+	build_set('raid_bh', 'baradinhold/map', 29,29, 31,31);
+}
+if (0){
+	clean_set('raid_os');
+	build_set('raid_os', 'chamberofaspectsblack/map', 30,31, 25,26);
+
+	patch_set('raid_os', '#1E1C1E', 0,0, 512,27); #top
+	patch_set('raid_os', '#1E1C1E', 0,0, 29,512); # left
+	patch_set('raid_os', '#1E1C1E', 256+228,0, 512,512); # right
+	patch_set('raid_os', '#1E1C1E', 0,256+198, 512,512); # bottom
+
+	patch_set('raid_os', '#1E1C1E', 256+176,256+63, 512,512); # odd chunk bottom-right
+}
+if (1){
+	clean_set('raid_rs');
+	build_set('raid_rs', 'chamberofaspectsred/map', 30,31, 25,26);
+
+	patch_set('raid_rs', '#392E39', 0,0, 512,34); # top
+	patch_set('raid_rs', '#392E39', 0,0, 26,512); # left
+	patch_set('raid_rs', '#392E39', 256+236,0, 512,512); # right
+	patch_set('raid_rs', '#392E39', 0,256+231, 512,512); # bottom
 }
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){

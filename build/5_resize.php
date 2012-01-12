@@ -70,8 +70,15 @@
 		#	'inst_lbrs',
 		#	'inst_ubrs',
 		#	'inst_aq20',
-			'inst_bm',
-			'inst_pos',
+		#	'inst_bm',
+		#	'inst_pos',
+		#	'inst_vp',
+		#	'raid_tofw',
+		#	'inst_et',
+		#	'inst_woe',
+		#	'inst_hot',
+		#	'raid_bh',
+			'inst_scholo',
 		))) return;
 
 		echo "$dir: \n";
