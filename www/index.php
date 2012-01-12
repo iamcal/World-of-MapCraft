@@ -73,7 +73,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'magisters-terrace'	=> array(),
 
 		'utgarde-keep'		=> array(),
-		'nexus'			=> array(),
+		'nexus'			=> array('http://doats.net/tiles/built/inst_nexus/', 0.8, 0.7, '#000000', array(2,2, 4,4, 8,6)),
 		'old-kingdom'		=> array(),
 		'azjol-nerub'		=> array(),
 		'drak-tharon-keep'	=> array(),
@@ -81,8 +81,8 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'gundrak'		=> array('http://doats.net/tiles/built/inst_gun/', 0.9, 1.0, '#000000', array(3,3, 5,5)),
 		'halls-of-stone'	=> array('http://doats.net/tiles/built/inst_hos/', 0.9, 0.8, '#000000', array(2,2, 4,4, 8,7)),
 		'halls-of-lightning'	=> array('http://doats.net/tiles/built/inst_hol/', 0.8, 0.5, '#000000', array(2,2, 4,4, 7,5)),
-		'oculus'		=> array(),
-		'culling-of-stratholme'	=> array(),
+		'oculus'		=> array('http://doats.net/tiles/built/inst_oculus/', 1.0, 1.0, '#163454', array(2,2, 4,4)),
+		'culling-of-stratholme'	=> array('http://doats.net/tiles/built/inst_cos/', 0.6, 0.8, '#000000', array(2,2, 4,4, 6,7)),
 		'utgarde-pinnacle'	=> array('http://doats.net/tiles/built/inst_up/', 0.7, 0.8, '#000000', array(3,2, 5,4)),
 		'trial-of-the-champion'	=> array(),
 		'forge-of-souls'	=> array('http://doats.net/tiles/built/inst_fos/', 0.8, 0.5, '#000000', array(2,2, 4,4, 7,5)),
@@ -122,7 +122,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'naxxramas'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
 		'obsidian-sanctum'	=> array('http://doats.net/tiles/built/raid_os/', 1.0, 0.95, '#1E1C1E', array(2,2)),
 		'vault-of-archavon'	=> array('http://doats.net/tiles/built/raid_voa/', 0.5, 0.8, '#000000', array(2,2, 4,4, 5,7)),
-		'eye-of-eternity'	=> array(),
+		'eye-of-eternity'	=> array('http://doats.net/tiles/built/raid_eoe/', 0.55, 0.57, '#000000', array(1,1)),
 		'ulduar'		=> array(),
 		'trial-of-the-crusader'	=> array(),
 		'onyxia'		=> array('http://doats.net/tiles/built/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
@@ -267,7 +267,7 @@ body { padding: 0; margin: 0 }
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
 				<ul>
 					<li><?=dead_link("Utgarde Keep")?></li>
-					<li><?=dead_link("The Nexus")?></li>
+					<li><?=nav_link('nexus', "The Nexus")?></li>
 					<li><?=dead_link("Ahn'kahet: The Old Kingdom")?></li>
 					<li><?=dead_link("Azjol-Nerub")?></li>
 					<li><?=dead_link("Drak'Tharon Keep")?></li>
@@ -275,8 +275,8 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('gundrak', "Gundrak")?></li>
 					<li><?=nav_link('halls-of-stone', "Halls of Stone")?></li>
 					<li><?=nav_link('halls-of-lightning', "Halls of Lightning")?></li>
-					<li><?=dead_link("The Oculus")?></li>
-					<li><?=dead_link("Culling of Stratholme")?></li>
+					<li><?=nav_link('oculus', "The Oculus")?></li>
+					<li><?=nav_link('culling-of-stratholme', "Culling of Stratholme")?></li>
 					<li><?=nav_link('utgarde-pinnacle', "Utgarde Pinnacle")?></li>
 					<li><?=dead_link("Trial of the Champion")?></li>
 					<li><?=nav_link('forge-of-souls', "Forge of Souls")?></li>
@@ -329,7 +329,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('naxxramas', "Naxxramas")?></li>
 					<li><?=nav_link('obsidian-sanctum', "Obsidian Sanctum")?></li>
 					<li><?=nav_link('vault-of-archavon', "Vault of Archavon")?></li>
-					<li><?=dead_link("The Eye of Eternity")?></li>
+					<li><?=nav_link('eye-of-eternity', "The Eye of Eternity")?></li>
 					<li><?=dead_link("Ulduar")?></li>
 					<li><?=dead_link("Trial of the Crusader")?></li>
 					<li><?=nav_link('onyxia', "Onyxia's Lair")?></li>

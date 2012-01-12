@@ -161,7 +161,13 @@
 	#	array('Ruinedkeep_crypt_instance_basement.png', 540+720-33, 99),
 	#));
 
-	assemble_set('raid_voa', 'wintergrasp_raid.png');
+	#assemble_set('raid_voa', 'wintergrasp_raid.png');
+	#assemble_set('inst_nexus', 'nexus_70.png');
+
+	assemble_set('inst_cos', array(
+		array('Stratholme_Past.png', 0, 0),
+		array('inst_cos.png', 223, 1260-92),
+	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
 

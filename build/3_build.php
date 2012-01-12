@@ -245,7 +245,7 @@ if (0){
 
 	patch_set('raid_os', '#1E1C1E', 256+176,256+63, 512,512); # odd chunk bottom-right
 }
-if (1){
+if (0){
 	clean_set('raid_rs');
 	build_set('raid_rs', 'chamberofaspectsred/map', 30,31, 25,26);
 
@@ -254,6 +254,18 @@ if (1){
 	patch_set('raid_rs', '#392E39', 256+236,0, 512,512); # right
 	patch_set('raid_rs', '#392E39', 0,256+231, 512,512); # bottom
 }
+if (1){
+	clean_set('inst_oculus');
+	build_set('inst_oculus', 'nexus80/map', 28,31, 28,31);
+
+	#patch_set('inst_oculus', '#183657', 0,0, 1024,163); # top
+	#patch_set('inst_oculus', '#183657', 0,0, 97,1024); # left
+}
+if (0){
+	clean_set('raid_eoe');
+	build_set('raid_eoe', 'nexusraid/map', 29,29, 30,30);
+}
+
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){
 

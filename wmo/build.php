@@ -432,8 +432,12 @@
 	#build_wmo_map('pvp/buildings/tolbarad', 'tb_micro03');
 	#build_wmo_map('pvp/buildings/tolbarad', 'tb_tower');
 
+	#build_wmo_map('dungeon/wintergrasp', 'wintergrasp_raid');
 
-	build_wmo_map('dungeon/wintergrasp', 'wintergrasp_raid');
+	build_wmo_map('dungeon/nexus', 'nexus_70');
+	build_wmo_map('dungeon/nexus', 'nexus_80');
+	build_wmo_map('dungeon/nexus', 'nexus_90');
+	build_wmo_map('dungeon/nexus', 'nexus_exterior');
 
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
