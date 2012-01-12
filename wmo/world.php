@@ -6,8 +6,8 @@
 	include('../build/config.php');
 
 
-	create_world('inst_vc', 'deadminesinstance', 33, 33, 31, 32, 32, 160, 192, 256);
-
+	#create_world('inst_vc', 'deadminesinstance', 33, 33, 31, 32, 32, 160, 192, 256);
+	create_world('inst_sfk', 'shadowfang', 27, 28, 32, 32, 150, 30, 150, 130);
 
 	function create_world($out_name, $map_name, $x1, $x2, $y1, $y2, $crop_x, $crop_y, $crop_w, $crop_h){
 
