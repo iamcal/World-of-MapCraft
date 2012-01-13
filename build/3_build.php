@@ -254,7 +254,7 @@ if (0){
 	patch_set('raid_rs', '#392E39', 256+236,0, 512,512); # right
 	patch_set('raid_rs', '#392E39', 0,256+231, 512,512); # bottom
 }
-if (1){
+if (0){
 	clean_set('inst_oculus');
 	build_set('inst_oculus', 'nexus80/map', 28,31, 28,31);
 
@@ -264,6 +264,13 @@ if (1){
 if (0){
 	clean_set('raid_eoe');
 	build_set('raid_eoe', 'nexusraid/map', 29,29, 30,30);
+}
+if (1){
+	clean_set('raid_fl');
+	build_set('raid_fl', 'firelands1/noliquid_map', 30,33, 29,33);
+
+	clean_set('misc_fl');
+	build_set('misc_fl', 'firelandsdailies/map', 28,35, 26,31);
 }
 
 

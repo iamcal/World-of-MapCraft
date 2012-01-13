@@ -198,6 +198,75 @@
 	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_zangarentrance');
 
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple');
+
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(25,26,27,28,29,35,45), array(), 'blacktemple_sewer', 2);
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(12,13,34,9), array(), 'blacktemple_floor_1', 2);
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34,9,10,20,22,17,41,42,43,44,16,33,15,32,17,36,37,14), array(), 'blacktemple_floor_2', 2);
+
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(31,18,6), array(), 'blacktemple_floor_3', 2); # gorefiend
+	#cut_wmo_map('blacktemple_floor_3', array(
+	#	array(0,0,303,386),
+	#	array(801,0,480,398),
+	#	array(675,0,140,257),
+	#	array(675,323,140,100),
+	#));
+
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(4,7,19,21,0,8,23,1,30), array(), 'blacktemple_floor_4', 2); #ledges
+	#cut_wmo_map('blacktemple_floor_4', array(
+	#	array(0,0,304,206),
+	#	array(1116,0,163,230),
+	#	array(315,605,146,395),
+	#	array(284,252,70,67),
+	#	array(171,413,181,75),
+	#));
+
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(2,30), array(), 'blacktemple_floor_5',2 ); #illidan
+
+	# gorefiend = 31,18
+	# ledge = 4,6,7,19,21,0,8,23,1,30
+	#
+
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(0), array(), 'blacktemple_0');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(1), array(), 'blacktemple_1');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(2), array(), 'blacktemple_2');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(4), array(), 'blacktemple_4');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(6), array(), 'blacktemple_6');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(7), array(), 'blacktemple_7');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(8), array(), 'blacktemple_8');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(9), array(), 'blacktemple_9');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(10), array(), 'blacktemple_10');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(12), array(), 'blacktemple_12');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(13), array(), 'blacktemple_13');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(14), array(), 'blacktemple_14');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(15), array(), 'blacktemple_15');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(16), array(), 'blacktemple_16');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(17), array(), 'blacktemple_17');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(18), array(), 'blacktemple_18');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(19), array(), 'blacktemple_19');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(20), array(), 'blacktemple_20');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(21), array(), 'blacktemple_21');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(22), array(), 'blacktemple_22');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(23), array(), 'blacktemple_23');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(25), array(), 'blacktemple_25');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(26), array(), 'blacktemple_26');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(27), array(), 'blacktemple_27');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(28), array(), 'blacktemple_28');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(29), array(), 'blacktemple_29');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(30), array(), 'blacktemple_30');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(31), array(), 'blacktemple_31');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(32), array(), 'blacktemple_32');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(33), array(), 'blacktemple_33');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34), array(), 'blacktemple_34');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(35), array(), 'blacktemple_35');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(36), array(), 'blacktemple_36');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(37), array(), 'blacktemple_37');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(41), array(), 'blacktemple_41');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(42), array(), 'blacktemple_42');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(43), array(), 'blacktemple_43');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(44), array(), 'blacktemple_44');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(45), array(), 'blacktemple_45');
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(47), array(), 'blacktemple_47');
+
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_entrance');
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple_facade');
 	#build_wmo_map('Dungeon/Blacktemple', 'ShadowMoon_BattlementLeft');
@@ -445,7 +514,7 @@
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'coliseum_intact_floor', array(), array(), '', 2);
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum', array(), $exclude);
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_construction');
-	build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(2,3), array(), '', 2);
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(2,3), array(), '', 2);
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(0), array(), 'nd_argentcrusadecoliseum_instance_0');
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(1), array(), 'nd_argentcrusadecoliseum_instance_1');
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(2), array(), 'nd_argentcrusadecoliseum_instance_2');
@@ -457,6 +526,8 @@
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadetentone');
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadetenttwo');
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_human_construction01');
+
+	build_wmo_map('cataclysm/firelands', 'firelands_sulfuronkeep', array(), array(), '', 3);
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
 
@@ -654,7 +725,31 @@
 		if ($rotate==2){
 			echo shell_exec("convert $dst -rotate 180 $dst");
 		}
+		if ($rotate==3){
+			echo shell_exec("convert $dst -rotate 270 $dst");
+		}
 		echo " done\n";
+	}
+
+	function cut_wmo_map($name, $chunks){
+
+		global $flats;
+
+		$dst = "$flats/{$name}.png";
+
+		foreach ($chunks as $chunk){
+			list($x,$y, $w,$h) = $chunk;
+
+			$x--;
+			$y--;
+
+			$x2 = $x+$w;
+			$y2 = $y+$h;
+
+			echo shell_exec("convert $dst -fill 'blue' -draw 'rectangle $x,$y $x2,$y2' $dst");
+		}
+		echo shell_exec("convert $dst -transparent 'blue' $dst");
+		
 	}
 
 	function zsort_chunks($a, $b){

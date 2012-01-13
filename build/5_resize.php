@@ -87,8 +87,11 @@
 		#	'inst_mgt',
 		#	'raid_sunwell',
 		#	'inst_dtk',
-			'inst_toc',
-			'raid_toc',
+		#	'inst_toc',
+		#	'raid_toc',
+			'raid_fl',
+		#	'misc_fl',
+		#	'raid_bt',
 		))) return;
 
 		echo "$dir: \n";

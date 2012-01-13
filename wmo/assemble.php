@@ -193,10 +193,25 @@
 	#	array('coliseum_intact_floor.png', -230, 0),
 	#));
 
-	assemble_set('raid_toc', array(
-		array('coliseum_intact_floor.png', -230, 825),
-		array('nd_argentcrusadecoliseum_instance.png', 120, 0),
-	));
+	#assemble_set('raid_toc', array(
+	#	array('coliseum_intact_floor.png', -230, 825),
+	#	array('nd_argentcrusadecoliseum_instance.png', 120, 0),
+	#));
+
+	#assemble_set('raid_bt', array(
+	#	array('blacktemple_sewer.png', -163,1779),
+	#	array('raid_bt.png', 222,1207),
+	#	array('blacktemple_floor_1.png', 1216,0),
+	#	array('blacktemple_floor_2.png', 886,821),
+	#	array('blacktemple_floor_3.png', 986,1961),
+	#	array('blacktemple_floor_4.png', 2039-206,779+45),
+	#	array('blacktemple_floor_5.png', 1935,1289),
+	#));
+
+	assemble_set('raid_fl', array(
+		array('raid_fl.png', 0, 128),
+		array('firelands_sulfuronkeep.png', 1024,0),
+	),'#310000');
 
 	function assemble_set($name, $tiles, $bg_color='black'){
 
@@ -231,7 +246,8 @@
 			echo shell_exec($cmd);
 		}
 
-#return;
+#echo "DONE COMP\n";
+#exit;
 		# cut out z0 pieces
 
 		$w /= 256;
