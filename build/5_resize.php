@@ -82,7 +82,13 @@
 		#	'raid_voa',
 		#	'inst_nexus',
 		#	'inst_oculus',
-			'inst_cos',
+		#	'inst_cos',
+		#	'inst_ramps',
+		#	'inst_mgt',
+		#	'raid_sunwell',
+		#	'inst_dtk',
+			'inst_toc',
+			'raid_toc',
 		))) return;
 
 		echo "$dir: \n";

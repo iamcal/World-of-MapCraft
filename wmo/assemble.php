@@ -164,9 +164,38 @@
 	#assemble_set('raid_voa', 'wintergrasp_raid.png');
 	#assemble_set('inst_nexus', 'nexus_70.png');
 
-	assemble_set('inst_cos', array(
-		array('Stratholme_Past.png', 0, 0),
-		array('inst_cos.png', 223, 1260-92),
+	#assemble_set('inst_cos', array(
+	#	array('Stratholme_Past.png', 0, 0),
+	#	array('inst_cos.png', 223, 1260-92),
+	#));
+
+	#assemble_set('inst_ramps', array(
+	#	array('inst_ramps.png', 0, 0),
+	#	array('hellfire_ramparts.png', 550, -1150),
+	#), '#AD5942');
+
+	#assemble_set('raid_sunwell', array(
+	#	array('sunwell.png', 680, 190),
+	#	array('raid_sunwell.png', 0, 0),
+	#), '#001D29');
+
+	#assemble_set('inst_mgt', array(
+	#	array('inst_mgt.png', 0, 120),
+	#	array('sunwell_5man.png', 450, -120),
+	#), '#335254');
+
+	#assemble_set('inst_dtk', array(
+	#	array('inst_dtk.png', 0, 145),
+	#	array('DrakTharon_72_Wing.png', 450, -150),
+	#), '#000000');
+
+	#assemble_set('inst_toc', array(
+	#	array('coliseum_intact_floor.png', -230, 0),
+	#));
+
+	assemble_set('raid_toc', array(
+		array('coliseum_intact_floor.png', -230, 825),
+		array('nd_argentcrusadecoliseum_instance.png', 120, 0),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){

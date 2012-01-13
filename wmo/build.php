@@ -187,7 +187,9 @@
 	#build_wmo_map('Dungeon/KL_OnyxiasLair', 'KL_OnyxiasLair_B');
 
 	#build_wmo_map('Dungeon/QT_Sunwell_5Man', 'Sunwell_5Man');
-	#build_wmo_map('Dungeon/QT_Sunwell', 'Sunwell');
+	#build_wmo_map('Dungeon/QT_Sunwell', 'Sunwell', array(), array(), '', 2);
+	#build_wmo_map('Dungeon/QT_sunwell_facades', 'sunwell_magister_facade');
+	#build_wmo_map('Dungeon/QT_sunwell_facades', 'sunwell_raid_facade');
 
 	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Draenei');
 	#build_wmo_map('Dungeon/OL_Coilfang', 'Coilfang_Marsh');
@@ -215,7 +217,7 @@
 	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_Citadel');
 	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_Military');
 	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_raid');
-	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_ramparts');
+	#build_wmo_map('Dungeon/Hellfire', 'Hellfire_ramparts', array(), array(), '', 2);
 	#build_wmo_map('Dungeon/Hellfire', 'hellfire_DemonWing');
 	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall01');
 	#build_wmo_map('Dungeon/Hellfire', 'hellfire_wall02');
@@ -434,11 +436,27 @@
 
 	#build_wmo_map('dungeon/wintergrasp', 'wintergrasp_raid');
 
-	build_wmo_map('dungeon/nexus', 'nexus_70');
-	build_wmo_map('dungeon/nexus', 'nexus_80');
-	build_wmo_map('dungeon/nexus', 'nexus_90');
-	build_wmo_map('dungeon/nexus', 'nexus_exterior');
+	#build_wmo_map('dungeon/nexus', 'nexus_70');
+	#build_wmo_map('dungeon/nexus', 'nexus_80');
+	#build_wmo_map('dungeon/nexus', 'nexus_90');
+	#build_wmo_map('dungeon/nexus', 'nexus_exterior');
 
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'coliseum_destruct_floor');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'coliseum_intact_floor', array(), array(), '', 2);
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum', array(), $exclude);
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_construction');
+	build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(2,3), array(), '', 2);
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(0), array(), 'nd_argentcrusadecoliseum_instance_0');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(1), array(), 'nd_argentcrusadecoliseum_instance_1');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(2), array(), 'nd_argentcrusadecoliseum_instance_2');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(3), array(), 'nd_argentcrusadecoliseum_instance_3');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(4), array(), 'nd_argentcrusadecoliseum_instance_4');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(5), array(), 'nd_argentcrusadecoliseum_instance_5');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadecoliseum_instance', array(6), array(), 'nd_argentcrusadecoliseum_instance_6');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadestage');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadetentone');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadetenttwo');
+	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_human_construction01');
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
 

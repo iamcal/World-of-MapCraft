@@ -55,7 +55,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'lower-blackrock-spire'	=> array('http://doats.net/tiles/built/inst_lbrs/', 1.3, 0.6, '#000000', array(3,2, 6,3)),
 		'upper-blackrock-spire'	=> array('http://doats.net/tiles/built/inst_ubrs/', 1.05, 0.5, '#000000', array(3,2, 5,3)),
 
-		'hellfire-ramparts'	=> array(),
+		'hellfire-ramparts'	=> array('http://doats.net/tiles/built/inst_ramps/', 0.65, 0.35, '#AD5942', array(2,1, 4,2, 7,4)),
 		'blood-furnace'		=> array('http://doats.net/tiles/built/inst_bf/', 0.8, 1.1, '#000000', array(3,3, 5,5)),
 		'shattered-halls'	=> array('http://doats.net/tiles/built/inst_sh/', 0.9, 1.2, '#000000', array(3,3, 5,5)),
 		'slave-pens'		=> array('http://doats.net/tiles/built/inst_sp/', 0.8, 0.5, '#000000', array(2,2, 4,4, 8,5)),
@@ -70,13 +70,13 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'mechanar'		=> array('http://doats.net/tiles/built/inst_mech/', 0.8, 0.9, '#000000', array(2,2, 4,4)),
 		'botanica'		=> array('http://doats.net/tiles/built/inst_bot/', 0.7, 0.5, '#000000', array(2,2, 4,4, 7,5)),
 		'arcatraz'		=> array('http://doats.net/tiles/built/inst_arc/', 1.1, 1.15, '#000000', array(3,3, 6,6)),
-		'magisters-terrace'	=> array(),
+		'magisters-terrace'	=> array('http://doats.net/tiles/built/inst_mgt/', 0.72, 0.3, '#335254', array(2,1, 4,2, 7,3)),
 
 		'utgarde-keep'		=> array(),
 		'nexus'			=> array('http://doats.net/tiles/built/inst_nexus/', 0.8, 0.7, '#000000', array(2,2, 4,4, 8,6)),
 		'old-kingdom'		=> array(),
 		'azjol-nerub'		=> array(),
-		'drak-tharon-keep'	=> array(),
+		'drak-tharon-keep'	=> array('http://doats.net/tiles/built/inst_dtk/', 1.25, 0.75, '#000000', array(3,2, 6,4)),
 		'violet-hold'		=> array('http://doats.net/tiles/built/inst_vh/', 0.9, 0.7, '#000000', array(2,2)),
 		'gundrak'		=> array('http://doats.net/tiles/built/inst_gun/', 0.9, 1.0, '#000000', array(3,3, 5,5)),
 		'halls-of-stone'	=> array('http://doats.net/tiles/built/inst_hos/', 0.9, 0.8, '#000000', array(2,2, 4,4, 8,7)),
@@ -84,7 +84,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'oculus'		=> array('http://doats.net/tiles/built/inst_oculus/', 1.0, 1.0, '#163454', array(2,2, 4,4)),
 		'culling-of-stratholme'	=> array('http://doats.net/tiles/built/inst_cos/', 0.6, 0.8, '#000000', array(2,2, 4,4, 6,7)),
 		'utgarde-pinnacle'	=> array('http://doats.net/tiles/built/inst_up/', 0.7, 0.8, '#000000', array(3,2, 5,4)),
-		'trial-of-the-champion'	=> array(),
+		'trial-of-the-champion'	=> array('http://doats.net/tiles/built/inst_toc/', 0.55, 0.48, '#000000', array(2,1)),
 		'forge-of-souls'	=> array('http://doats.net/tiles/built/inst_fos/', 0.8, 0.5, '#000000', array(2,2, 4,4, 7,5)),
 		'pit-of-saron'		=> array('http://doats.net/tiles/built/inst_pos/', 1.45, 1.52, '#151A21', array(3,3)),
 		'halls-of-reflection'	=> array('http://doats.net/tiles/built/inst_hor/', 0.9, 0.8, '#000000', array(2,2, 4,4, 7,8)),
@@ -117,14 +117,14 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'the-eye'		=> array('http://doats.net/tiles/built/raid_tk/', 0.98, 1.2, '#000000', array(2,3, 4,6, 8,9)),
 		'mount-hyjal'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
 		'black-temple'		=> array(),
-		'sunwell'		=> array(),
+		'sunwell'		=> array('http://doats.net/tiles/built/raid_sunwell/', 1.0, 0.7, '#001D29', array(2,3, 4,6, 8,9)),
 
 		'naxxramas'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
 		'obsidian-sanctum'	=> array('http://doats.net/tiles/built/raid_os/', 1.0, 0.95, '#1E1C1E', array(2,2)),
 		'vault-of-archavon'	=> array('http://doats.net/tiles/built/raid_voa/', 0.5, 0.8, '#000000', array(2,2, 4,4, 5,7)),
 		'eye-of-eternity'	=> array('http://doats.net/tiles/built/raid_eoe/', 0.55, 0.57, '#000000', array(1,1)),
 		'ulduar'		=> array(),
-		'trial-of-the-crusader'	=> array(),
+		'trial-of-the-crusader'	=> array('http://doats.net/tiles/built/raid_toc/', 0.55, 0.85, '#000000', array(2,2, 4,4, 5,8)),
 		'onyxia'		=> array('http://doats.net/tiles/built/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
 		'ruby-sanctum'		=> array('http://doats.net/tiles/built/raid_rs/', 1.0, 1.0, '#392E39', array(2,2)),
 		'icecrown-citadel'	=> array(),
@@ -246,7 +246,7 @@ body { padding: 0; margin: 0 }
 			</li>
 			<li><a href="#" onclick="return false;">The Burning Crusade</a>
 				<ul>
-					<li><?=dead_link("Hellfire Ramparts")?></li>
+					<li><?=nav_link('hellfire-ramparts', "Hellfire Ramparts")?></li>
 					<li><?=nav_link('blood-furnace', "The Blood Furnace")?></li>
 					<li><?=nav_link('shattered-halls', "Shattered Halls")?></li>
 					<li><?=nav_link('slave-pens', "Slave Pens")?></li>
@@ -261,7 +261,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('mechanar', "The Mechanar")?></li>
 					<li><?=nav_link('botanica', "The Botanica")?></li>
 					<li><?=nav_link('arcatraz', "The Arcatraz")?></li>
-					<li><?=dead_link("Magisters' Terrace")?></li>
+					<li><?=nav_link('magisters-terrace', "Magisters' Terrace")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
@@ -270,7 +270,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('nexus', "The Nexus")?></li>
 					<li><?=dead_link("Ahn'kahet: The Old Kingdom")?></li>
 					<li><?=dead_link("Azjol-Nerub")?></li>
-					<li><?=dead_link("Drak'Tharon Keep")?></li>
+					<li><?=nav_link('drak-tharon-keep', "Drak'Tharon Keep")?></li>
 					<li><?=nav_link('violet-hold', "The Violet Hold")?></li>
 					<li><?=nav_link('gundrak', "Gundrak")?></li>
 					<li><?=nav_link('halls-of-stone', "Halls of Stone")?></li>
@@ -278,7 +278,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('oculus', "The Oculus")?></li>
 					<li><?=nav_link('culling-of-stratholme', "Culling of Stratholme")?></li>
 					<li><?=nav_link('utgarde-pinnacle', "Utgarde Pinnacle")?></li>
-					<li><?=dead_link("Trial of the Champion")?></li>
+					<li><?=nav_link('trial-of-the-champion', "Trial of the Champion")?></li>
 					<li><?=nav_link('forge-of-souls', "Forge of Souls")?></li>
 					<li><?=nav_link('pit-of-saron', "Pit of Saron")?></li>
 					<li><?=nav_link('halls-of-reflection', "Halls of Reflection")?></li>
@@ -321,7 +321,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('the-eye', "The Eye")?></li>
 					<li><?=nav_link('mount-hyjal', "Battle for Mount Hyjal")?></li>
 					<li><?=dead_link("Black Temple")?></li>
-					<li><?=dead_link("Sunwell Plateau")?></li>
+					<li><?=nav_link('sunwell', "Sunwell Plateau")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
@@ -331,7 +331,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('vault-of-archavon', "Vault of Archavon")?></li>
 					<li><?=nav_link('eye-of-eternity', "The Eye of Eternity")?></li>
 					<li><?=dead_link("Ulduar")?></li>
-					<li><?=dead_link("Trial of the Crusader")?></li>
+					<li><?=nav_link('trial-of-the-crusader', "Trial of the Crusader")?></li>
 					<li><?=nav_link('onyxia', "Onyxia's Lair")?></li>
 					<li><?=nav_link('ruby-sanctum', "Ruby Sanctum")?></li>
 					<li><?=dead_link("Icecrown Citadel")?></li>
