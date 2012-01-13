@@ -106,7 +106,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		# raids
 
 		'molten-core'		=> array('http://doats.net/tiles/built/raid_mc/', 0.95, 0.8, '#000000', array(2,2, 4,4, 8,8)),
-		'blackwing-lair'	=> array(),
+		'blackwing-lair'	=> array('http://doats.net/tiles/built/raid_bwl/', 0.75, 0.38, '#000000', array(2,1, 4,2, 7,4)),
 		'aq-ruins'		=> array('http://doats.net/tiles/built/inst_aq20/', 0.85, 1.3, '#655339', array(2,3, 4,5)),
 		'aq-temple'		=> array('http://doats.net/tiles/built/raid_aq40/', 0.85, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
 
@@ -116,7 +116,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'serpentshrine-cavern'	=> array('http://doats.net/tiles/built/raid_ssc/', 1.2, 0.9, '#000000', array(3,3, 6,6, 11,9)),
 		'the-eye'		=> array('http://doats.net/tiles/built/raid_tk/', 0.98, 1.2, '#000000', array(2,3, 4,6, 8,9)),
 		'mount-hyjal'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
-		'black-temple'		=> array('http://doats.net/tiles/built/raid_bt/', 0.72, 0.85, '#000000', array(2,2, 4,4, 8,8, 13,15)),
+		'black-temple'		=> array('http://doats.net/tiles/built/raid_bt/', 0.8, 0.85, '#000000', array(2,2, 4,4, 8,8, 13,15)),
 		'sunwell'		=> array('http://doats.net/tiles/built/raid_sunwell/', 1.0, 0.7, '#001D29', array(2,3, 4,6, 8,9)),
 
 		'naxxramas'		=> array('http://doats.net/tiles/built/raid_naxx/', 0.7, 0.55, '#000000', array(2,2, 4,4, 8,8, 13,10)),
@@ -312,7 +312,7 @@ body { padding: 0; margin: 0 }
 			<li><a href="#" onclick="return false;">Classic</a>
 				<ul>
 					<li><?=nav_link('molten-core', "Molten Core")?></li>
-					<li><?=dead_link("Blackwing Lair")?></li>
+					<li><?=nav_link('blackwing-lair', "Blackwing Lair")?></li>
 					<li><?=nav_link('aq-ruins', "Ruins of Ahn'Qiraj")?></li>
 					<li><?=nav_link('aq-temple', "Temple of Ahn'Qiraj")?></li>
 				</ul>

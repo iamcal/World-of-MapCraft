@@ -203,15 +203,22 @@
 	#	array('raid_bt.png', 222,1207),
 	#	array('blacktemple_floor_1.png', 1216,0),
 	#	array('blacktemple_floor_2.png', 886,821),
-	#	array('blacktemple_floor_3.png', 986,1961),
-	#	array('blacktemple_floor_4.png', 2039-206,779+45),
+	#	array('blacktemple_floor_3.png', 986-(98+107),1961+135),
+	#	array('blacktemple_floor_3a.png', 1597-107,2003+135-121),
+	#	array('blacktemple_floor_4.png', 2039+7,779+45),
 	#	array('blacktemple_floor_5.png', 1935,1289),
 	#));
 
-	assemble_set('raid_fl', array(
-		array('raid_fl.png', 0, 128),
-		array('firelands_sulfuronkeep.png', 1024,0),
-	),'#310000');
+	#assemble_set('raid_fl', array(
+	#	array('raid_fl.png', 0, 128),
+	#	array('firelands_sulfuronkeep.png', 1024,0),
+	#),'#310000');
+
+	assemble_set('raid_bwl', array(
+		array('blackrock_upper_guild_floor_1.png', 0, 182+34),
+		array('blackrock_upper_guild_floor_2.png', 520, 182),
+		array('blackrock_upper_guild_floor_3.png', 520+520-(135), 0),
+	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
 

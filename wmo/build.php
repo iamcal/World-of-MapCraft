@@ -56,7 +56,55 @@
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock2');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_lower_guild');
 	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_lower_instance');
-	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild');
+
+	$bwl_floor_1 = array(
+		6, # entry ramp
+		7, # razorgore
+		8, # ramp from raz to val
+		9, # val
+		10, # ramp to suppression
+		22,
+	);
+
+	$bwl_floor_2 = array(
+		12,
+		11, # upper something
+		15,16, # lower dragons
+	);
+
+	$bwl_floor_3 = array(
+		0, # nef
+		19,20,21, # chromagnus
+		17,18, # upper dragons
+	);
+
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', $bwl_floor_1, array(), 'blackrock_upper_guild_floor_1');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', $bwl_floor_2, array(), 'blackrock_upper_guild_floor_2');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', $bwl_floor_3, array(), 'blackrock_upper_guild_floor_3');
+
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(0), array(), 'Blackrock_upper_guild_0');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(1), array(), 'Blackrock_upper_guild_1');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(2), array(), 'Blackrock_upper_guild_2');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(3), array(), 'Blackrock_upper_guild_3');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(4), array(), 'Blackrock_upper_guild_4');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(5), array(), 'Blackrock_upper_guild_5');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(6), array(), 'Blackrock_upper_guild_6');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(7), array(), 'Blackrock_upper_guild_7');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(8), array(), 'Blackrock_upper_guild_8');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(9), array(), 'Blackrock_upper_guild_9');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(10), array(), 'Blackrock_upper_guild_10');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(11), array(), 'Blackrock_upper_guild_11');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(12), array(), 'Blackrock_upper_guild_12');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(13), array(), 'Blackrock_upper_guild_13');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(14), array(), 'Blackrock_upper_guild_14');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(15), array(), 'Blackrock_upper_guild_15');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(16), array(), 'Blackrock_upper_guild_16');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(17), array(), 'Blackrock_upper_guild_17');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(18), array(), 'Blackrock_upper_guild_18');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(19), array(), 'Blackrock_upper_guild_19');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(20), array(), 'Blackrock_upper_guild_20');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(21), array(), 'Blackrock_upper_guild_21');
+	#build_wmo_map('Dungeon/AZ_Blackrock', 'Blackrock_upper_guild', array(22), array(), 'Blackrock_upper_guild_22');
 
 	$lbrs_lower = array(
 		#66,68,	# forlorn span, outside
@@ -201,8 +249,10 @@
 
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(25,26,27,28,29,35,45), array(), 'blacktemple_sewer', 2);
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(12,13,34,9), array(), 'blacktemple_floor_1', 2);
-	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34,9,10,20,22,17,41,42,43,44,16,33,15,32,17,36,37,14), array(), 'blacktemple_floor_2', 2);
 
+	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34,9, 20,22,17,41,42,43,44,16, 15,17,11), array(), 'blacktemple_floor_2', 2);
+	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(10,32,33,36,37,14), array(), 'blacktemple_floor_3a', 2); # gorefiend coridoor
+exit;
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(31,18,6), array(), 'blacktemple_floor_3', 2); # gorefiend
 	#cut_wmo_map('blacktemple_floor_3', array(
 	#	array(0,0,303,386),
