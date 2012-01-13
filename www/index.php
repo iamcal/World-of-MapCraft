@@ -110,7 +110,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'aq-ruins'		=> array('http://doats.net/tiles/built/inst_aq20/', 0.85, 1.3, '#655339', array(2,3, 4,5)),
 		'aq-temple'		=> array('http://doats.net/tiles/built/raid_aq40/', 0.85, 0.6, '#000000', array(2,2, 4,4, 8,8, 15,11)),
 
-		'karazhan'		=> array(),
+		'karazhan'		=> array('http://doats.net/tiles/built/raid_kara/', 0.63, 0.43, '#000000', array(2,1, 4,2, 8,4, 13,8)),
 		'gruul'			=> array('http://doats.net/tiles/built/raid_gruul/', 0.9, 0.65, '#000000', array(3,2, 5,3)),
 		'magtheridon'		=> array('http://doats.net/tiles/built/raid_mag/', 0.4, 0.7, '#000000', array(2,2, 3,4)),
 		'serpentshrine-cavern'	=> array('http://doats.net/tiles/built/raid_ssc/', 1.2, 0.9, '#000000', array(3,3, 6,6, 11,9)),
@@ -319,7 +319,7 @@ body { padding: 0; margin: 0 }
 			</li>
 			<li><a href="#" onclick="return false;">The Burning Crusade</a>
 				<ul>
-					<li><?=dead_link("Karazhan")?></li>
+					<li><?=nav_link('karazhan', "Karazhan")?></li>
 					<li><?=nav_link('gruul', "Gruul's Lair")?></li>
 					<li><?=nav_link('magtheridon', "Magtheridon's Lair")?></li>
 					<li><?=nav_link('serpentshrine-cavern', "Serpentshrine Cavern")?></li>

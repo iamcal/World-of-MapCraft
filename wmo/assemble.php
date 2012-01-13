@@ -214,10 +214,30 @@
 	#	array('firelands_sulfuronkeep.png', 1024,0),
 	#),'#310000');
 
-	assemble_set('raid_bwl', array(
-		array('blackrock_upper_guild_floor_1.png', 0, 182+34),
-		array('blackrock_upper_guild_floor_2.png', 520, 182),
-		array('blackrock_upper_guild_floor_3.png', 520+520-(135), 0),
+	#assemble_set('raid_bwl', array(
+	#	array('blackrock_upper_guild_floor_1.png', 0, 182+34),
+	#	array('blackrock_upper_guild_floor_2.png', 520, 182),
+	#	array('blackrock_upper_guild_floor_3.png', 520+520-(135), 0),
+	#));
+
+	assemble_set('raid_kara', array(
+		array('kharazan_instance_floor1.png', 0, 0),
+		array('kharazan_instance_floor2.png', 650, 112),
+		array('kharazan_instance_floor3.png', 222, 740),
+		array('kharazan_instance_floor3b.png', 222+160-73, 740+372+400),
+
+		array('kharazan_instance_floor4_base.png', 908+195+80, 108),
+		array('kharazan_instance_floor4.png', 1000+195+80, 0),
+
+		array('kharazan_instance_floor5_base.png', 382+1000-196, 1080-(100+207)),
+		array('kharazan_instance_floor5.png', 382+1000, 1080-207),
+
+		array('kharazan_instance_floor6_base.png', 1580+148+430, 81+27),
+		array('kharazan_instance_floor6.png', 1580+430, 27),
+
+		array('kharazan_instance_floor7.png', 2080, 78+1000-125),
+		array('kharazan_instance_floor8.png', 2420, 78+1018-125),
+		array('kharazan_instance_floor9.png', 2080+134, 78+1160),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){

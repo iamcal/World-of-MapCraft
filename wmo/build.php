@@ -1,6 +1,150 @@
 <?
 	include('../build/config.php');
 
+	#build_wmo_map('dungeon/az_karazahn', 'karazhan');
+
+	$kara_1 = array(
+		32,45,64,
+		21,33,
+	);
+	$kara_2 = array(
+		3,4,5, # dance floors
+		45,
+		41,46,
+	);
+	$kara_3 = array(
+		4,5, # dance floors
+
+		6, # the stage
+		16, # coridoor under stage?
+
+		14,15,2, # dance floor coridoor
+		34,35,36,37,38,39,63, # maiden
+
+		60,66,
+		10,12,
+	);
+
+	$kara_3b = array(
+		40, # spiral coridoor up from stage
+		6, # the stage
+		7,30, # blue passages from stage
+		10,11,12,
+		8,
+	);
+
+		#49, # big crazy top rooms
+		#55, # crazy big thing
+
+	$kara_4 = array(
+		#8,9,10,
+		9,
+		61,31,48,62,
+
+		50,51, # illhoof
+
+	#	49, # big room base
+	);
+
+	$kara_5 = array(
+		44,
+		47, # shade of aran
+
+		52, # illhoof coridoor (50 is the coridoor)
+		43,
+
+	#	49, # big room base
+	);
+
+	$kara_6 = array(
+
+		13, # chess room
+		17,19,58, # room after chess
+
+		65,42,53, # netherspite
+		52,43,
+
+	#	49, # big room base
+	);
+
+	$kara_7 = array(
+		56,54,57,20,		#lvl 7
+		19,
+	);
+
+	$kara_8 = array(
+		18,			#lvl 8
+		19,
+	);
+
+	$kara_9 = array(
+		19,
+		22,			#lvl 9
+		23,27,28,24,25,26,29,
+	);
+
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_1, array(), 'kharazan_instance_floor1');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_2, array(), 'kharazan_instance_floor2');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_3, array(), 'kharazan_instance_floor3');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_3b, array(), 'kharazan_instance_floor3b');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_4, array(), 'kharazan_instance_floor4');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_5, array(), 'kharazan_instance_floor5');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_6, array(), 'kharazan_instance_floor6');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_7, array(), 'kharazan_instance_floor7');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_8, array(), 'kharazan_instance_floor8');
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_9, array(), 'kharazan_instance_floor9');
+
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(55), array(), 'kharazan_instance_top');
+
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor4_base');
+	#cut_wmo_map('kharazan_instance_floor4_base', array(
+	#	array(0,0, 1024,245),
+	#	array(0,687, 1024,1024),
+	#	array(0,0, 241,1024),
+	#	array(735,0, 1024,1024),
+	#	array(580,233, 230,202),
+	#	array(206,526, 150,175),
+	#	array(356,610, 83,78),
+	#	array(439,648, 26, 40),
+	#	array(640,652, 111,53),
+	#	array(214,346, 114,110),
+	#	array(222,233, 136,77),
+	#	array(229,306, 54,62),
+	#));
+
+	build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor5_base');
+	cut_wmo_map('kharazan_instance_floor5_base', array(
+		array(0,0,1024,228), # top
+		array(466,190, 95,165),
+		array(0,0,446,386),
+		array(752,0, 400,1024),
+		array(0,583,650,500),
+		array(0,0,279,1024),
+		array(308,415,272,137),
+		array(460,384,120,40),
+		array(580,433,95,90),
+		array(704,433,62,89),
+		array(644,641, 116,337),
+		array(433,509, 217,93),
+		array(614,502, 46,57),
+		array(614,597, 46,57),
+	));
+
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor6_base');
+	#cut_wmo_map('kharazan_instance_floor6_base', array(
+	#	array(0,0,1024,223),
+	#	array(0,0,221,1024),
+	#	array(436,0,1024,1024),
+	#	array(0,610,1024,400),
+	#	array(195,303,63,137),
+	#	array(308,303,128,250),
+	#	array(191,436,88,182),
+	#	array(383,220,63,92),
+	#));
+	
+
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_7, array(), 'kharazan_instance_floor7', 'kara');
+exit;
 
 	#build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon');
 
@@ -591,6 +735,7 @@ exit;
 		echo "$out_name: ";
 
 		$wmo = "$blps/world/wmo/$folder/{$map_name}.wmo";
+		if ($map_name == 'karazhan') $wmo = "$blps/world/wmo/$folder/kharazan.wmo";
 
 		if (!file_exists($wmo)){
 			echo "can't find $wmo\n";
@@ -610,6 +755,10 @@ exit;
 #	echo "$k,$v[0],$v[1],$v[2]\n";
 #}
 #exit;
+
+		#$chunks[49][5] = -9999;
+		$chunks[19][5] = -9999;
+
 
 		#
 		# filter chunks?
@@ -777,6 +926,9 @@ exit;
 		}
 		if ($rotate==3){
 			echo shell_exec("convert $dst -rotate 270 $dst");
+		}
+		if ($rotate=='kara'){
+			echo shell_exec("convert $dst -rotate 135 $dst");
 		}
 		echo " done\n";
 	}
