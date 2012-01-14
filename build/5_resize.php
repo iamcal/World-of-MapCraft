@@ -93,7 +93,9 @@
 		#	'misc_fl',
 		#	'raid_bt',
 		#	'raid_bwl',
-			'raid_kara',
+		#	'raid_kara',
+		#	'raid_icc',
+			'raid_ulduar',
 		))) return;
 
 		echo "$dir: \n";

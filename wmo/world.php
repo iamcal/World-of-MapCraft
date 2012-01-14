@@ -14,8 +14,10 @@
 	#create_world('raid_sunwell', 'sunwellplateau', 28,32, 26,31, 10,10, (256*5)-20, (256*6)-20);
 	#create_world('inst_dtk', 'draktheronkeep', 31,34, 30,34, 133+230,430, 640-230,460);
 	#create_world('raid_bt', 'blacktemple', 29,32, 28,32, 195,478, 613,428);
+	#create_world('raid_fl', 'firelands1', 30,33, 29,33, 0,0, 1024,1280, 'noliquid_');
 
-	create_world('raid_fl', 'firelands1', 30,33, 29,33, 0,0, 1024,1280, 'noliquid_');
+	#create_world('raid_ulduar_1', 'ulduarraid', 30,33, 29,34, 225,237, 565,1226);
+	create_world('raid_ulduar_2', 'ulduarraid', 31,32, 27,28, 129,42, 295,220);
 
 	function create_world($out_name, $map_name, $x1, $x2, $y1, $y2, $crop_x, $crop_y, $crop_w, $crop_h, $prefix=''){
 

@@ -123,11 +123,11 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'obsidian-sanctum'	=> array('http://doats.net/tiles/built/raid_os/', 1.0, 0.95, '#1E1C1E', array(2,2)),
 		'vault-of-archavon'	=> array('http://doats.net/tiles/built/raid_voa/', 0.5, 0.8, '#000000', array(2,2, 4,4, 5,7)),
 		'eye-of-eternity'	=> array('http://doats.net/tiles/built/raid_eoe/', 0.55, 0.57, '#000000', array(1,1)),
-		'ulduar'		=> array(),
+		'ulduar'		=> array('http://doats.net/tiles/built/raid_ulduar/', 1.15, 1.05, '#000000', array(3,3, 6,6, 12,12, 18,17)),
 		'trial-of-the-crusader'	=> array('http://doats.net/tiles/built/raid_toc/', 0.55, 0.85, '#000000', array(2,2, 4,4, 5,8)),
 		'onyxia'		=> array('http://doats.net/tiles/built/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
 		'ruby-sanctum'		=> array('http://doats.net/tiles/built/raid_rs/', 1.0, 1.0, '#392E39', array(2,2)),
-		'icecrown-citadel'	=> array(),
+		'icecrown-citadel'	=> array('http://doats.net/tiles/built/raid_icc/', 1.2, 0.8, '#000000', array(3,2, 6,4, 10,7)),
 
 		'baradin-hold'		=> array('http://doats.net/tiles/built/raid_bh/', 1.15, 0.8, '#000000', array(3,2, 6,4)),
 		'bastion-of-twilight'	=> array('http://doats.net/tiles/built/raid_bot/', 0.4, 0.8, '#000000', array(1,2, 2,4, 4,8, 8,13)),
@@ -335,11 +335,11 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('obsidian-sanctum', "Obsidian Sanctum")?></li>
 					<li><?=nav_link('vault-of-archavon', "Vault of Archavon")?></li>
 					<li><?=nav_link('eye-of-eternity', "The Eye of Eternity")?></li>
-					<li><?=dead_link("Ulduar")?></li>
+					<li><?=nav_link('ulduar', "Ulduar")?></li>
 					<li><?=nav_link('trial-of-the-crusader', "Trial of the Crusader")?></li>
 					<li><?=nav_link('onyxia', "Onyxia's Lair")?></li>
 					<li><?=nav_link('ruby-sanctum', "Ruby Sanctum")?></li>
-					<li><?=dead_link("Icecrown Citadel")?></li>
+					<li><?=nav_link('icecrown-citadel', "Icecrown Citadel")?></li>
 				</ul>
 			</li>
 			<li><a href="#" onclick="return false;">Cataclysm</a>

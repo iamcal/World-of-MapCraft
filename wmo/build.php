@@ -112,23 +112,23 @@
 	#	array(229,306, 54,62),
 	#));
 
-	build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor5_base');
-	cut_wmo_map('kharazan_instance_floor5_base', array(
-		array(0,0,1024,228), # top
-		array(466,190, 95,165),
-		array(0,0,446,386),
-		array(752,0, 400,1024),
-		array(0,583,650,500),
-		array(0,0,279,1024),
-		array(308,415,272,137),
-		array(460,384,120,40),
-		array(580,433,95,90),
-		array(704,433,62,89),
-		array(644,641, 116,337),
-		array(433,509, 217,93),
-		array(614,502, 46,57),
-		array(614,597, 46,57),
-	));
+	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor5_base');
+	#cut_wmo_map('kharazan_instance_floor5_base', array(
+	#	array(0,0,1024,228), # top
+	#	array(466,190, 95,165),
+	#	array(0,0,446,386),
+	#	array(752,0, 400,1024),
+	#	array(0,583,650,500),
+	#	array(0,0,279,1024),
+	#	array(308,415,272,137),
+	#	array(460,384,120,40),
+	#	array(580,433,95,90),
+	#	array(704,433,62,89),
+	#	array(644,641, 116,337),
+	#	array(433,509, 217,93),
+	#	array(614,502, 46,57),
+	#	array(614,597, 46,57),
+	#));
 
 	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', array(49), array(), 'kharazan_instance_floor6_base');
 	#cut_wmo_map('kharazan_instance_floor6_base', array(
@@ -142,9 +142,7 @@
 	#	array(383,220,63,92),
 	#));
 	
-
 	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_7, array(), 'kharazan_instance_floor7', 'kara');
-exit;
 
 	#build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon');
 
@@ -394,9 +392,9 @@ exit;
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(25,26,27,28,29,35,45), array(), 'blacktemple_sewer', 2);
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(12,13,34,9), array(), 'blacktemple_floor_1', 2);
 
-	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34,9, 20,22,17,41,42,43,44,16, 15,17,11), array(), 'blacktemple_floor_2', 2);
-	build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(10,32,33,36,37,14), array(), 'blacktemple_floor_3a', 2); # gorefiend coridoor
-exit;
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(34,9, 20,22,17,41,42,43,44,16, 15,17,11), array(), 'blacktemple_floor_2', 2);
+	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(10,32,33,36,37,14), array(), 'blacktemple_floor_3a', 2); # gorefiend coridoor
+
 	#build_wmo_map('Dungeon/Blacktemple', 'Blacktemple', array(31,18,6), array(), 'blacktemple_floor_3', 2); # gorefiend
 	#cut_wmo_map('blacktemple_floor_3', array(
 	#	array(0,0,303,386),
@@ -569,6 +567,19 @@ exit;
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ext04');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Forge');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid');
+
+	$ulduar_mimiron = array(
+		32, # main room
+		#37,39, # the wrong end
+		41,42,43,44, # main coridoor
+		17, # small bridge
+	);
+
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(33,34,35,36,46), array(), 'Ulduar_Raid_lower', 3);
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', $ulduar_mimiron, array(), 'Ulduar_Raid_mimiron', 3);
+	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(), array_merge(array(34,35,46), $ulduar_mimiron), 'Ulduar_Raid_main', 3);
+
+exit;
 
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ramp01');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01');

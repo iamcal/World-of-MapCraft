@@ -220,24 +220,41 @@
 	#	array('blackrock_upper_guild_floor_3.png', 520+520-(135), 0),
 	#));
 
-	assemble_set('raid_kara', array(
-		array('kharazan_instance_floor1.png', 0, 0),
-		array('kharazan_instance_floor2.png', 650, 112),
-		array('kharazan_instance_floor3.png', 222, 740),
-		array('kharazan_instance_floor3b.png', 222+160-73, 740+372+400),
+	#assemble_set('raid_kara', array(
+	#	array('kharazan_instance_floor1.png', 0, 0),
+	#	array('kharazan_instance_floor2.png', 650, 112),
+	#	array('kharazan_instance_floor3.png', 222, 740),
+	#	array('kharazan_instance_floor3b.png', 222+160-73, 740+372+400),
 
-		array('kharazan_instance_floor4_base.png', 908+195+80, 108),
-		array('kharazan_instance_floor4.png', 1000+195+80, 0),
+	#	array('kharazan_instance_floor4_base.png', 908+195+80, 108),
+	#	array('kharazan_instance_floor4.png', 1000+195+80, 0),
 
-		array('kharazan_instance_floor5_base.png', 382+1000-196, 1080-(100+207)),
-		array('kharazan_instance_floor5.png', 382+1000, 1080-207),
+	#	array('kharazan_instance_floor5_base.png', 382+1000-196, 1080-(100+207)),
+	#	array('kharazan_instance_floor5.png', 382+1000, 1080-207),
 
-		array('kharazan_instance_floor6_base.png', 1580+148+430, 81+27),
-		array('kharazan_instance_floor6.png', 1580+430, 27),
+	#	array('kharazan_instance_floor6_base.png', 1580+148+430, 81+27),
+	#	array('kharazan_instance_floor6.png', 1580+430, 27),
 
-		array('kharazan_instance_floor7.png', 2080, 78+1000-125),
-		array('kharazan_instance_floor8.png', 2420, 78+1018-125),
-		array('kharazan_instance_floor9.png', 2080+134, 78+1160),
+	#	array('kharazan_instance_floor7.png', 2080, 78+1000-125),
+	#	array('kharazan_instance_floor8.png', 2420, 78+1018-125),
+	#	array('kharazan_instance_floor9.png', 2080+134, 78+1160),
+	#));
+
+	#assemble_set('raid_icc', array(
+	#	array('IceCrownRaid.png', -580, -95),
+	#	array('IceCrownRaid_middle_section.png', 470, 0),
+	#	array('IceCrownRaid_arthas_precipice.png', 226, 1130),
+	#));
+
+	assemble_set('raid_ulduar', array(
+
+		array('Ulduar_Raid_mimiron.png', 0, 0),
+		array('Ulduar_Raid_main.png', 2500-(988), 0+1262-700),
+
+		array('raid_ulduar_1.png', 2100+2506-(295+988), 2164+1262+175-700),
+		array('raid_ulduar_2.png', 2500+2104-(148+988), 760+1262-(232+700)),
+
+		array('Ulduar_Raid_lower.png', 1773, 1998),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
@@ -262,7 +279,7 @@
 		$h = ceil($max_h / 256) * 256;
 
 		# create canvas
-		$temp = "$flats/temp.png";
+		$temp = "$flats/__{$name}.png";
 		$cmd = "convert xc:{$bg_color} -geometry !{$w}x{$h} $temp";
 		echo shell_exec($cmd);
 		foreach ($tiles as $tile){
