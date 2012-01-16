@@ -72,7 +72,8 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'arcatraz'		=> array('http://doats.net/tiles/built/inst_arc/', 1.1, 1.15, '#000000', array(3,3, 6,6)),
 		'magisters-terrace'	=> array('http://doats.net/tiles/built/inst_mgt/', 0.72, 0.3, '#335254', array(2,1, 4,2, 7,3)),
 
-		'utgarde-keep'		=> array(),
+		'utgarde-keep'		=> array('http://doats.net/tiles/built/inst_uk/', 0.6, 0.7, '#000000', array(2,2, 4,4, 
+5,7)),
 		'nexus'			=> array('http://doats.net/tiles/built/inst_nexus/', 0.8, 0.7, '#000000', array(2,2, 4,4, 8,6)),
 		'old-kingdom'		=> array(),
 		'azjol-nerub'		=> array(),
@@ -271,7 +272,7 @@ body { padding: 0; margin: 0 }
 			</li>
 			<li><a href="#" onclick="return false;">Wrath of the Lich King</a>
 				<ul>
-					<li><?=dead_link("Utgarde Keep")?></li>
+					<li><?=nav_link('utgarde-keep', "Utgarde Keep")?></li>
 					<li><?=nav_link('nexus', "The Nexus")?></li>
 					<li><?=dead_link("Ahn'kahet: The Old Kingdom")?></li>
 					<li><?=dead_link("Azjol-Nerub")?></li>

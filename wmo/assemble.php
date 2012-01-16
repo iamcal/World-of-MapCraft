@@ -246,15 +246,21 @@
 	#	array('IceCrownRaid_arthas_precipice.png', 226, 1130),
 	#));
 
-	assemble_set('raid_ulduar', array(
+	#assemble_set('raid_ulduar', array(
 
-		array('Ulduar_Raid_mimiron.png', 0, 0),
-		array('Ulduar_Raid_main.png', 2500-(988), 0+1262-700),
+	#	array('Ulduar_Raid_mimiron.png', 0, 0),
+	#	array('Ulduar_Raid_main.png', 2500-(988), 0+1262-700),
 
-		array('raid_ulduar_1.png', 2100+2506-(295+988), 2164+1262+175-700),
-		array('raid_ulduar_2.png', 2500+2104-(148+988), 760+1262-(232+700)),
+	#	array('raid_ulduar_1.png', 2100+2506-(295+988), 2164+1262+175-700),
+	#	array('raid_ulduar_2.png', 2500+2104-(148+988), 760+1262-(232+700)),
 
-		array('Ulduar_Raid_lower.png', 1773, 1998),
+	#	array('Ulduar_Raid_lower.png', 1773, 1998),
+	#));
+
+	assemble_set('inst_uk', array(
+		array('inst_uk_lower.png', 0, 0),
+		array('inst_uk_upper.png', 0, 1010),
+		array('inst_uk.png', 840, 1000),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){

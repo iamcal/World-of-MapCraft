@@ -575,11 +575,9 @@
 		17, # small bridge
 	);
 
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(33,34,35,36,46), array(), 'Ulduar_Raid_lower', 3);
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', $ulduar_mimiron, array(), 'Ulduar_Raid_mimiron', 3);
-	build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(), array_merge(array(34,35,46), $ulduar_mimiron), 'Ulduar_Raid_main', 3);
-
-exit;
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(33,34,35,36,46), array(), 'Ulduar_Raid_lower', 3);
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', $ulduar_mimiron, array(), 'Ulduar_Raid_mimiron', 3);
+	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Raid', array(), array_merge(array(34,35,46), $ulduar_mimiron), 'Ulduar_Raid_main', 3);
 
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Ramp01');
 	#build_wmo_map('Dungeon/Ulduar', 'Ulduar_Tower01');
@@ -602,7 +600,25 @@ exit;
 
 	#build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01');
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde');
-	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW');
+
+	$uk_lower = array(
+		0,
+		1,2,
+		5,
+		10,11,12,13,14,
+		#15,
+		16,
+	);
+
+	$uk_upper = array(
+		3,4,6,9,#15,
+		5,
+		7,8,
+	);
+
+	build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW', $uk_lower, array(), 'inst_uk_lower');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW', $uk_upper, array(), 'inst_uk_upper');
+exit;
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_80GW', array(), array(), '', 0);
 
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC');
@@ -768,7 +784,11 @@ exit;
 #exit;
 
 		#$chunks[49][5] = -9999;
-		$chunks[19][5] = -9999;
+		#$chunks[19][5] = -9999;
+
+		if ($alt_name == 'inst_uk_lower'){
+			$chunks[10][5] = -9999;
+		}
 
 
 		#
