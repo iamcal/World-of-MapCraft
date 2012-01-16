@@ -257,10 +257,18 @@
 	#	array('Ulduar_Raid_lower.png', 1773, 1998),
 	#));
 
-	assemble_set('inst_uk', array(
-		array('inst_uk_lower.png', 0, 0),
-		array('inst_uk_upper.png', 0, 1010),
-		array('inst_uk.png', 840, 1000),
+	#assemble_set('inst_uk', array(
+	#	array('inst_uk_lower.png', 0, 0),
+	#	array('inst_uk_upper.png', 0, 1010),
+	#	array('inst_uk.png', 840, 1000),
+	#));
+
+	assemble_set('raid_ds', array(
+		array('raid_ds_hagara.png', 256, 0),
+		array('raid_ds_main.png', 0, 288),
+		array('raid_ds_warmaster.png', 800, 0),
+		array('raid_ds_spine.png', 1396+32, 42),
+		array('raid_ds_deathwing.png', 800, 629),
 	));
 
 	function assemble_set($name, $tiles, $bg_color='black'){

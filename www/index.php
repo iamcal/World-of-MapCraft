@@ -72,8 +72,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'arcatraz'		=> array('http://doats.net/tiles/built/inst_arc/', 1.1, 1.15, '#000000', array(3,3, 6,6)),
 		'magisters-terrace'	=> array('http://doats.net/tiles/built/inst_mgt/', 0.72, 0.3, '#335254', array(2,1, 4,2, 7,3)),
 
-		'utgarde-keep'		=> array('http://doats.net/tiles/built/inst_uk/', 0.6, 0.7, '#000000', array(2,2, 4,4, 
-5,7)),
+		'utgarde-keep'		=> array('http://doats.net/tiles/built/inst_uk/', 0.6, 0.7, '#000000', array(2,2, 4,4, 5,7)),
 		'nexus'			=> array('http://doats.net/tiles/built/inst_nexus/', 0.8, 0.7, '#000000', array(2,2, 4,4, 8,6)),
 		'old-kingdom'		=> array(),
 		'azjol-nerub'		=> array(),
@@ -135,7 +134,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'throne-of-four-winds'	=> array('http://doats.net/tiles/built/raid_tofw/', 1.45, 1.1, '#310000', array(3,3)),
 		'blackwing-descent'	=> array('http://doats.net/tiles/built/raid_bwd/', 0.8, 0.9, '#000000', array(2,3, 4,6, 8,9)),
 		'firelands'		=> array('http://doats.net/tiles/built/raid_fl/', 1.0, 0.71, '#310000', array(3,2, 6,4, 9,8)),
-		'dragon-soul'		=> array(),
+		'dragon-soul'		=> array('http://doats.net/tiles/built/raid_ds/', 0.8, 0.7, '#000000', array(2,2, 4,4, 7,6)),
 
 
 		# world misc
@@ -350,7 +349,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('throne-of-four-winds', "Throne of the Four Winds")?></li>
 					<li><?=nav_link('blackwing-descent', "Blackwing Descent")?></li>
 					<li><?=nav_link('firelands', "Firelands")?></li>
-					<li><?=dead_link("Dragon Soul")?></li>
+					<li><?=nav_link('dragon-soul', "Dragon Soul")?></li>
 				</ul>
 			</li>
 		</ul>
