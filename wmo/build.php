@@ -1,6 +1,50 @@
 <?
 	include('../build/config.php');
 
+	#build_wmo_map('northrend/dalaran', 'nd_dalaran', array(59,63,64,68,69,70,71,72,73));
+	#build_wmo_map('lorderon/undercity', 'undercity', array(), array(9,32,31,35,33,8,34,12,30), '', 3);
+
+	#build_wmo_map('khazmodan/cities/ironforge', 'ironforge', array(101,102,103), array(), 'misc_if_lower');
+	#build_wmo_map('khazmodan/cities/ironforge', 'ironforge', array(), array(101,102,103), 'misc_if_upper');
+
+	#build_wmo_map('kalimdor/draeneicity', 'ol_draenei_city');
+
+$add_labels = 1;
+
+	$cot_ramp = array(
+10,
+9,
+8,
+11,
+12,
+7,
+3,
+0,
+2,
+
+27,
+23,
+5,
+21,
+24,
+6,
+
+19,
+20,
+34,
+33,
+32,
+31,
+30,
+	);
+
+$cot_remove = array(
+	29, # huge center piece
+	2,3,7,8,9, # entrance ramp
+);
+
+	build_wmo_map('dungeon/cavernsoftime', 'cavernsoftime', array(), $cot_remove);
+
 	#build_wmo_map('dungeon/az_karazahn', 'karazhan');
 
 	$kara_1 = array(
@@ -728,9 +772,8 @@
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance');
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance_LOW');
 
-	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(0,1,2), array(), 'inst_tot_upper');
-	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(), array(0,1,2), 'inst_tot_lower');
-exit;
+	#build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(0,1,2), array(), 'inst_tot_upper');
+	#build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(), array(0,1,2), 'inst_tot_lower');
 
 	#build_wmo_map('Cataclysm/deathwing', 'deathwing_wmo_torso');
 	#build_wmo_map('Dungeon/Spineofthedestroyer', 'deathwings_back');
@@ -815,7 +858,7 @@ exit;
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_argentcrusadetenttwo');
 	#build_wmo_map('northrend/buildings/human/nd_human_construction01', 'nd_human_construction01');
 
-	build_wmo_map('cataclysm/firelands', 'firelands_sulfuronkeep', array(), array(), '', 3);
+	#build_wmo_map('cataclysm/firelands', 'firelands_sulfuronkeep', array(), array(), '', 3);
 
 	function build_wmo_map($folder, $map_name, $only_chunks=array(), $exclude_chunks=array(), $alt_name='', $rotate=1){
 
@@ -1013,21 +1056,46 @@ exit;
 				$cmd = "composite $row[0] -geometry +{$x}+{$y} $dst $dst";
 				#echo "$cmd\n";
 				echo shell_exec($cmd);
+
 				echo '.';
 			}
 		}
-		if ($rotate==1){
-			echo shell_exec("convert $dst -rotate 90 $dst");
+
+
+		#
+		# add labels last, so they're on the top
+		#
+
+		if ($GLOBALS['add_labels']){
+			foreach ($chunks as $k => $chunk){
+
+				$g_w = $groups[$k]['w'];
+				$g_h = $groups[$k]['h'];
+				$tx = $chunk[0] + 1;
+				$ty = $chunk[1] + 20;
+				$gx2 = $chunk[0]+$g_w;
+				$gy2 = $chunk[1]+$g_h;
+
+				echo shell_exec("convert $dst -stroke red -pointsize 20 -undercolor dodgerblue -draw \"text $tx,$ty '$k'\" ".
+					"-stroke '#333333' -fill none -draw \"rectangle $chunk[0],$chunk[1] $gx2,$gy2\" $dst");
+			}
 		}
-		if ($rotate==2){
-			echo shell_exec("convert $dst -rotate 180 $dst");
+
+		if (!$GLOBALS['add_labels']){
+			if ($rotate==1){
+				echo shell_exec("convert $dst -rotate 90 $dst");
+			}
+			if ($rotate==2){
+				echo shell_exec("convert $dst -rotate 180 $dst");
+			}
+			if ($rotate==3){
+				echo shell_exec("convert $dst -rotate 270 $dst");
+			}
+			if ($rotate=='kara'){
+				echo shell_exec("convert $dst -rotate 135 $dst");
+			}
 		}
-		if ($rotate==3){
-			echo shell_exec("convert $dst -rotate 270 $dst");
-		}
-		if ($rotate=='kara'){
-			echo shell_exec("convert $dst -rotate 135 $dst");
-		}
+
 		echo " done\n";
 	}
 

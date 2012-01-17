@@ -1,11 +1,20 @@
 <?
 	include('../build/config.php');
 
-	assemble_set('inst_tot', array(
-		array('inst_tot_upper.png', 464, 0),
-		array('inst_tot_lower.png', 0, 0),
-		array('inst_tot.png', 504, 917),
-	), '#310000');
+	assemble_set('misc_exodar', 'ol_draenei_city.png');
+
+	#assemble_set('misc_if', array(
+	#	array('misc_if_upper.png', 0, 0),
+	#	array('misc_if_lower.png', 924, 924),
+	#));
+
+	#assemble_set('misc_undercity', 'undercity.png');
+
+	#assemble_set('inst_tot', array(
+	#	array('inst_tot_upper.png', 464, 0),
+	#	array('inst_tot_lower.png', 0, 0),
+	#	array('inst_tot.png', 504, 917),
+	#), '#310000');
 
 	#assemble_set('inst_hoo', array(
 	#	array('uldum_hoo_6.png', 780-22, 908),

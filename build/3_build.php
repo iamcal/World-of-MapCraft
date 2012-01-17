@@ -265,16 +265,23 @@ if (0){
 	clean_set('raid_eoe');
 	build_set('raid_eoe', 'nexusraid/map', 29,29, 30,30);
 }
-if (1){
+if (0){
 	clean_set('raid_fl');
 	build_set('raid_fl', 'firelands1/noliquid_map', 30,33, 29,33);
 
 	clean_set('misc_fl');
 	build_set('misc_fl', 'firelandsdailies/map', 28,35, 26,31);
 }
+if (1){
+	#clean_set('misc_dmf');
+	#build_set('misc_dmf', 'darkmoonfaire/map', 18,21, 37,41);
+
+	clean_set('misc_dal');
+	build_set('misc_dal', 'wmo_northrend_dalaran/nd_dalaran_091_', 0,4, 0,5, 0,0,array(),1); 
+}
 
 
-	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array()){
+	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array(), $flip=false){
 
 		global $pngs;
 		global $built;
@@ -284,8 +291,15 @@ if (1){
 		for ($x=$min_x; $x<=$max_x; $x++){
 		for ($y=$min_y; $y<=$max_y; $y++){
 
+			$x_out = ($x-$min_x)+$offset_x;
+			$y_out = ($y-$min_y)+$offset_y;
+
+			if ($flip){
+				$y_out = ($max_y-$min_y) - $y_out;
+			}
+
 			$src_key = sprintf('%02d_%02d', $x, $y);
-			$dst_key = sprintf('%02d_%02d', ($x-$min_x)+$offset_x, ($y-$min_y)+$offset_y);
+			$dst_key = sprintf('%02d_%02d', $x_out, $y_out);
 
 			if (in_array($src_key, $skips)) continue;
 
