@@ -1,6 +1,18 @@
 <?
 	include('../build/config.php');
 
+	assemble_set('inst_hoo', array(
+		array('uldum_hoo_6.png', 780-22, 908),
+		array('uldum_hoo_3.png', 471-8, 1201),
+		array('uldum_hoo_4.png', 0, 291+82+4),
+		array('uldum_hoo_5.png', 46, 1245+59),
+		array('uldum_hoo_2.png', 220, 0),
+
+		array('uldum_hoo_1.png', 758, 1642),
+		array('inst_hoo.png', 1645,910),
+		array('Uldum_Interior_Pyramid.png', 1855, 566),
+	));
+
 	#assemble_set('inst_rfc', array(
 	#	array('LavaDungeon.png', 0, 0),
 	#));
@@ -263,13 +275,13 @@
 	#	array('inst_uk.png', 840, 1000),
 	#));
 
-	assemble_set('raid_ds', array(
-		array('raid_ds_hagara.png', 256, 0),
-		array('raid_ds_main.png', 0, 288),
-		array('raid_ds_warmaster.png', 800, 0),
-		array('raid_ds_spine.png', 1396+32, 42),
-		array('raid_ds_deathwing.png', 800, 629),
-	));
+	#assemble_set('raid_ds', array(
+	#	array('raid_ds_hagara.png', 256, 0),
+	#	array('raid_ds_main.png', 0, 288),
+	#	array('raid_ds_warmaster.png', 800, 0),
+	#	array('raid_ds_spine.png', 1396+32, 42),
+	#	array('raid_ds_deathwing.png', 800, 629),
+	#));
 
 	function assemble_set($name, $tiles, $bg_color='black'){
 

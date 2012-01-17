@@ -94,7 +94,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'stonecore'		=> array('http://doats.net/tiles/built/inst_sc/', 0.95, 0.8, '#000000', array(3,2, 6,4, 9,8)),
 		'vortex-pinnacle'	=> array('http://doats.net/tiles/built/inst_vp/', 0.9, 0.7, '#310000', array(2,2, 4,3)),
 		'lost-city'		=> array('http://doats.net/tiles/built/inst_lc/', 1.5, 1.5, '#ffffff', array(3,3)),
-		'halls-of-origination'	=> array(),
+		'halls-of-origination'	=> array('http://doats.net/tiles/built/inst_hoo/', 1.3, 1.4, '#000000', array(3,3, 6,6, 11,12)),
 		'grim-batol'		=> array('http://doats.net/tiles/built/inst_gb/', 0.8, 0.75, '#000000', array(2,2, 4,4, 7,7)),
 		'zul-aman'		=> array('http://doats.net/tiles/built/inst_za/', 1.0, 0.8, '#2D2A21', array(2,2)),
 		'zul-gurub'		=> array('http://doats.net/tiles/built/inst_zg/', 1.05, 1.3, '#ffffff', array(3,3)),
@@ -296,7 +296,7 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('stonecore', "The Stonecore")?></li>
 					<li><?=nav_link('vortex-pinnacle', "Vortex Pinnacle")?></li>
 					<li><?=nav_link('lost-city', "Lost City of the Tol'vir")?></li>
-					<li><?=dead_link("Halls of Origination")?></li>
+					<li><?=nav_link('halls-of-origination', "Halls of Origination")?></li>
 					<li><?=nav_link('grim-batol', "Grim Batol")?></li>
 					<li><?=nav_link('zul-aman', "Zul'Aman")?></li>
 					<li><?=nav_link('zul-gurub', "Zul'Gurub")?></li>

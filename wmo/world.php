@@ -20,10 +20,12 @@
 	#create_world('inst_uk', 'valgarde70', 31,32, 31,32, 90,20, 512,310);
 
 	#create_world('raid_ds_hagara', 'deathwingback', 6,6, 6,6, 0,0, 256,256);
-	create_world('raid_ds_warmaster', 'deathwingback', 53,55, 5,7, 196-50,219-50, 496+100,497+100);
+	#create_world('raid_ds_warmaster', 'deathwingback', 53,55, 5,7, 196-50,219-50, 496+100,497+100);
 	#create_world('raid_ds_main', 'deathwingback', 35,37, 34,37, 0,0, 768,1024);
 	#create_world('raid_ds_deathwing', 'deathwingback', 8,11, 53,55, 0,0, 768,768);
 	#create_world('raid_ds_spine', 'deathwingback', 57,57, 57,58, 0,0, 256,512);
+
+	create_world('inst_hoo', 'uldum', 32,33, 32,33, 57,33, 512,460);
 
 	function create_world($out_name, $map_name, $x1, $x2, $y1, $y2, $crop_x, $crop_y, $crop_w, $crop_h, $prefix=''){
 

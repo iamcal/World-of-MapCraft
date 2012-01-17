@@ -598,6 +598,74 @@
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior');
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior_Pyramid');
 
+	$uldum_hoo_1 = array(
+		0,7,5,6,14,23,25,28,22,27,24,26,29,13,
+	);
+
+	$uldum_hoo_2 = array(
+		2,3,17,19,20,10,18,21,
+		#11, # not needed
+		#8, # not used
+		#30,
+		#4, # big top chamber
+		#9, # entrance
+		12,
+		15,
+		16,
+		#1, # sand zone
+	);
+
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', $uldum_hoo_1, array(), 'uldum_hoo_1');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', $uldum_hoo_2, array(), 'uldum_hoo_2');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(1), array(), 'uldum_hoo_3');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(4), array(), 'uldum_hoo_4');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(9), array(), 'uldum_hoo_5');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(30), array(), 'uldum_hoo_6');
+	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(11,8), array(), 'uldum_hoo_7');
+
+	#cut_wmo_map('uldum_hoo_2', array(
+	#	array(288,1146,61,61),
+	#	array(427,1031,53,40),
+	#	array(429,1170,55,40),
+	#	array(769,1291,44,43),
+	#	array(630,1290,43,47),
+	#	array(748,1415,61,62),
+	#	array(183,1916,42,46),
+	#	array(44,1914,43,45),
+	#	array(45,2040,63,67),
+	#	array(329,1925,67,62),
+	#	array(350,2067,40,43),
+	#	array(214,2065,40,47),
+	#	array(1022,1027,137,42),
+	#	array(1018,1170,141,48),
+	#	array(929,1170,41,38),
+	#	array(931,1030,39,40),
+	#));
+
+	#cut_wmo_map('uldum_hoo_3', array(
+	#	array(98,0,200,96),
+	#	array(106,277,162,101),
+	#));
+
+	#cut_wmo_map('uldum_hoo_4', array(
+	#	array(0,0,270,768),
+	#	array(922,0,350,768),
+	#));
+
+	#cut_wmo_map('uldum_hoo_5', array(
+	#	array(0,142,145,450),
+	#	array(474,161,166,430),
+	#	array(394,292,90,350),
+	#	array(141,292,79,290),
+	#	array(380,336,17,315),
+	#	array(219,336,19,280),
+	#	array(176,0,32,52),
+	#	array(410,0,36,52),
+	#));
+	
+exit;
+
+
 	#build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01');
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde');
 
@@ -616,9 +684,8 @@
 		7,8,
 	);
 
-	build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW', $uk_lower, array(), 'inst_uk_lower');
+	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW', $uk_lower, array(), 'inst_uk_lower');
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_70GW', $uk_upper, array(), 'inst_uk_upper');
-exit;
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_80GW', array(), array(), '', 0);
 
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde_IC');
