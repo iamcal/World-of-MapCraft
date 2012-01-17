@@ -89,7 +89,7 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 		'pit-of-saron'		=> array('http://doats.net/tiles/built/inst_pos/', 1.45, 1.52, '#151A21', array(3,3)),
 		'halls-of-reflection'	=> array('http://doats.net/tiles/built/inst_hor/', 0.9, 0.8, '#000000', array(2,2, 4,4, 7,8)),
 
-		'throne-of-the-tides'	=> array(),
+		'throne-of-the-tides'	=> array('http://doats.net/tiles/built/inst_tot/', 0.6, 1.18, '#310000', array(2,3, 4,6, 5,11)),
 		'blackrock-caverns'	=> array('http://doats.net/tiles/built/inst_brc/', 0.95, 0.65, '#000000', array(2,2, 4,4, 8,7)),
 		'stonecore'		=> array('http://doats.net/tiles/built/inst_sc/', 0.95, 0.8, '#000000', array(3,2, 6,4, 9,8)),
 		'vortex-pinnacle'	=> array('http://doats.net/tiles/built/inst_vp/', 0.9, 0.7, '#310000', array(2,2, 4,3)),
@@ -291,7 +291,7 @@ body { padding: 0; margin: 0 }
 			</li>
 			<li><a href="#" onclick="return false;">Cataclysm</a>
 				<ul>
-					<li><?=dead_link("Throne of the Tides")?></li>
+					<li><?=nav_link('throne-of-the-tides', "Throne of the Tides")?></li>
 					<li><?=nav_link('blackrock-caverns', "Blackrock Caverns")?></li>
 					<li><?=nav_link('stonecore', "The Stonecore")?></li>
 					<li><?=nav_link('vortex-pinnacle', "Vortex Pinnacle")?></li>

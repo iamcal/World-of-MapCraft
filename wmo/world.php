@@ -25,7 +25,8 @@
 	#create_world('raid_ds_deathwing', 'deathwingback', 8,11, 53,55, 0,0, 768,768);
 	#create_world('raid_ds_spine', 'deathwingback', 57,57, 57,58, 0,0, 256,512);
 
-	create_world('inst_hoo', 'uldum', 32,33, 32,33, 57,33, 512,460);
+	#create_world('inst_hoo', 'uldum', 32,33, 32,33, 57,33, 512,460);
+	create_world('inst_tot', 'abyssalmaw_interior', 30,30, 32,32, 0,0, 256,196);
 
 	function create_world($out_name, $map_name, $x1, $x2, $y1, $y2, $crop_x, $crop_y, $crop_w, $crop_h, $prefix=''){
 

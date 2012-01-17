@@ -621,7 +621,7 @@
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(4), array(), 'uldum_hoo_4');
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(9), array(), 'uldum_hoo_5');
 	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(30), array(), 'uldum_hoo_6');
-	build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(11,8), array(), 'uldum_hoo_7');
+	#build_wmo_map('Dungeon/Uldum', 'Uldum_Interior', array(11,8), array(), 'uldum_hoo_7');
 
 	#cut_wmo_map('uldum_hoo_2', array(
 	#	array(288,1146,61,61),
@@ -663,8 +663,6 @@
 	#	array(410,0,36,52),
 	#));
 	
-exit;
-
 
 	#build_wmo_map('Dungeon/Valgarde', 'IC_VrykulTunnel01');
 	#build_wmo_map('Dungeon/Valgarde', 'Valgarde');
@@ -730,7 +728,9 @@ exit;
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance');
 	#build_wmo_map('Dungeon/Skywall', 'KL_Skywall_Raid_Entrance_LOW');
 
-	#build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw');
+	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(0,1,2), array(), 'inst_tot_upper');
+	build_wmo_map('Dungeon/Abyssal_Maw', 'Abyssal_Maw', array(), array(0,1,2), 'inst_tot_lower');
+exit;
 
 	#build_wmo_map('Cataclysm/deathwing', 'deathwing_wmo_torso');
 	#build_wmo_map('Dungeon/Spineofthedestroyer', 'deathwings_back');

@@ -1,17 +1,23 @@
 <?
 	include('../build/config.php');
 
-	assemble_set('inst_hoo', array(
-		array('uldum_hoo_6.png', 780-22, 908),
-		array('uldum_hoo_3.png', 471-8, 1201),
-		array('uldum_hoo_4.png', 0, 291+82+4),
-		array('uldum_hoo_5.png', 46, 1245+59),
-		array('uldum_hoo_2.png', 220, 0),
+	assemble_set('inst_tot', array(
+		array('inst_tot_upper.png', 464, 0),
+		array('inst_tot_lower.png', 0, 0),
+		array('inst_tot.png', 504, 917),
+	), '#310000');
 
-		array('uldum_hoo_1.png', 758, 1642),
-		array('inst_hoo.png', 1645,910),
-		array('Uldum_Interior_Pyramid.png', 1855, 566),
-	));
+	#assemble_set('inst_hoo', array(
+	#	array('uldum_hoo_6.png', 780-22, 908),
+	#	array('uldum_hoo_3.png', 471-8, 1201),
+	#	array('uldum_hoo_4.png', 0, 291+82+4),
+	#	array('uldum_hoo_5.png', 46, 1245+59),
+	#	array('uldum_hoo_2.png', 220, 0),
+
+	#	array('uldum_hoo_1.png', 758, 1642),
+	#	array('inst_hoo.png', 1645,910),
+	#	array('Uldum_Interior_Pyramid.png', 1855, 566),
+	#));
 
 	#assemble_set('inst_rfc', array(
 	#	array('LavaDungeon.png', 0, 0),
