@@ -1,6 +1,8 @@
 <?
 	include('../build/config.php');
 
+	#build_wmo_map('dungeon/az_subway', 'subway');
+
 	#build_wmo_map('northrend/dalaran', 'nd_dalaran', array(59,63,64,68,69,70,71,72,73));
 	#build_wmo_map('lorderon/undercity', 'undercity', array(), array(9,32,31,35,33,8,34,12,30), '', 3);
 
@@ -9,41 +11,16 @@
 
 	#build_wmo_map('kalimdor/draeneicity', 'ol_draenei_city');
 
-$add_labels = 1;
-
 	$cot_ramp = array(
-10,
-9,
-8,
-11,
-12,
-7,
-3,
-0,
-2,
-
-27,
-23,
-5,
-21,
-24,
-6,
-
-19,
-20,
-34,
-33,
-32,
-31,
-30,
+		#29, # huge center piece
+		1,2,3,4,5,6,7,8,9,10,11,12 # entrance ramp
 	);
 
-$cot_remove = array(
-	29, # huge center piece
-	2,3,7,8,9, # entrance ramp
-);
+	#build_wmo_map('dungeon/cavernsoftime', 'cavernsoftime', $cot_ramp, array(), 'cavernsoftime_ramp', 2);
+	#build_wmo_map('dungeon/cavernsoftime', 'cavernsoftime', array(), $cot_ramp, 'cavernsoftime_main', 2);
 
-	build_wmo_map('dungeon/cavernsoftime', 'cavernsoftime', array(), $cot_remove);
+	#$add_labels = 1;
+	#build_wmo_map('dungeon/cavernsoftime', 'cavernsoftime');
 
 	#build_wmo_map('dungeon/az_karazahn', 'karazhan');
 
@@ -188,7 +165,8 @@ $cot_remove = array(
 	
 	#build_wmo_map('dungeon/az_karazahn', 'kharazan_instance', $kara_7, array(), 'kharazan_instance_floor7', 'kara');
 
-	#build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon');
+	$add_labels = 1;
+	build_wmo_map('Dungeon/KL_OrgrimmarLavaDungeon', 'LavaDungeon', array(), array(), 'bits_rfc');
 
 	# the outside part
 	#build_wmo_map('Dungeon/AZ_Deadmines', 'AZ_Deadmines_A', array(), array(), '', 2);

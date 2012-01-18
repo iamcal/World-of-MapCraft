@@ -139,6 +139,13 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 
 		# world misc
 
+		'undercity'		=> array('http://doats.net/tiles/built/misc_undercity/', 1.5, 1.55, '#000000', array(3,3, 6,6)),
+		'ironforge'		=> array('http://doats.net/tiles/built/misc_if/', 1.22, 1.25, '#000000', array(3,3, 6,6)),
+		'exodar'		=> array('http://doats.net/tiles/built/misc_exodar/', 0.7, 0.6, '#000000', array(2,2, 4,4, 7,6)),
+		'subway'		=> array('http://doats.net/tiles/built/misc_subway/', 1.25, 0.2, '#000000', array(3,1, 6,2, 12,4, 21,5)),
+		'caverns-of-time'	=> array('http://doats.net/tiles/built/misc_cot/', 1.3, 0.8, '#000000', array(3,2, 6,4, 11,7)),
+		'dalaran'		=> array('http://doats.net/tiles/built/misc_dal/', 1.2, 1.6, '#000000', array(3,3, 5,6)),
+		'darkmoon-faire'	=> array('http://doats.net/tiles/built/misc_dmf/', 1.1, 1.27, '#1E395D', array(2,3,4,5)),
 		'firelands-dailies'	=> array('http://doats.net/tiles/built/misc_fl/', 1.12, 0.9, '#310000', array(2,2, 4,4, 8,6)),
 	);
 
@@ -352,6 +359,18 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('dragon-soul', "Dragon Soul")?></li>
 				</ul>
 			</li>
+		</ul>
+	</li>
+	<li><a href="#" onclick="return false;">Misc</a>
+		<ul class="subnav">
+			<li><?=nav_link('undercity', 'Undercity')?></li>
+			<li><?=nav_link('ironforge', 'Ironforge')?></li>
+			<li><?=nav_link('exodar', 'The Exodar')?></li>
+			<li><?=nav_link('subway', 'SW / IF Subway')?></li>
+			<li><?=nav_link('caverns-of-time', 'Caverns of Time')?></li>
+			<li><?=nav_link('dalaran', 'Dalaran')?></li>
+			<li><?=nav_link('darkmoon-faire', 'Darkmoon Faire Isle')?></li>
+			<li><?=nav_link('firelands-dailies', 'Firelands Dailies')?></li>
 		</ul>
 	</li>
 </ul>

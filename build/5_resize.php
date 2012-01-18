@@ -99,7 +99,14 @@
 		#	'inst_uk',
 		#	'raid_ds',
 		#	'inst_hoo',
-			'inst_tot',
+		#	'inst_tot',
+			'misc_dmf',
+			'misc_dal',
+			'misc_undercity',
+			'misc_if',
+			'misc_exodar',
+			'misc_cot',
+			'misc_subway',
 		))) return;
 
 		echo "$dir: \n";

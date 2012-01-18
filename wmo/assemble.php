@@ -1,7 +1,14 @@
 <?
 	include('../build/config.php');
 
-	assemble_set('misc_exodar', 'ol_draenei_city.png');
+	assemble_set('misc_subway', 'subway.png');
+
+	#assemble_set('misc_cot', array(
+	#	array('cavernsoftime_main.png', 0, 0),
+	#	array('cavernsoftime_ramp.png', 1422, 106),
+	#));
+
+	#assemble_set('misc_exodar', 'ol_draenei_city.png');
 
 	#assemble_set('misc_if', array(
 	#	array('misc_if_upper.png', 0, 0),
