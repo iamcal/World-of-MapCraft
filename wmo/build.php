@@ -1,6 +1,30 @@
 <?
 	include('../build/config.php');
 
+	#$dump_bounds = 1;
+	#for ($i=0; $i<=4; $i++){
+	#	build_wmo_map('Dungeon/Azjol_Uppercity', 'azjol_uppercity', array($i), array(), 'inst_an_'.$i);
+	#}
+
+	build_wmo_map('Dungeon/Azjol_Uppercity', 'azjol_uppercity', array(2,3), array(), 'inst_an_upper');
+	cut_wmo_map('inst_an_upper', array(
+		array(836,300,276,128),
+	));
+
+	#build_wmo_map('Dungeon/Azjol_Uppercity', 'azjol_uppercity', array(1,4), array(), 'inst_an_lower');
+
+
+	#$dump_bounds = 1;
+	#$dump_chunk_counts = 1;
+	#for ($i=1; $i<=23; $i++){
+	#	 build_wmo_map('dungeon/azjol_lowercity', 'azjol_lowercityroof', array($i), array(), 'inst_ok_'.$i);
+	#}
+
+	#$add_labels = 1;
+	#build_wmo_map('dungeon/azjol_lowercity', 'azjol_lowercityroof', array(1,2,3,4,5,6,7,8,9,22,23), array(), 'inst_ok_test');
+
+exit;
+
 	#build_wmo_map('dungeon/az_subway', 'subway');
 
 	#build_wmo_map('northrend/dalaran', 'nd_dalaran', array(59,63,64,68,69,70,71,72,73));
@@ -866,16 +890,22 @@
 
 		$chunks = extract_mogi($wmo);
 
-#foreach ($chunks as $k => $v){
-#	echo "$k,$v[0],$v[1],$v[2]\n";
-#}
-#exit;
+		if ($GLOBALS['dump_bounds']){
+			echo "\n";
+			foreach ($chunks as $k => $v){
+				echo "$k,$v[0],$v[1],$v[2]\n";
+			}
+			exit;
+		}
 
 		#$chunks[49][5] = -9999;
 		#$chunks[19][5] = -9999;
 
 		if ($alt_name == 'inst_uk_lower'){
 			$chunks[10][5] = -9999;
+		}
+		if ($alt_name == 'inst_an_lower'){
+			$chunks[1][5] = -9999;
 		}
 
 
@@ -964,6 +994,14 @@
 				'h'	=> $total_h,
 				'pngs'	=> $our_pngs,
 			);
+		}
+
+		if ($GLOBALS['dump_chunk_counts']){
+			echo "\n";
+			foreach ($groups as $k => $v){
+				echo "group $k : ".count($v['pngs'])." pngs\n";
+			}
+			exit;
 		}
 
 		#print_r($groups);

@@ -272,12 +272,18 @@ if (0){
 	clean_set('misc_fl');
 	build_set('misc_fl', 'firelandsdailies/map', 28,35, 26,31);
 }
-if (1){
+if (0){
 	#clean_set('misc_dmf');
 	#build_set('misc_dmf', 'darkmoonfaire/map', 18,21, 37,41);
 
 	clean_set('misc_dal');
 	build_set('misc_dal', 'wmo_northrend_dalaran/nd_dalaran_091_', 0,4, 0,5, 0,0,array(),1); 
+}
+if (1){
+	clean_set('inst_ok');
+	build_set('inst_ok', 'azjol_lowercity/map', 32,34, 30,31);
+
+	patch_set('inst_ok', '#424542', 0, 0, 48, 512);
 }
 
 

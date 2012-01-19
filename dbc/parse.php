@@ -2,15 +2,21 @@
 
 #$w = parse_dbc('WMOAreaTable.dbc');
 #print_r($w);
-#foreach ($w as $row) if ($row[2] == 3433) print_r($row);
+#foreach ($w as $row) if ($row[1] == 617) print_r($row);
 #exit;
 
 $map = parse_dbc('Map.dbc', array(2), 1);
-print_r($map);
+#print_r($map);
+#print_r($map[617]);
+print_r($map[571]);
 exit;
 
 $areas =  parse_dbc('AreaTable.dbc', array(12), 1);
-print_r($areas);
+
+foreach ($areas as $row){
+	if (preg_match('!^Dalaran!', $row[12])) print_r($row);
+}
+#print_r($areas);
 exit;
 
 	$aa = parse_dbc('AreaAssignment.dbc', array(), 1);

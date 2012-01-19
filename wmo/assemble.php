@@ -1,7 +1,12 @@
 <?
 	include('../build/config.php');
 
-	assemble_set('misc_subway', 'subway.png');
+	assemble_set('inst_an', array(
+		array('inst_an_upper.png', 0, 65),
+		array('inst_an_lower.png', 900, 0),
+	));
+
+	#assemble_set('misc_subway', 'subway.png');
 
 	#assemble_set('misc_cot', array(
 	#	array('cavernsoftime_main.png', 0, 0),

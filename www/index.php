@@ -74,8 +74,8 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 
 		'utgarde-keep'		=> array('http://doats.net/tiles/built/inst_uk/', 0.6, 0.7, '#000000', array(2,2, 4,4, 5,7)),
 		'nexus'			=> array('http://doats.net/tiles/built/inst_nexus/', 0.8, 0.7, '#000000', array(2,2, 4,4, 8,6)),
-		'old-kingdom'		=> array(),
-		'azjol-nerub'		=> array(),
+		'old-kingdom'		=> array('http://doats.net/tiles/built/inst_ok/', 1.6, 1.0, '#424542', array(3,2)),
+		'azjol-nerub'		=> array('http://doats.net/tiles/built/inst_an/', 1.15, 0.45, '#000000', array(3,2, 6,4, 10,5)),
 		'drak-tharon-keep'	=> array('http://doats.net/tiles/built/inst_dtk/', 1.25, 0.75, '#000000', array(3,2, 6,4)),
 		'violet-hold'		=> array('http://doats.net/tiles/built/inst_vh/', 0.9, 0.7, '#000000', array(2,2)),
 		'gundrak'		=> array('http://doats.net/tiles/built/inst_gun/', 0.9, 1.0, '#000000', array(3,3, 5,5)),
@@ -280,8 +280,8 @@ body { padding: 0; margin: 0 }
 				<ul>
 					<li><?=nav_link('utgarde-keep', "Utgarde Keep")?></li>
 					<li><?=nav_link('nexus', "The Nexus")?></li>
-					<li><?=dead_link("Ahn'kahet: The Old Kingdom")?></li>
-					<li><?=dead_link("Azjol-Nerub")?></li>
+					<li><?=nav_link('old-kingdom', "Ahn'kahet: The Old Kingdom")?></li>
+					<li><?=nav_link('azjol-nerub', "Azjol-Nerub")?></li>
 					<li><?=nav_link('drak-tharon-keep', "Drak'Tharon Keep")?></li>
 					<li><?=nav_link('violet-hold', "The Violet Hold")?></li>
 					<li><?=nav_link('gundrak', "Gundrak")?></li>
