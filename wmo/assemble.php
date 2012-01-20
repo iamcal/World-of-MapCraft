@@ -1,10 +1,10 @@
 <?
 	include('../build/config.php');
 
-	assemble_set('inst_an', array(
-		array('inst_an_upper.png', 0, 65),
-		array('inst_an_lower.png', 900, 0),
-	));
+	#assemble_set('inst_an', array(
+	#	array('inst_an_upper.png', 0, 65),
+	#	array('inst_an_lower.png', 900, 0),
+	#));
 
 	#assemble_set('misc_subway', 'subway.png');
 
@@ -88,9 +88,9 @@
 	#	array('KL_Diremaul_Instance.png', 0, 0),
 	#));
 
-	#assemble_set('inst_strat', array(
-	#	array('Stratholme.png', 0, 0),
-	#));
+	assemble_set('inst_strat', array(
+		array('Stratholme.png', 0, 0),
+	));
 
 	#assemble_set('raid_naxx', array(
 	#	array('Stratholme_raid.png', 0, 0),
@@ -360,7 +360,7 @@
 			$yp = $y * 256;
 
 			$out = "$built/$name/tile_z0_".sprintf('%02d_%02d', $x, $y).'.png';
-			$cmd = "convert $temp -crop 256x256+$xp+$yp +repage $out";
+			$cmd = "convert $temp -crop 256x256+$xp+$yp +repage png24:$out";
 
 			echo shell_exec($cmd);
 			echo '.';
