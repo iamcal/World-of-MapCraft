@@ -2,7 +2,7 @@
 	include('config.php');
 
 	chdir($built);
-	$lines = explode("\n", shell_exec("find ."));
+	$lines = explode("\n", shell_exec("find ./inst_strat"));
 
 	echo "found ".count($lines)." lines\n";
 
