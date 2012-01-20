@@ -20,19 +20,41 @@
 	function process_dir($pngs, $dir){
 
 		if (!in_array($dir,array(
-		#	'azeroth',
-		#	'outland',
-		#	'vashjir',
-		#	'deepholm',
+
+			'azeroth',
+			'outland',
+			'vashjir',
+			'deepholm',
 
 			'bg_wsg',
-		#	'bg_ab',
-		#	'bg_av',
-		#	'bg_eots',
+			'bg_ab',
+			'bg_av',
+			'bg_eots',
 			'bg_sota',
-		#	'bg_ioc',
-		#	'bg_bfg',
+			'bg_ioc',
+			'bg_bfg',
 			'bg_tp',
+
+			'inst_rfc',
+			'inst_vc',
+			'inst_wc',
+			'inst_sfk',
+			'inst_bfd',
+			'inst_stocks',
+			'inst_gnomer',
+			'inst_sm',
+			'inst_rfk',
+			'inst_mara',
+			'inst_ulda',
+			'inst_dm',
+			'inst_scholo',
+			'inst_rfd',
+			'inst_strat',
+			'inst_zf',
+			'inst_brd',
+			'inst_st',
+			'inst_lbrs',
+			'inst_ubrs',
 
 		#	'inst_bfd',
 		#	'inst_stocks',
@@ -128,6 +150,10 @@
 
 		global $colors;
 
+		if (!$colors[$dir]){
+			die("ERROR: no compositing color found for $dir!\n");
+		}
+
 		$color = $colors[$dir] ? $colors[$dir] : 'NO-COLOR';
 		echo "$dir: ($color) \n";
 
@@ -147,6 +173,11 @@
 				$all_y[] = $y;
 
 				$tiles["$x/$y"] = $file;
+
+			}else if ($file != '.' && $file != '..'){
+
+				unlink("$pngs/$dir/$file");
+				#echo "DELETE $file\n";
 			}
 		}
 		closedir($dh);
@@ -179,6 +210,8 @@
 		if ($dir == 'bg_wsg') $max_zoom = 1;
 		if ($dir == 'bg_tp') $max_zoom = 1;
 
+		$pairs = array();
+
 		for ($zoom=$max_zoom; $zoom>=1; $zoom--){
 
 			$pow = pow(2, $zoom);
@@ -188,6 +221,7 @@
 			$layer_h = ceil(($max_y+1) / $pow);
 
 			echo "\tlayer $zoom is $layer_w x $layer_h : ";
+			$pairs[] = "$layer_w,$layer_h";
 
 			for ($x=0; $x<$layer_w; $x++){
 			for ($y=0; $y<$layer_h; $y++){
@@ -240,6 +274,9 @@
 		}
 
 		echo "\tlayer 0 is $zero_w x $zero_h\n";
+		$pairs[] = "$zero_w,$zero_h";
+
+		echo "\t".implode(', ', $pairs)."\n";
 
 #		print_r($tiles);
 	}
