@@ -1,7 +1,7 @@
 <?
 	include('config.php');
 
-if (0){
+if (1){
 	clean_set('azeroth');
 
 	build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
@@ -279,7 +279,7 @@ if (0){
 	clean_set('misc_dal');
 	build_set('misc_dal', 'wmo_northrend_dalaran/nd_dalaran_091_', 0,4, 0,5, 0,0,array(),1); 
 }
-if (1){
+if (0){
 	clean_set('inst_ok');
 	build_set('inst_ok', 'azjol_lowercity/map', 32,34, 30,31);
 
@@ -288,6 +288,8 @@ if (1){
 
 
 	function build_set($set_name, $src_path, $min_x, $max_x, $min_y, $max_y, $offset_x=0, $offset_y=0, $skips=array(), $flip=false){
+
+		$src_path = StrToLower($src_path);
 
 		global $pngs;
 		global $built;

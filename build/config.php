@@ -36,6 +36,8 @@
 	$built = "/var/www/doats.net/tiles/built";
 	$built_url = "/tiles/built";
 
+	$crushed = "/var/www/doats.net/tiles/crushed";
+
 
 	#
 	# other stuff

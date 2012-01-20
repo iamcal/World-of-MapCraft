@@ -1,5 +1,6 @@
 <?php
 	include('config.php');
+	include('colors.php');
 
 	$pngs = $built;
 
@@ -19,6 +20,20 @@
 	function process_dir($pngs, $dir){
 
 		if (!in_array($dir,array(
+		#	'azeroth',
+		#	'outland',
+		#	'vashjir',
+		#	'deepholm',
+
+			'bg_wsg',
+		#	'bg_ab',
+		#	'bg_av',
+		#	'bg_eots',
+			'bg_sota',
+		#	'bg_ioc',
+		#	'bg_bfg',
+			'bg_tp',
+
 		#	'inst_bfd',
 		#	'inst_stocks',
 		#	'inst_gnomer',
@@ -97,7 +112,7 @@
 		#	'raid_icc',
 		#	'raid_ulduar',
 		#	'inst_uk',
-			'raid_ds',
+		#	'raid_ds',
 		#	'inst_hoo',
 		#	'inst_tot',
 		#	'misc_dmf',
@@ -111,7 +126,10 @@
 		#	'inst_an',
 		))) return;
 
-		echo "$dir: \n";
+		global $colors;
+
+		$color = $colors[$dir] ? $colors[$dir] : 'NO-COLOR';
+		echo "$dir: ($color) \n";
 
 		$tiles = array();
 		$all_x = array();
@@ -157,6 +175,9 @@
 		if ($dir == 'inst_hillsbrad') $max_zoom = 2;
 		if ($dir == 'inst_wc') $max_zoom = 2;
 		if ($dir == 'inst_sm') $max_zoom = 2;
+		if ($dir == 'bg_sota') $max_zoom = 1;
+		if ($dir == 'bg_wsg') $max_zoom = 1;
+		if ($dir == 'bg_tp') $max_zoom = 1;
 
 		for ($zoom=$max_zoom; $zoom>=1; $zoom--){
 
@@ -194,8 +215,10 @@
 				# we need to actually make this tile!
 				$dst = "$pngs/$dir/tile_z{$zoom}_".sprintf('%02d_%02d', $x, $y).'.png';
 
-				echo shell_exec("convert -size 256x256 null: -matte -compose Clear -composite -compose Over $dst");
-				#echo shell_exec("convert -size 256x256 xc:red $dst");
+				$color = $colors[$dir] ? $colors[$dir] : '#000000';
+
+				#echo shell_exec("convert -size 256x256 null: -matte -compose Clear -composite -compose Over $dst");
+				echo shell_exec("convert -size 256x256 xc:$color $dst");
 
 				for ($x2=$min_x; $x2<=$max_x; $x2++){
 				for ($y2=$min_y; $y2<=$max_y; $y2++){
@@ -204,7 +227,7 @@
 					$tile_x = ($x2-$min_x) * $slice;
 					$tile_y = ($y2-$min_y) * $slice;
 
-					echo shell_exec("composite -geometry {$slice}x{$slice}+{$tile_x}+{$tile_y} $pngs/$dir/$file $dst $dst");
+					echo shell_exec("composite -geometry {$slice}x{$slice}+{$tile_x}+{$tile_y} $pngs/$dir/$file $dst png24:$dst");
 				}
 				}
 

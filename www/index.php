@@ -18,19 +18,19 @@ $base = 'http://cdn.iamcal.com/wow-tiles';
 	# map config
 
 	$hash = array(
-		'_'			=> array($base.'/azeroth/', 1.3, 0.9, '#001D29', array(3,2, 6,4, 12,8, 24,16, 48,32, 96,64)),
-		'outland'		=> array($base.'/outland/', 0.7, 0.7, '#000000', array(2,2, 4,4, 8,8, 16,16, 32,32)),
-		'vashjir'		=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,10)),
-		'deepholm'		=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 8,8)),
+		'_'			=> array($base.'/azeroth/', 1.3, 0.9, '#001D29', array(3,2, 6,4, 12,8, 24,16, 48,32, 85,60)),
+		'outland'		=> array('http://doats.net/tiles/crushed/outland/', 0.7, 0.7, '#000000', array(2,2, 4,4, 8,8, 16,16, 22,22)),
+		'vashjir'		=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,9)),
+		'deepholm'		=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 6,6)),
 
-		'warsong-gulch'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 4,4)),
+		'warsong-gulch'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 3,3)),
 		'arathi-basin'		=> array($base.'/bg_ab/', 1.1, 1, '#414318', array(2,2, 4,4)),
-		'alterac-valley'	=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 4,6)),
-		'eye-of-the-storm'	=> array($base.'/bg_eots/', 0.5, 1, '#000000', array(2,2, 4,4)),
-		'strand-of-the-ancients'=> array($base.'/bg_sota/', 1.1, 2.2, '#052431', array(2,4, 4,8)),
-		'isle-of-conquest'	=> array($base.'/bg_ioc/', 1.2, 1.2, '#1E395D', array(4,3, 8,6)),
-		'battle-for-gilneas'	=> array($base.'/bg_bfg/', 1, 0.9, '#000C18', array(2,2, 4,4)),
-		'twin-peaks'		=> array($base.'/bg_tp/', 0.8, 0.8, '#8E8175', array(2,2, 4,4)),
+		'alterac-valley'	=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 3,5)),
+		'eye-of-the-storm'	=> array($base.'/bg_eots/', 0.5, 1, '#000000', array(2,2, 3,4)),
+		'strand-of-the-ancients'=> array($base.'/bg_sota/', 1.1, 2.2, '#052431', array(2,4, 4,7)),
+		'isle-of-conquest'	=> array($base.'/bg_ioc/', 1.2, 1.2, '#1E395D', array(2,2, 4,4, 7,6)),
+		'battle-for-gilneas'	=> array($base.'/bg_bfg/', 1, 0.9, '#000C18', array(2,2, 4,3)),
+		'twin-peaks'		=> array($base.'/bg_tp/', 0.8, 0.8, '#8E8175', array(2,2, 3,3)),
 
 		# dungeons
 
