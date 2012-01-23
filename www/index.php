@@ -146,7 +146,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'subway'		=> array($base.'/misc_subway/', 1.25, 0.2, '#000000', array(3,1, 6,2, 12,4, 21,5)),
 		'caverns-of-time'	=> array($base.'/misc_cot/', 1.3, 0.8, '#000000', array(3,2, 6,4, 11,7)),
 		'dalaran'		=> array($base.'/misc_dal/', 1.2, 1.6, '#000000', array(3,3, 5,6)),
-		'darkmoon-faire'	=> array($base.'/misc_dmf/', 1.1, 1.27, '#1E395D', array(2,3,4,5)),
+		'darkmoon-faire'	=> array($base.'/misc_dmf/', 1.1, 1.27, '#1E395D', array(2,3, 4,5)),
 		'firelands-dailies'	=> array($base.'/misc_fl/', 1.12, 0.9, '#310000', array(2,2, 4,4, 8,6)),
 	);
 
