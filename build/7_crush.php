@@ -2,7 +2,7 @@
 	include('config.php');
 
 	chdir($built);
-	$lines = explode("\n", shell_exec("find ./inst_strat"));
+	$lines = explode("\n", shell_exec("find ."));
 
 	echo "found ".count($lines)." lines\n";
 
@@ -39,7 +39,8 @@
 
 			if ($code == 1 && preg_match('!unsupported format!', $out_flat)){
 
-				echo "x($name)";
+				echo "\nbad format: $name\n";
+				exit;
 				#copy($src, $tmp);
 
 			}else if ($code == 2 && preg_match('!Unable to compress further: copying original file!', $out_flat)){
