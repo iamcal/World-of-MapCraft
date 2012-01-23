@@ -29,7 +29,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'alterac-valley'	=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 3,5)),
 		'eye-of-the-storm'	=> array($base.'/bg_eots/', 0.5, 1, '#000000', array(2,2, 3,4)),
 		'strand-of-the-ancients'=> array($base.'/bg_sota/', 1.1, 2.2, '#052431', array(2,4, 4,7)),
-		'isle-of-conquest'	=> array($base.'/bg_ioc/', 1.2, 1.2, '#1E395D', array(2,2, 4,4, 7,6)),
+		'isle-of-conquest'	=> array($base.'/bg_ioc/', 0.6, 0.6, '#1E395D', array(2,2, 4,4, 7,6)),
 		'battle-for-gilneas'	=> array($base.'/bg_bfg/', 1, 0.9, '#000C18', array(2,2, 4,3)),
 		'twin-peaks'		=> array($base.'/bg_tp/', 0.8, 0.8, '#8E8175', array(2,2, 3,3)),
 
@@ -50,7 +50,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'scholomance'		=> array($base.'/inst_scholo/', 0.7, 0.37, '#000000', array(2,1, 4,2, 7,4)),
 		'razorfen-downs'	=> array($base.'/inst_rfd/', 1.55, 0.8, '#000000', array(3,2, 6,4)),
 		'stratholme'		=> array($base.'/inst_strat/', 0.85, 0.75, '#000000', array(2,2, 4,4, 8,7)),
-		'zul-farrak'		=> array($base.'/inst_zf/', 0.55, 0.7, '#D0C1B5', array(3,3)),
+		'zul-farrak'		=> array($base.'/inst_zf/', 1.15, 1.54, '#D0C1B5', array(3,3)),
 		'blackrock-depths'	=> array($base.'/inst_brd/', 1.1, 1.2, '#000000', array(3,3, 6,6, 10,11)),
 		'sunken-temple'		=> array($base.'/inst_st/', 1.2, 1.1, '#000000', array(3,3, 5,5)),
 		'lower-blackrock-spire'	=> array($base.'/inst_lbrs/', 1.3, 0.6, '#000000', array(3,2, 6,3)),
@@ -126,7 +126,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'eye-of-eternity'	=> array($base.'/raid_eoe/', 0.55, 0.57, '#000000', array(1,1)),
 		'ulduar'		=> array($base.'/raid_ulduar/', 1.15, 1.05, '#000000', array(3,3, 6,6, 12,12, 18,17)),
 		'trial-of-the-crusader'	=> array($base.'/raid_toc/', 0.55, 0.85, '#000000', array(2,2, 4,4, 5,8)),
-		'onyxia'		=> array($base.'/raid_ony/', 1.4, 1.1, '#000000', array(2,2, 4,3)),
+		'onyxia'		=> array($base.'/raid_ony/', 0.65, 0.55, '#000000', array(2,2, 4,3)),
 		'ruby-sanctum'		=> array($base.'/raid_rs/', 1.0, 1.0, '#392E39', array(2,2)),
 		'icecrown-citadel'	=> array($base.'/raid_icc/', 1.2, 0.8, '#000000', array(3,2, 6,4, 10,7)),
 
