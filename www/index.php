@@ -116,7 +116,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'magtheridon'		=> array($base.'/raid_mag/', 0.4, 0.7, '#000000', array(2,2, 3,4)),
 		'serpentshrine-cavern'	=> array($base.'/raid_ssc/', 1.2, 0.9, '#000000', array(3,3, 6,6, 11,9)),
 		'the-eye'		=> array($base.'/raid_tk/', 0.98, 1.2, '#000000', array(2,3, 4,6, 8,9)),
-		'mount-hyjal'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 8,8)),
+		'mount-hyjal'		=> array($base.'/inst_bmh/', 0.75, 0.65, '#F7F3F7', array(2,2, 4,4, 6,5)),
 		'black-temple'		=> array($base.'/raid_bt/', 0.8, 0.85, '#000000', array(2,2, 4,4, 8,8, 13,15)),
 		'sunwell'		=> array($base.'/raid_sunwell/', 1.0, 0.7, '#001D29', array(2,3, 4,6, 8,9)),
 
@@ -126,7 +126,7 @@ $base = 'http://doats.net/tiles/crushed';
 		'eye-of-eternity'	=> array($base.'/raid_eoe/', 0.55, 0.57, '#000000', array(1,1)),
 		'ulduar'		=> array($base.'/raid_ulduar/', 1.15, 1.05, '#000000', array(3,3, 6,6, 12,12, 18,17)),
 		'trial-of-the-crusader'	=> array($base.'/raid_toc/', 0.55, 0.85, '#000000', array(2,2, 4,4, 5,8)),
-		'onyxia'		=> array($base.'/raid_ony/', 1.4, 1.1, '#000000', array(4,3)),
+		'onyxia'		=> array($base.'/raid_ony/', 1.4, 1.1, '#000000', array(2,2, 4,3)),
 		'ruby-sanctum'		=> array($base.'/raid_rs/', 1.0, 1.0, '#392E39', array(2,2)),
 		'icecrown-citadel'	=> array($base.'/raid_icc/', 1.2, 0.8, '#000000', array(3,2, 6,4, 10,7)),
 
