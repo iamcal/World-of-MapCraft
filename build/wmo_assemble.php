@@ -76,11 +76,14 @@ if (0){
 	assemble_set('inst_rfd', array(
 		array('RazorfenDowns_instance.png', 0, 0),
 	));
-
+}
+if (1){
 	assemble_set('inst_mara', array(
-		array('KL_Maraudon_instance01.png', 0, 0),
+		array('KL_Maraudon.png', 1750, 0),
+		array('KL_Maraudon_instance01.png', 0, 130),
 	));
-
+}
+if (0){
 	assemble_set('inst_ulda', array(
 		array('KZ_Uldaman_A.png', 727, 359),
 		array('KZ_Uldaman_B.png', 0, 0),
@@ -256,7 +259,7 @@ if (0){
 		array('blacktemple_floor_5.png', 1935,1289),
 	));
 }
-if (1){
+if (0){
 	assemble_set('raid_fl', array(
 		array('raid_fl.png', 0, 128),
 		array('firelands_sulfuronkeep.png', 1024,0),
