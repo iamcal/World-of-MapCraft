@@ -48,4 +48,4 @@
 	$blp_convertor = "/root/Kanma-BLPConverter-3abb6b9/build/bin/BLPConverter";
 
 	$s3_cmd = "python /root/s3cmd-1.0.1/s3cmd";
-	$s3_bucket = "s3://iamcal-misc/wow-tiles";
+	$s3_bucket = "s3://iamcal-misc/mapcraft/v2";
