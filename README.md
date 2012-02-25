@@ -1,9 +1,9 @@
 World-of-MapCraft - World of Warcraft Slippy Maps
 =================================================
 
-To see the maps in action:
+To see the maps in action: http://worldofmapcraft.com/
 
-http://worldofmapcraft.com/
+For an explanation of how it all works: http://www.iamcal.com/mapping-warcraft/
 
 
 ## Generating the map tiles
