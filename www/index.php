@@ -14,6 +14,7 @@ $base = 'http://doats.net/tiles/built';
 $base = 'http://doats.net/tiles/crushed';
 #$base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
 #$base = 'http://cdn.iamcal.com/wow-tiles';
+$base = 'http://cdn.iamcal.com/mapcraft/v2';
 
 
 	# map config
