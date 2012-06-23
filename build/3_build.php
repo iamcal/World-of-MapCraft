@@ -2,44 +2,133 @@
 	include('config.php');
 
 if (1){
-	clean_set('azeroth2');
+	clean_set('azeroth');
 
-	#build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
-	#build_set('azeroth', 'Expansion01/map', 50, 59, 32, 42, 0, 11+7, array('58_32')); # exodar
+#	build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
+#	build_set('azeroth', 'Expansion01/map', 50, 59, 32, 42, 0, 11+7, array('58_32')); # exodar
+#	cull_tiles('azeroth', 30, 16, 4, 5);
 
-	#build_set('azeroth', 'Azeroth/map', 17, 45, 22, 61, 34+21, 12+7); # eastern kingdoms
-	#build_set('azeroth', 'Expansion01/map', 41, 51, 6, 20, 53+21, 0+7, array('46_20', '47_20', '40_20', '41_20', '42_20')); # silvermoon city & isle
+#	build_set('azeroth', 'Azeroth/map', 17, 45, 22, 61, 34+21, 12+7); # eastern kingdoms
+#	build_set('azeroth', 'Expansion01/map', 41, 51, 6, 20, 53+21, 0+7, array('46_20', '47_20', '40_20', '41_20', '42_20')); # silvermoon city
+#	cull_tiles('azeroth', 55, 45, 4, 1);
+#	cull_tiles('azeroth', 80,7, 1,4);
+#	cull_tiles('azeroth', 81,11, 1,4);
 
-	build_set('azeroth2', 'Northrend/map', 16, 45, 11, 15/*33*/, 33, 0); # northrend
-	cull_tiles('azeroth2', 33, 0, 12, 3);
-	cull_tiles('azeroth2', 33, 3, 9, 1);
-	cull_tiles('azeroth2', 33, 4, 7, 1);
-	cull_tiles('azeroth2', 33, 5, 6, 2);
-	cull_tiles('azeroth2', 33, 7, 5, 1);
-	cull_tiles('azeroth2', 33, 8, 4, 1);
-	cull_tiles('azeroth2', 33, 9, 3, 3);
-	cull_tiles('azeroth2', 33, 20, 20, 3);
-	cull_tiles('azeroth2', 54, 0, 9, 3);
+	$replace = '#001D29';
+	build_set('azeroth', 'Northrend/map', 16, 45, 11, 33, 33, 0); # northrend
+	cull_tiles('azeroth', 45, 17);
+	cull_tiles('azeroth', 34, 4); # random tiny island out in the ocean?
+	cull_tiles('azeroth', 43,2, 3,1);
+	cull_tiles('azeroth', 45,1);
+	cull_tiles('azeroth', 61,14);
+	cull_set('azeroth');
+	color_replace('azeroth', '#1E3A5D', $replace, 33, 0, 30, 23);
+	color_replace('azeroth', '#1E395D', $replace, 42, 0, 8, 5);
+	color_replace('azeroth', '#1B3A5D', $replace, 42, 0, 8, 5);
+	color_replace('azeroth', '#1B395D', $replace, 42, 0, 8, 5);
+	patch_set_offset('azeroth', $replace, 42,4, 108,8, 20,60);
+	patch_set_offset('azeroth', $replace, 42,4, 104,68, 8,16);
+	patch_set_offset('azeroth', $replace, 42,3, 0,0, 256+174, 128);
+	patch_set_offset('azeroth', $replace, 42,3, 176,129, 28,31);
+	patch_set_offset('azeroth', $replace, 46,3, 0,0, 106,68);
+	patch_set_offset('azeroth', $replace, 48,1, 76,0, 180,512);
+	patch_set_offset('azeroth', $replace, 47,3, 157,0, 150,88);
+	color_replace('azeroth', '#1B3A5D', $replace, 59, 14, 3, 3);
+	patch_set_offset('azeroth', $replace, 59,14, 212,8, 44+256, 68);
+	patch_set_offset('azeroth', $replace, 60,14, 128,76, 128,140);
+	patch_set_offset('azeroth', $replace, 61,15, 32,0, 24,256+100);
+	patch_set_offset('azeroth', $replace, 61,15, 18,0, 22,46);	
 
-	color_replace('azeroth2', '#1E3A5D', '#ffff00', 33, 0, 30, 23);
-	color_replace('azeroth2', '#1E395D', '#ffff00', 42, 0, 8, 5);
-	color_replace('azeroth2', '#1B3A5D', '#ffff00', 42, 0, 8, 5);
-	color_replace('azeroth2', '#1B395D', '#ffff00', 42, 0, 8, 5);
+	patch_set_offset('azeroth', $replace, 61,16, 16,32, 50,50);	
+	patch_set_offset('azeroth', $replace, 61,16, 0,72, 40,40);	
 
-	#build_set('azeroth2', 'LostIsles/map', 26, 31, 46, 51, 41, 54); # kezan
-	#color_replace('azeroth2', '#293C4F', '#001D29', 41, 54, 6, 6);
-	#patch_set_offset('azeroth2', '#001D29', 41, 54, 0, 0, 250, 250);
-	#patch_set_offset('azeroth2', '#001D29', 41, 54, 0, 1024, 154, 1024+512);
 
-	#build_set('azeroth2', 'LostIsles/map', 24, 31, 26, 32, 33, 46); # lost isles
-	#color_replace('azeroth2', '#4F8EFF', '#001D29', 33, 46, 8, 7);
+#	build_set('azeroth', 'LostIsles/map', 26, 31, 46, 51, 41, 54); # kezan
+	#color_replace('azeroth', '#293C4F', '#001D29', 41, 54, 6, 6);
+	#patch_set_offset('azeroth', '#001D29', 41, 54, 0, 0, 250, 250);
+	#patch_set_offset('azeroth', '#001D29', 41, 54, 0, 1024, 154, 1024+512);
 
-	#build_set('azeroth2', 'TolBarad/map', 27, 32, 31, 35, 57, 30); # tol barad
-	#color_replace('azeroth2', '#00000D', '#001D29', 57, 30, 6, 5);
-	#patch_set_offset('azeroth2', '#001D29', 57, 30, 760, 1024+115, 512, 256);
+#	build_set('azeroth', 'LostIsles/map', 24, 31, 26, 32, 33, 46); # lost isles
+	#color_replace('azeroth', '#4F8EFF', '#001D29', 33, 46, 8, 7);
 
-	#build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 33); # maelstrom
-	
+#	build_set('azeroth', 'TolBarad/map', 27, 32, 31, 35, 57, 30); # tol barad
+	#color_replace('azeroth', '#00000D', '#001D29', 57, 30, 6, 5);
+	#patch_set_offset('azeroth', '#001D29', 57, 30, 760, 1024+115, 512, 256);
+
+#	build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 33); # maelstrom
+
+#	build_set('azeroth', 'hawaiimainland/map', 19, 39, 18, 38, 36, 48);
+
+	cull_set('azeroth');
+
+	# azeroth has a bunch of single bad tiles with junk, in the ocean.
+	# we need to delete these
+	$bad_tiles = array();
+
+	# bloodmyst isles
+	$bad_tiles[] = array(7,18);
+	$bad_tiles[] = array(10,23);
+	$bad_tiles[] = array(10,27);
+
+	# kalimdor
+	$bad_tiles[] = array(10,13);
+	$bad_tiles[] = array(25,16);
+	$bad_tiles[] = array(33,25);
+	$bad_tiles[] = array(10,31);
+	$bad_tiles[] = array(30,35);
+	$bad_tiles[] = array(9,38);
+	$bad_tiles[] = array(8,41);
+	$bad_tiles[] = array(29,39);
+	$bad_tiles[] = array(29,40);
+	$bad_tiles[] = array(8,45);
+	$bad_tiles[] = array(28,48);
+	$bad_tiles[] = array(10,50);
+	$bad_tiles[] = array(10,52);
+	$bad_tiles[] = array(10,58);
+
+	# eastern kingdoms
+	$bad_tiles[] = array(82,15);
+	$bad_tiles[] = array(82,16);
+	$bad_tiles[] = array(63,19);
+	$bad_tiles[] = array(63,22);
+	$bad_tiles[] = array(67,21);
+	$bad_tiles[] = array(71,20);
+	$bad_tiles[] = array(73,19);
+	$bad_tiles[] = array(63,26);
+	$bad_tiles[] = array(63,28);
+	$bad_tiles[] = array(82,26);
+
+	$bad_tiles[] = array(60,30);
+	$bad_tiles[] = array(63,32);
+	$bad_tiles[] = array(55,34);
+	$bad_tiles[] = array(60,34);
+	$bad_tiles[] = array(61,34);
+	$bad_tiles[] = array(55,38);
+	$bad_tiles[] = array(59,38);
+	$bad_tiles[] = array(55,42);
+	$bad_tiles[] = array(59,43);
+
+	$bad_tiles[] = array(63,46);
+	$bad_tiles[] = array(62,50);
+	$bad_tiles[] = array(63,50);
+	$bad_tiles[] = array(63,54);
+	$bad_tiles[] = array(65,56);
+	$bad_tiles[] = array(74,54);
+	$bad_tiles[] = array(79,50);
+	$bad_tiles[] = array(83,37);
+	$bad_tiles[] = array(83,38);
+
+
+	foreach ($bad_tiles as $p) cull_tiles('azeroth', $p[0], $p[1], 1, 1);
+
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+	$bad_tiles[] = array();
+
 }
 if (0){
 	clean_set('outland');
@@ -426,7 +515,7 @@ if (0){
 
 	}
 
-	function cull_tiles($set_name, $x, $y, $w, $h){
+	function cull_tiles($set_name, $x, $y, $w=1, $h=1){
 	
 		global $built;
 
@@ -439,6 +528,31 @@ if (0){
 			@unlink($dst);
 			echo 'k';
 		}
+		}
+	}
+
+	function cull_set($set_name){
+
+		global $built;
+		$dh = opendir("$built/$set_name/");
+		while (($file = readdir($dh)) !== false){
+			if (!preg_match('!\.png$!', $file)) continue;
+
+			$size = filesize("$built/$set_name/$file");
+			$kill = 0;
+
+			if (preg_match('!--16\.png$!', $file)){
+
+				if ($size == 134) $kill = 1;
+			}else{
+				if ($size == 783) $kill = 1;
+				if ($size == 784) $kill = 1;
+			}
+
+			if ($kill){
+				@unlink("$built/$set_name/$file");
+				echo '/';
+			}
 		}
 	}
 
