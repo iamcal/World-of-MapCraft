@@ -21,7 +21,7 @@
 
 		if (!in_array($dir,array(
 
-		#	'azeroth',
+			'azeroth',
 		#	'outland',
 		#	'vashjir',
 		#	'deepholm',
@@ -44,7 +44,7 @@
 		#	'inst_gnomer',
 		#	'inst_sm',
 		#	'inst_rfk',
-			'inst_mara',
+		#	'inst_mara',
 		#	'inst_ulda',
 		#	'inst_dm',
 		#	'inst_scholo',

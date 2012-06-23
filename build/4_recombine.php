@@ -5,7 +5,7 @@
 	$maps = $built;
 	$pngs_url = $built_url;
 
-	$size = 256;
+	$size = 128;
 
 
 	#
@@ -50,7 +50,7 @@
 		echo "$name ($num chunks) : ";
 
 		$out = '<html><head></head><body><h1>'.$name.'</h1>';
-		$out .= "<style>body { background-image: url('$bg_url'); } td { font-size: 5px }</style>\n";
+		$out .= "<style>body { background-image: url('$bg_url'); } td { font-size: 5px; line-height: 5px; }</style>\n";
 
 		$all_x = array();
 		$all_y = array();
@@ -91,7 +91,7 @@
 
 					$out .= "<td><img src=\"$url\" width=$size height=$size /></td>\n";
 				}else{
-					$out .= '<td>.</td>';
+					$out .= '<td></td>';
 				}
 			}
 
