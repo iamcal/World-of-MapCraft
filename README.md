@@ -78,3 +78,11 @@ some different ones!
  * `build/wmo_build.php` to assemble a flat image from a WMO group
  * `build/wmo_assemble.php` to assemble multiple flats into a tileset
  * From there, you can use <code>build/5_resize.php</code> to build the other zoom levels
+
+
+## Changes in MoP
+
+* `art.MPQ` has been renamed `textures.MPQ`
+* Expansion minimap textures have been moved to `exspansionX.MPQ` files
+* `world2.MPQ` is gone, with contents moved into a bunch of new MPQs
+* All patch MPQs have no prefix (this changed in cata in March 2012)
