@@ -25,6 +25,8 @@ $base = 'http://cdn.iamcal.com/mapcraft/v2';
 		'vashjir'		=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,9)),
 		'deepholm'		=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 6,6)),
 
+		'a2'			=> array('http://doats.net/tiles/mop_built/azeroth/', 1.3, 0.9, '#001D29', array(3,3, 6,6, 12,12, 24,24, 48,48, 85,69)),
+
 		'warsong-gulch'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 3,3)),
 		'arathi-basin'		=> array($base.'/bg_ab/', 1.1, 1, '#414318', array(2,2, 4,4)),
 		'alterac-valley'	=> array($base.'/bg_av/', 0.75, 1.25, '#8FB0C9', array(2,3, 3,5)),
@@ -230,6 +232,9 @@ body { padding: 0; margin: 0 }
 			<li><?=nav_link('isle-of-conquest', 'Isle of Conquest')?></li>
 			<li><?=nav_link('battle-for-gilneas', 'Battle for Gilneas')?></li>
 			<li><?=nav_link('twin-peaks', 'Twin Peaks')?></li>
+			<li><?=dead_link("Silver Shard Mine")?></li>
+			<li><?=dead_link("Temple of Kotmogu")?></li>
+			<li><?=dead_link("Unnamed CTF")?></li>
 		</ul>
 	</li>
 	<li><a href="#" onclick="return false;">Dungeons</a>
@@ -314,6 +319,22 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('hour-of-twilight', "Hour of Twilight")?></li>
 				</ul>
 			</li>
+			<li><a href="#" onclick="return false;">Mists of Pandaria</a>
+				<ul>
+					<li><?=dead_link("Temple of the Jade Serpent")?></li>
+					<li><?=dead_link("Stormstout Brewery")?></li>
+					<li><?=dead_link("Shado-pan Monastery")?></li>
+					<li><?=dead_link("Gate of the Setting Sun")?></li>
+					<li><?=dead_link("Mogu'Shan Palace")?></li>
+					<li><?=dead_link("The Perfect Storm")?></li>
+					<li><?=dead_link("Crypt of Forgotten Kings")?></li>
+					<li><?=dead_link("Temple of the Red Crane")?></li>
+					<li><?=dead_link("Temple of the White Tiger")?></li>
+					<li><?=dead_link("Scholomance (90)")?></li>
+					<li><?=dead_link("Scarlet Cathedral")?></li>
+					<li><?=dead_link("Scarlet Halls")?></li>
+				</ul>
+			</li>
 		</ul>
 	</li>
 	<li><a href="#" onclick="return false;">Raids</a>
@@ -361,6 +382,13 @@ body { padding: 0; margin: 0 }
 					<li><?=nav_link('dragon-soul', "Dragon Soul")?></li>
 				</ul>
 			</li>
+			<li><a href="#" onclick="return false;">Mists of Pandaria</a>
+				<ul>
+					<li><?=dead_link("Mogu'shan Vaults")?></li>
+					<li><?=dead_link("Heart of Fear")?></li>
+					<li><?=dead_link("Terrace of Endless Spring")?></li>
+				</ul>
+			</li>
 		</ul>
 	</li>
 	<li><a href="#" onclick="return false;">Misc</a>
@@ -373,6 +401,7 @@ body { padding: 0; margin: 0 }
 			<li><?=nav_link('dalaran', 'Dalaran')?></li>
 			<li><?=nav_link('darkmoon-faire', 'Darkmoon Faire Isle')?></li>
 			<li><?=nav_link('firelands-dailies', 'Firelands Dailies')?></li>
+			<li><?=dead_link("The Wandering Isle")?></li>
 		</ul>
 	</li>
 </ul>
