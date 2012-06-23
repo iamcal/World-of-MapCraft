@@ -2,22 +2,44 @@
 	include('config.php');
 
 if (1){
-	clean_set('azeroth');
+	clean_set('azeroth2');
 
-	build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
-	build_set('azeroth', 'Expansion01/map', 50, 59, 32, 42, 0, 11+7, array('58_32')); # exodar
+	#build_set('azeroth', 'Kalimdor/map', 23, 48, 9, 55, 8, 6+7, array('45_20', '46_20', '47_20')); # kalimdor
+	#build_set('azeroth', 'Expansion01/map', 50, 59, 32, 42, 0, 11+7, array('58_32')); # exodar
 
-	build_set('azeroth', 'Azeroth/map', 17, 45, 22, 61, 34+21, 12+7); # eastern kingdoms
-	build_set('azeroth', 'Expansion01/map', 41, 51, 6, 20, 53+21, 0+7, array('46_20', '47_20', '40_20', '41_20', '42_20')); # silvermoon city & isle
+	#build_set('azeroth', 'Azeroth/map', 17, 45, 22, 61, 34+21, 12+7); # eastern kingdoms
+	#build_set('azeroth', 'Expansion01/map', 41, 51, 6, 20, 53+21, 0+7, array('46_20', '47_20', '40_20', '41_20', '42_20')); # silvermoon city & isle
 
-	build_set('azeroth', 'Northrend/map', 16, 45, 11, 33, 33, 0); # northrend
+	build_set('azeroth2', 'Northrend/map', 16, 45, 11, 15/*33*/, 33, 0); # northrend
+	cull_tiles('azeroth2', 33, 0, 12, 3);
+	cull_tiles('azeroth2', 33, 3, 9, 1);
+	cull_tiles('azeroth2', 33, 4, 7, 1);
+	cull_tiles('azeroth2', 33, 5, 6, 2);
+	cull_tiles('azeroth2', 33, 7, 5, 1);
+	cull_tiles('azeroth2', 33, 8, 4, 1);
+	cull_tiles('azeroth2', 33, 9, 3, 3);
+	cull_tiles('azeroth2', 33, 20, 20, 3);
+	cull_tiles('azeroth2', 54, 0, 9, 3);
 
-	build_set('azeroth', 'LostIsles/map', 26, 32, 45, 51, 41, 53); # kezan
-	build_set('azeroth', 'LostIsles/map', 24, 31, 26, 32, 33, 46); # lost isles
+	color_replace('azeroth2', '#1E3A5D', '#ffff00', 33, 0, 30, 23);
+	color_replace('azeroth2', '#1E395D', '#ffff00', 42, 0, 8, 5);
+	color_replace('azeroth2', '#1B3A5D', '#ffff00', 42, 0, 8, 5);
+	color_replace('azeroth2', '#1B395D', '#ffff00', 42, 0, 8, 5);
 
-	build_set('azeroth', 'TolBarad/map', 27, 32, 31, 37, 57, 30); # tol barad
+	#build_set('azeroth2', 'LostIsles/map', 26, 31, 46, 51, 41, 54); # kezan
+	#color_replace('azeroth2', '#293C4F', '#001D29', 41, 54, 6, 6);
+	#patch_set_offset('azeroth2', '#001D29', 41, 54, 0, 0, 250, 250);
+	#patch_set_offset('azeroth2', '#001D29', 41, 54, 0, 1024, 154, 1024+512);
 
-	build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 33); # maelstrom
+	#build_set('azeroth2', 'LostIsles/map', 24, 31, 26, 32, 33, 46); # lost isles
+	#color_replace('azeroth2', '#4F8EFF', '#001D29', 33, 46, 8, 7);
+
+	#build_set('azeroth2', 'TolBarad/map', 27, 32, 31, 35, 57, 30); # tol barad
+	#color_replace('azeroth2', '#00000D', '#001D29', 57, 30, 6, 5);
+	#patch_set_offset('azeroth2', '#001D29', 57, 30, 760, 1024+115, 512, 256);
+
+	#build_set('azeroth', 'MaelstromZone/map', 28, 32, 28, 32, 46, 33); # maelstrom
+	
 }
 if (0){
 	clean_set('outland');
@@ -324,6 +346,15 @@ if (0){
 		}
 	}
 
+	function patch_set_offset($set_name, $color, $x_off, $y_off, $x, $y, $w, $h){
+
+		$x_off *= 256;
+		$y_off *= 256;
+
+		patch_set($set_name, $color, $x_off + $x, $y_off + $y, $x_off + $x + $w, $y_off + $y + $h);
+
+	}
+
 	function patch_set($set_name, $color, $x1, $y1, $x2, $y2){
 
 		global $built;
@@ -363,6 +394,8 @@ if (0){
 
 			#echo shell_exec("composite -geometry {$w}x{$h}!+{$my_x1}+{$my_y1} xc:red $dst $dst");
 			echo shell_exec("convert $dst -fill '$color' -draw 'rectangle $my_x1,$my_y1 $my_x2,$my_y2' $dst");
+
+			echo 'x';
 		}
 		}
 	}
@@ -371,6 +404,42 @@ if (0){
 
 		global $built;
 		shell_exec("rm -rf $built/$set_name");
+	}
+
+	function color_replace($set_name, $from_col, $to_col, $x, $y, $w, $h){
+
+		global $built;
+
+		for ($yp=$y; $yp<$y+$h; $yp++){
+		for ($xp=$x; $xp<$x+$w; $xp++){
+
+			$dst_key = sprintf('%02d_%02d', $xp, $yp);
+			$dst = "$built/$set_name/tile_z0_$dst_key.png";
+
+			if (!file_exists($dst)) continue;
+
+			echo shell_exec("mogrify $dst -fill '$to_col' -opaque '$from_col' $dst");
+
+			echo 'c';
+		}
+		}
+
+	}
+
+	function cull_tiles($set_name, $x, $y, $w, $h){
+	
+		global $built;
+
+		for ($yp=$y; $yp<$y+$h; $yp++){
+		for ($xp=$x; $xp<$x+$w; $xp++){
+
+			$dst_key = sprintf('%02d_%02d', $xp, $yp);
+			$dst = "$built/$set_name/tile_z0_$dst_key.png";
+
+			@unlink($dst);
+			echo 'k';
+		}
+		}
 	}
 
 	echo "\ndone\n";
