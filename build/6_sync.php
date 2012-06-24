@@ -21,7 +21,7 @@
 		global $s3_cmd;
 		global $s3_bucket;
 
-		#if ($dir != 'inst_hillsbrad') return;
+		if ($dir != 'azeroth') return;
 
 		echo "$dir: \n";
 

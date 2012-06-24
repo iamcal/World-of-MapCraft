@@ -15,6 +15,7 @@ $base = 'http://doats.net/tiles/crushed';
 #$base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
 #$base = 'http://cdn.iamcal.com/wow-tiles';
 $base = 'http://cdn.iamcal.com/mapcraft/v2';
+$base_mop = 'http://cdn.iamcal.com/mapcraft/mopv1';
 
 
 	# map config
@@ -25,7 +26,7 @@ $base = 'http://cdn.iamcal.com/mapcraft/v2';
 		'vashjir'		=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,9)),
 		'deepholm'		=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 6,6)),
 
-		'a2'			=> array('http://doats.net/tiles/mop_built/azeroth/', 1.3, 0.9, '#001D29', array(3,3, 6,6, 12,12, 24,24, 48,48, 85,69)),
+		'a2'			=> array($base_mop.'/azeroth/', 1.3, 1.1, '#001D29', array(3,3, 6,6, 12,12, 24,24, 48,48, 85,69)),
 
 		'warsong-gulch'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 3,3)),
 		'arathi-basin'		=> array($base.'/bg_ab/', 1.1, 1, '#414318', array(2,2, 4,4)),
