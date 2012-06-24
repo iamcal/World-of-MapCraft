@@ -86,3 +86,14 @@ some different ones!
 * Expansion minimap textures have been moved to `exspansionX.MPQ` files
 * `world2.MPQ` is gone, with contents moved into a bunch of new MPQs
 * All patch MPQs have no prefix (this changed in cata in March 2012)
+
+To find new WMOs to build and preview for MoP, I used the following commands:
+
+    find dungeon | grep pa_ | grep .blp | perl -pi -e's!_\d\d\d_\d\d_\d\d.blp!!' | \
+        sort | uniq | perl -pi -e's/(.*)\/(.*?)$/$1!!$2/' >> wmos.txt
+    find pandaria | grep .blp | perl -pi -e's!_\d\d\d_\d\d_\d\d.blp!!' | \
+        sort | uniq | perl -pi -e's/(.*)\/(.*?)$/$1!!$2/' >> wmos.txt
+
+This found all WMO groups under either the `pandaria` folder, or inside the
+dungeons folder with a prefix of `pa_`. I then used this list to make a bunch
+of calls to `build_wmo_map()` in `wmo_build.php`.
