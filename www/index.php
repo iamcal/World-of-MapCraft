@@ -207,6 +207,7 @@ body { padding: 0; margin: 0 }
 <?
 	function nav_link($k, $v){
 		global $map;
+		$v = str_replace(array_keys($GLOBALS['logo_map']), $GLOBALS['logo_map'], $v);
 		$url = $k == '_' ? '/' : "/$k/";
 		if ($k == $map){
 			return "<a href=\"$url\" class=\"current\">$v</a>";
@@ -215,27 +216,53 @@ body { padding: 0; margin: 0 }
 		}
 	}
 	function dead_link($v){
+		$v = str_replace(array_keys($GLOBALS['logo_map']), $GLOBALS['logo_map'], $v);
 		return "<a href=\"#\" onclick=\"return false;\" class=\"pending\">$v</a>";
 	}
+
+	$logo_map = array(
+	#	'{BC}'		=> '<img src="/img/bc.gif" width="30" height="14" style="float: none" />',
+	#	'{Wrath}'	=> '<img src="/img/wrath.png" width="36" height="19" style="float: none" />',
+	#	'{Cata}'	=> '<img src="/img/cata.png" width="39" height="15" style="float: none" />',
+	#	'{MoP}'		=> '<img src="/img/mop.png" width="46" height="14" style="float: none" />',
+		'{BC}'		=> '',
+		'{Wrath}'	=> '',
+		'{Cata}'	=> '',
+		'{MoP}'		=> '',
+	);
 ?>
 <ul id="nav" xclass="topnav">
 	<li><?=nav_link('_', 'Azeroth')?></li>
 	<li><?=nav_link('outland', 'Outland')?></li>
 	<li><?=nav_link('vashjir', 'Vash\'jir')?></li>
 	<li><?=nav_link('deepholm', 'Deepholm')?></li>
-	<li><a href="#" onclick="return false;">Battlegrounds</a>
-		<ul class="subnav">
-			<li><?=nav_link('warsong-gulch', 'Warsong Gulch')?></li>
-			<li><?=nav_link('arathi-basin', 'Arathi Basin')?></li>
-			<li><?=nav_link('alterac-valley', 'Alterac Valley')?></li>
-			<li><?=nav_link('eye-of-the-storm', 'Eye of the Storm')?></li>
-			<li><?=nav_link('strand-of-the-ancients', 'Strand of the Ancients')?></li>
-			<li><?=nav_link('isle-of-conquest', 'Isle of Conquest')?></li>
-			<li><?=nav_link('battle-for-gilneas', 'Battle for Gilneas')?></li>
-			<li><?=nav_link('twin-peaks', 'Twin Peaks')?></li>
-			<li><?=dead_link("Silver Shard Mine")?></li>
-			<li><?=dead_link("Temple of Kotmogu")?></li>
-			<li><?=dead_link("Unnamed CTF")?></li>
+	<li><a href="#" onclick="return false;">PvP</a>
+		<ul>
+			<li><a href="#" onclick="return false;">Battlegrounds</a>
+				<ul>
+					<li><?=nav_link('warsong-gulch', 'Warsong Gulch')?></li>
+					<li><?=nav_link('arathi-basin', 'Arathi Basin')?></li>
+					<li><?=nav_link('alterac-valley', 'Alterac Valley')?></li>
+					<li><?=nav_link('eye-of-the-storm', 'Eye of the Storm {BC}')?></li>
+					<li><?=nav_link('strand-of-the-ancients', 'Strand of the Ancients {Wrath}')?></li>
+					<li><?=nav_link('isle-of-conquest', 'Isle of Conquest {Wrath}')?></li>
+					<li><?=nav_link('battle-for-gilneas', 'Battle for Gilneas {Cata}')?></li>
+					<li><?=nav_link('twin-peaks', 'Twin Peaks {Cata}')?></li>
+					<li><?=dead_link("Silver Shard Mine {MoP}")?></li>
+					<li><?=dead_link("Temple of Kotmogu {MoP}")?></li>
+					<li><?=dead_link("Unnamed CTF {MoP}")?></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="return false;">Arenas</a>
+				<ul>
+					<li><?=dead_link("The Ring of Valor {BC}")?></li>
+					<li><?=dead_link("The Ruins of Lordaeron {BC}")?></li>
+					<li><?=dead_link("The Ring of Trials {BC}")?></li>
+					<li><?=dead_link("The Circle of Blood {BC}")?></li>
+					<li><?=dead_link("The Dalaran Arena {Wrath}")?></li>
+					<li><?=dead_link("Tol'vir Proving Grounds {MoP}")?></li>
+				</ul>
+			</li>
 		</ul>
 	</li>
 	<li><a href="#" onclick="return false;">Dungeons</a>
