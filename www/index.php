@@ -21,12 +21,10 @@ $base_mop = 'http://cdn.iamcal.com/mapcraft/mopv1';
 	# map config
 
 	$hash = array(
-		'_'			=> array($base.'/azeroth/', 1.3, 0.9, '#001D29', array(3,2, 6,4, 12,8, 24,16, 48,32, 85,60)),
+		'_'			=> array($base_mop.'/azeroth/', 1.3, 1.1, '#001D29', array(3,3, 6,6, 12,12, 24,24, 48,48, 85,69)),
 		'outland'		=> array($base.'/outland/', 0.7, 0.7, '#000000', array(2,2, 4,4, 8,8, 16,16, 22,22)),
 		'vashjir'		=> array($base.'/vashjir/', 0.7, 0.7, '#575357', array(2,2, 4,4, 8,8, 10,9)),
 		'deepholm'		=> array($base.'/deepholm/', 0.7, 0.7, '#2E2D36', array(2,2, 4,4, 6,6)),
-
-		'a2'			=> array($base_mop.'/azeroth/', 1.3, 1.1, '#001D29', array(3,3, 6,6, 12,12, 24,24, 48,48, 85,69)),
 
 		'warsong-gulch'		=> array($base.'/bg_wsg/', 0.7, 0.9, '#F7F3F7', array(2,2, 3,3)),
 		'arathi-basin'		=> array($base.'/bg_ab/', 1.1, 1, '#414318', array(2,2, 4,4)),
@@ -152,6 +150,8 @@ $base_mop = 'http://cdn.iamcal.com/mapcraft/mopv1';
 		'dalaran'		=> array($base.'/misc_dal/', 1.2, 1.6, '#000000', array(3,3, 5,6)),
 		'darkmoon-faire'	=> array($base.'/misc_dmf/', 1.1, 1.27, '#1E395D', array(2,3, 4,5)),
 		'firelands-dailies'	=> array($base.'/misc_fl/', 1.12, 0.9, '#310000', array(2,2, 4,4, 8,6)),
+
+		'cata_azeroth'		=> array($base.'/azeroth/', 1.3, 0.9, '#001D29', array(3,2, 6,4, 12,8, 24,16, 48,32, 85,60)),
 	);
 
 
