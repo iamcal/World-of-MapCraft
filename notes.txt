@@ -3,3 +3,7 @@ http://www4.picturepush.com/photo/a/8433147/img/Map/AzerothFull-copy.jpg
 
 in-game mop world:
 http://images2.wikia.nocookie.net/__cb20120601175439/wowwiki/images/thumb/b/b6/WorldMapBeta-World.jpg/830px-WorldMapBeta-World.jpg
+
+
+calculating zone labels:
+ * http://www.wowhead.com/forums&topic=11405/suggestion-sub-zones#p302654
