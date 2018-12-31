@@ -1,17 +1,68 @@
 <?
 
+$areas = parse_dbc('AreaTable.dbc', array(12), 1);
+
+$children = array();
+foreach ($areas as $row){
+	if ($row[3]) $children[$row[3]][$row[1]] = 1;
+}
+
+foreach ($areas as $k => $v){
+	$areas[$k]['children'] = get_children($children, $k);
+}
+
+function get_children(&$children, $k){
+	if (!$children[$k]) return array();
+	$out = $children[$k];
+	foreach ($children[$k] as $k2 => $v){
+		$m = get_children($children, $k2);
+		foreach ($m as $i => $j) $out[$i] = 1;
+	}
+	return $out;
+}
+
+
+print_r($areas[1519]);
+exit;
+
+foreach ($areas as $row){
+	if ($row[1] == 1519){
+		echo "$row[1] : $row[12] ($row[3])\n";
+	}
+	if ($row[3] == 1519){
+		echo "$row[1] : $row[12]\n";
+	}
+}
+exit;
+
+#$wm_areas = parse_dbc('WorldMapArea.bdc', array(4), 1);
+
+$x = parse_dbc('WorldMapOverlay.dbc', array(9));
+
+foreach (array_slice($x, 0, 2) as $row){
+
+	$row['area'] = $areas[$row[3]];
+	#$row['wm_area'] = $wm_areas[$row[2]];
+	print_r($row);
+}
+
+#print_r(array_slice($x, 0, 10));
+exit;
+
 #$w = parse_dbc('WMOAreaTable.dbc');
 #print_r($w);
 #foreach ($w as $row) if ($row[1] == 617) print_r($row);
 #exit;
 
-$map = parse_dbc('Map.dbc', array(2), 1);
+#$map = parse_dbc('Map.dbc', array(2), 1);
 #print_r($map);
 #print_r($map[617]);
-print_r($map[571]);
-exit;
+#print_r($map[571]);
+#exit;
 
 $areas =  parse_dbc('AreaTable.dbc', array(12), 1);
+print_r($areas);
+exit;
 
 foreach ($areas as $row){
 	if (preg_match('!^Dalaran!', $row[12])) print_r($row);

@@ -129,6 +129,19 @@ function initialize() {
 draw_area(1519); // stormwind
 draw_area(12); // elwynn
 draw_area(85); // tirisfal
+
+//draw_label(1519);
+//draw_label(19);
+
+var c = 0;
+for (var i in areas){
+	c++;
+	var long = calc_long_edge(areas[i]);
+	//console.log(areas[i][4], long);
+	if (long > 500) draw_label(i);
+	//if (c>30) break;
+}
+
 }
 
 function hash_init(){
@@ -187,4 +200,68 @@ function draw_area(id){
 		map: map,
 		bounds: new google.maps.LatLngBounds(sw,ne)
 	});
+}
+
+function draw_label(id){
+
+	var a = areas[id];
+	if (!a) return;
+
+	var x = (a[0]+a[2]) / 8;
+	var y = (a[1]+a[3]) / 8;
+	var ll = PixelsToLatLng([x,y]);
+
+//	var marker = new google.maps.Marker({
+//		position: ll,
+//		map: map,
+//		title: a[4]
+//	});
+
+	var overlay = new LabelOverlay(a[4], ll, map);
+}
+
+function LabelOverlay(label, ll, map){
+	this.ll_ = ll;
+	this.label_ = label;
+	this.map_ = map;
+	this.div_ = null;
+	this.setMap(map);
+}
+
+LabelOverlay.prototype = new google.maps.OverlayView();
+
+LabelOverlay.prototype.onAdd = function(){
+	var div = document.createElement('div');
+	div.className = 'wow-label';
+	div.style.border = "none";
+	div.style.borderWidth = "0px";
+	div.style.position = "absolute";
+	div.innerHTML = this.label_;
+
+	this.div_ = div;
+
+	var panes = this.getPanes();
+	panes.overlayImage.appendChild(div);
+}
+
+LabelOverlay.prototype.draw = function(){
+	var can_show = map.getZoom() > 2;
+
+	var overlayProjection = this.getProjection();
+	var xy = overlayProjection.fromLatLngToDivPixel(this.ll_);
+	var div = this.div_;
+	div.style.visibility = can_show ? 'visible' : 'hidden';
+	div.style.left = (xy.x - ($(div).width()/2)) + 'px';
+	div.style.top = (xy.y - ($(div).height()/2)) + 'px';
+}
+
+LabelOverlay.prototype.onRemove = function() {
+	this.div_.parentNode.removeChild(this.div_);
+	this.div_ = null;
+}
+
+function calc_long_edge(a){
+	var x = Math.abs(a[0]-a[2]);
+	var y = Math.abs(a[1]-a[3]);
+	return Math.max(x,y);
 }

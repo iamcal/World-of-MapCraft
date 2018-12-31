@@ -184,6 +184,21 @@ var tiles_config = {
 </script>
 <style>
 body { padding: 0; margin: 0 }
+
+.wow-label {
+	border: 0;
+	position: absolute;
+	white-space: nowrap;
+	font-family: Arial, sans-serif;
+	xfont-weight: bold;
+    color: white;
+    text-shadow:
+    -1px -1px 0.5px rgba(0,0,0,0.5),
+    1px -1px 0.5px rgba(0,0,0,0.5),
+    -1px 1px 0.5px rgba(0,0,0,0.5),
+    1px 1px 0.5px rgba(0,0,0,0.5);
+}
+
 </style>
 </head>
 <body>
