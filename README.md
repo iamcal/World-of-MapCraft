@@ -97,3 +97,8 @@ To find new WMOs to build and preview for MoP, I used the following commands:
 This found all WMO groups under either the `pandaria` folder, or inside the
 dungeons folder with a prefix of `pa_`. I then used this list to make a bunch
 of calls to `build_wmo_map()` in `wmo_build.php`.
+
+
+## Installing the web site
+
+    ./install.php https://github.com/iamcal/World-of-MapCraft
