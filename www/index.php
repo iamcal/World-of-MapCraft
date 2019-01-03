@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>!World of MapCraft</title>
+<title>World of MapCraft</title>
 <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyBAlZlTdi6viC3o3yH2JXTqMKRGAWCURxY"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
