@@ -5,7 +5,7 @@
 
 <title>!World of MapCraft</title>
 <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&sensor=false&key=AIzaSyBAlZlTdi6viC3o3yH2JXTqMKRGAWCURxY"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyBAlZlTdi6viC3o3yH2JXTqMKRGAWCURxY"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/map.js"></script>
 <script type="text/javascript">
@@ -13,9 +13,9 @@
 $base = 'http://doats.net/tiles/built';
 $base = 'http://doats.net/tiles/crushed';
 #$base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
-#$base = 'http://cdn.iamcal.com/wow-tiles';
-$base = 'http://cdn.iamcal.com/mapcraft/v2';
-$base_mop = 'http://cdn.iamcal.com/mapcraft/mopv1';
+#$base = 'https://cdn.iamcal.com/wow-tiles';
+$base = 'https://cdn.iamcal.com/mapcraft/v2';
+$base_mop = 'https://cdn.iamcal.com/mapcraft/mopv1';
 
 
 	# map config
