@@ -8,6 +8,14 @@
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3&key=AIzaSyBAlZlTdi6viC3o3yH2JXTqMKRGAWCURxY"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/map.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-25SXS0KSWM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-25SXS0KSWM');
+</script>
 <script type="text/javascript">
 <?
 $base = 'http://doats.net/tiles/built';
@@ -435,20 +443,6 @@ body { padding: 0; margin: 0 }
 </ul>
 
 </div>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-106458-16']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 
 </body>
 </html>
