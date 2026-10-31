@@ -1,4 +1,4 @@
-<?
+<?php
 extract_mogi('LavaDungeon.wmo');
 exit;
 

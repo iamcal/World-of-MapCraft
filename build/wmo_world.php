@@ -1,4 +1,4 @@
-<?
+<?php
 	#
 	# take world tiles and build a chunk ready for assembling along with wmo chunks
 	#

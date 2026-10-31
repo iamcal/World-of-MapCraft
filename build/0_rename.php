@@ -1,4 +1,4 @@
-<?
+<?php
 	# run this after you're extracted the files from the MPQs.
 	# if changes all paths to lowercase so they're grouped correctly.
 

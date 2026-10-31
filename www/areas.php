@@ -10,7 +10,7 @@
 <script type="text/javascript" src="/areadata.js"></script>
 <script type="text/javascript" src="/areas.js"></script>
 <script type="text/javascript">
-<?
+<?php
 $base = 'http://doats.net/tiles/built';
 $base = 'http://doats.net/tiles/crushed';
 #$base = 'http://iamcal-misc.s3.amazonaws.com/wow-tiles';
@@ -212,7 +212,7 @@ body { padding: 0; margin: 0 }
 
 <a href="/"><img src="/img/mapcraft.gif" width="70" height="35" /></a>
 
-<?
+<?php
 	function nav_link($k, $v){
 		global $map;
 		$v = str_replace(array_keys($GLOBALS['logo_map']), $GLOBALS['logo_map'], $v);

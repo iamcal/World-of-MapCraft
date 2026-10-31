@@ -1,4 +1,4 @@
-<?
+<?php
 	$list = glob("mpqs/*.MPQ");
 
 	foreach ($list as $mpq){

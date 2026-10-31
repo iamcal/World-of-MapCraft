@@ -1,4 +1,4 @@
-<?
+<?php
 	include('../build/config.php');
 
 	$add_labels = 1;

@@ -1,4 +1,4 @@
-<?
+<?php
 
 $areas = parse_dbc('AreaTable.dbc', array(12), 1);
 

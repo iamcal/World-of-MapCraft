@@ -1,4 +1,4 @@
-<?
+<?php
 	$colors = array(
 		'azeroth'	=> '#001D29',
 		'outland'	=> '#000000',

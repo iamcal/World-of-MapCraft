@@ -1,4 +1,4 @@
-<?
+<?php
 	# this is my shape:
 	# XXX
 	# XX0

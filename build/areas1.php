@@ -1,4 +1,4 @@
-<?
+<?php
 	include('../build/config.php');
 
 	ini_set('memory_limit', '128M');

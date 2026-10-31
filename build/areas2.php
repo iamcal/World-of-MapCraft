@@ -1,4 +1,4 @@
-<?
+<?php
 	#
 	# this map shows tile offsets on the master map.
 	# we need this so we can figure out absolute pixel offsets.
